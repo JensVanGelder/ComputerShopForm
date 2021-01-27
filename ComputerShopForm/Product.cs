@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ScrapbookAlternatief
+namespace ComputerShopForm
 {
     internal abstract class Product : IProduct
     {

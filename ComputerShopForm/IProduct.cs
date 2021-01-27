@@ -1,4 +1,4 @@
-﻿namespace ScrapbookAlternatief
+﻿namespace ComputerShopForm
 {
     internal interface IProduct
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ScrapbookAlternatief
+namespace ComputerShopForm
 {
     internal class ShoppingCart
     {
@@ -19,14 +19,17 @@ namespace ScrapbookAlternatief
             Shoppinglist.Add(product);
         }
 
-        public void ShowShoppingCart()
+        public string ShowShoppingCart()
         {
+            string output = "";
             foreach (IProduct product in Shoppinglist)
             {
-                Console.WriteLine(product.Name);
-                Console.WriteLine(CalculatePrice());
+                output += "\n" + (product.Name);
+                //Console.WriteLine(CalculatePrice());
+
                 product.ToString();
             }
+            return output;
         }
 
         public double CalculatePrice()
