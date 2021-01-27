@@ -21,18 +21,28 @@ namespace ComputerShopForm
 
         public Form1()
         {
-            UserControl test = new UserControl();
             InitializeComponent();
-            shoppingcart.AddProductToCart(testproduct4); //vervangen door foreach om lijst met producten te genereenene,s;.
+            shoppingcart.AddProductToCart(testproduct4); //vervangen door foreach om lijst met producten
             shoppingcart.AddProductToCart(testproduct2);
             shoppingcart.AddProductToCart(testproduct3);
             shoppingcart.AddProductToCart(testproduct1);
-            userController11.Name = testproduct1.Name;
+
+            int locationX = 0;
+
+            foreach (IProduct product in shoppingcart.Shoppinglist)
+            {
+                locationX += 200;
+                UserController1 testcontroller = new UserController1();
+                testcontroller.Name = product.Name;
+
+                flowLayoutPanel1.Controls.Add(testcontroller);
+
+                // UserController1.Name = product.Name;
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            label1.Text = shoppingcart.ShowShoppingCart();
         }
     }
 }
