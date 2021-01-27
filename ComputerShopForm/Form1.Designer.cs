@@ -31,6 +31,9 @@ namespace ComputerShopForm
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.userController11 = new ComputerShopForm.UserController1();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -52,6 +55,21 @@ namespace ComputerShopForm
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.userController11);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, -2);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(795, 451);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // userController11
+            // 
+            this.userController11.Location = new System.Drawing.Point(3, 3);
+            this.userController11.Name = "userController11";
+            this.userController11.Size = new System.Drawing.Size(328, 349);
+            this.userController11.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -59,8 +77,10 @@ namespace ComputerShopForm
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,6 +90,8 @@ namespace ComputerShopForm
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private UserController1 userController11;
     }
 }
 

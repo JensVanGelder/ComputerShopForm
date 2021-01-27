@@ -21,11 +21,13 @@ namespace ComputerShopForm
 
         public Form1()
         {
+            UserControl test = new UserControl();
             InitializeComponent();
-            shoppingcart.AddProductToCart(testproduct4);
+            shoppingcart.AddProductToCart(testproduct4); //vervangen door foreach om lijst met producten te genereenene,s;.
             shoppingcart.AddProductToCart(testproduct2);
             shoppingcart.AddProductToCart(testproduct3);
             shoppingcart.AddProductToCart(testproduct1);
+            userController11.Name = testproduct1.Name;
         }
 
         private void button1_Click(object sender, EventArgs e)
