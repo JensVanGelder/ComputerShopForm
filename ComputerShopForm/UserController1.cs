@@ -17,15 +17,25 @@ namespace ComputerShopForm
 
         public int Id { get; set; }
 
-        public string ProductName
+        public new string ProductName
         {
-            get { return lblName.Text; }
-            set { lblName.Text = value; }
+            get { return lblProductName.Text; }
+            set { lblProductName.Text = value; }
+        }
+              
+        public double ProductPrice
+        {
+            get { return Convert.ToDouble(lblProductPrice.Text); }
+            set { lblProductPrice.Text = $"{value},00 EUR"; }
         }
 
-        public double ProductPrice { get; set; }
-        public string ProductSummary { get; set; }
-        private string _productImagePath;
+        public string ProductSummary
+        {
+            get { return lblProductSummary.Text; }
+            set { lblProductSummary.Text = value; }
+        }
+
+        private string _productImagePath;        
 
         public string ProductImagePath
         {
@@ -40,11 +50,28 @@ namespace ComputerShopForm
             }
         }
 
-        /*public bool SameDayDelivery
+        public int ProductStock
         {
-            get { return lblSameDayDelivery.Text; }
-            set { lblName.Text = value; }
-        }*/
+            get { return Convert.ToInt32(lblProductStock.Text); }
+            set { lblProductStock.Text = $"{value}"; }
+        }
+
+        public bool SameDayDelivery
+        {
+            get { return Convert.ToBoolean(lblSameDayDelivery.Text); }
+            set 
+            {
+                if (ProductStock > 0)
+                {
+                    lblSameDayDelivery.Text = $"Morgen bij jou";
+                }
+                else
+                {
+                    lblSameDayDelivery.Text = $"Tijdelijk niet in voorraad";
+                }
+            }             
+                
+        }
 
         private void UserController1_Load(object sender, EventArgs e)
         {
@@ -52,8 +79,23 @@ namespace ComputerShopForm
 
         private void btnAddToShoppingCart_Click(object sender, EventArgs e)
         {
-            var product = _repo.GetProduct(Id);
+            var product = _repo.GetProduct(ProductName);
             _cart.AddProductToCart(product);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace ComputerShopForm
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         /// The main entry point for the application.

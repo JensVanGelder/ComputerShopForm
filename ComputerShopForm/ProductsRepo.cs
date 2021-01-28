@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ComputerShopForm
 {
-    internal class ProductsRepo : IProductsRepo
+    public class ProductsRepo : IProductsRepo
     {
         // string name, double price, string imagepath, string description, int stock, int ram,
         // string mobo, string hdd, string cpu, string psu, string gpu, Performance rgbperformance,
@@ -25,12 +25,12 @@ namespace ComputerShopForm
             return products;
         }
 
-        public IProduct GetProduct(int id)
+        public IProduct GetProduct(string name)
         {
             List<IProduct> allProducts = CreateProductList();
 
             // LAMBDA Expression. Return the first object in which the ID property equals user input
-            var selectedProduct = allProducts.Where(x => x.Id == id).FirstOrDefault();
+            var selectedProduct = allProducts.Where(x => x.Name == name).FirstOrDefault();
 
             return selectedProduct;
         }

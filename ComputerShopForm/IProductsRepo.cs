@@ -5,7 +5,6 @@ namespace ComputerShopForm
     public interface IProductsRepo
     {
         List<IProduct> CreateProductList();
-
-        IProduct GetProduct(int id);
+        IProduct GetProduct(string name);
     }
 }
