@@ -13,22 +13,22 @@
         public double Price { get; set; }
         public string Name { get; set; }
         public string ProductImagePath { get; set; }
-        public string Description { get; set; }
+        public string ProductSummary { get; set; }
         public int Stock { get; set; }
 
-        public Product(string name, double price, string imagepath, string description, int stock)
+        public Product(string name, double price, string imagepath, string summary, int stock)
         {
             Price = price;
             Name = name;
             ProductImagePath = imagepath;
-            Description = description;
+            ProductSummary = summary;
             Stock = stock;
             _id++;
         }
 
         public override string ToString()
         {
-            return $"Product:{Name} - ({Description}) Price: {Price}, Stock: {Stock}";
+            return $"Product:{Name} - ({ProductSummary}) Price: {Price}, Stock: {Stock}";
         }
     }
 }

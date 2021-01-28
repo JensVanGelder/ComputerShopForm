@@ -5,7 +5,7 @@ namespace ComputerShopForm
 {
     public class ProductsRepo : IProductsRepo
     {
-        // string name, double price, string imagepath, string description, int stock, int ram,
+        // string name, double price, string imagepath, string summary, int stock, int ram,
         // string mobo, string hdd, string cpu, string psu, string gpu, Performance rgbperformance,
         // bool fortnite
 
