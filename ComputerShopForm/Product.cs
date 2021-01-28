@@ -6,7 +6,7 @@ namespace ComputerShopForm
 {
     internal abstract class Product : IProduct
     {
-        private int _id { get; set; }
+        private int _id;
 
         public int Id
         {
@@ -18,11 +18,20 @@ namespace ComputerShopForm
         public string Name { get; set; }
         public string ImagePath { get; set; }
         public string Description { get; set; }
+        public int Stock { get; set; }
 
-        public Product(string name, double price)
+        public Product(string name, double price, string imagepath, string description, int stock)
         {
             Price = price;
             Name = name;
+            ImagePath = imagepath;
+            Description = description;
+            Stock = stock;
+        }
+
+        public override string ToString()
+        {
+            return $"Product:{Name} - ({Description}) Price: {Price}, Stock: {Stock}";
         }
     }
 }
