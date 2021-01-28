@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ComputerShopForm
 {
-    internal class ProductsRepo : IProductsRepo
+    public class ProductsRepo : IProductsRepo
     {
         // string name, double price, string imagepath, string description, int stock, int ram,
         // string mobo, string hdd, string cpu, string psu, string gpu, Performance rgbperformance,
