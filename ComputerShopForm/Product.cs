@@ -1,6 +1,6 @@
 ﻿namespace ComputerShopForm
 {
-    internal abstract class Product : IProduct
+    public abstract class Product : IProduct
     {
         private int _id;
 

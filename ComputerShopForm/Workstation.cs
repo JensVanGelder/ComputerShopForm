@@ -1,6 +1,6 @@
 ﻿namespace ComputerShopForm
 {
-    internal class Workstation : Computer
+    public class Workstation : Computer
     {
         public string Raidtype { get; set; }
 

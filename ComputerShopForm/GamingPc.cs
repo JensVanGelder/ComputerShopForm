@@ -1,6 +1,6 @@
 ﻿namespace ComputerShopForm
 {
-    internal class GamingPc : Computer
+    public class GamingPc : Computer
     {
         public string GPU { get; set; }
         public Performance RgbPerformance { get; set; }

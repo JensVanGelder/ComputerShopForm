@@ -7,7 +7,7 @@ namespace ComputerShopForm
         public List<IProduct> Shoppinglist;
         private static ShoppingCart _cart;
 
-        private ShoppingCart()
+        public ShoppingCart()
         {
             Shoppinglist = new List<IProduct>();
         }

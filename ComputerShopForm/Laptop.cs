@@ -1,6 +1,6 @@
 ﻿namespace ComputerShopForm
 {
-    internal class Laptop : Computer
+    public class Laptop : Computer
     {
         public int ScreenSize { get; set; } //in INCH
         public string ScreenType { get; set; }

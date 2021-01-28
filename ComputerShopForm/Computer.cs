@@ -1,6 +1,6 @@
 ﻿namespace ComputerShopForm
 {
-    internal class Computer : Product
+    public class Computer : Product
     {
         public int Ram { get; set; }
         public string MoBo { get; set; }

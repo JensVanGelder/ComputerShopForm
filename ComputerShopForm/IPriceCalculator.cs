@@ -1,6 +1,6 @@
 ﻿namespace ComputerShopForm
 {
-    internal interface IPriceCalculator
+    public interface IPriceCalculator
     {
         double CalculatePrice();
 
