@@ -17,10 +17,10 @@ namespace ComputerShopForm
         public Form1()
         {
             InitializeComponent();
-            shoppingcart.AddProductToCart(testproduct4); //vervangen door foreach om lijst met producten
+            /*shoppingcart.AddProductToCart(testproduct4); //vervangen door foreach om lijst met producten
             shoppingcart.AddProductToCart(testproduct2);
             shoppingcart.AddProductToCart(testproduct3);
-            shoppingcart.AddProductToCart(testproduct1);
+            shoppingcart.AddProductToCart(testproduct1);*/
 
             int locationX = 0;
 
