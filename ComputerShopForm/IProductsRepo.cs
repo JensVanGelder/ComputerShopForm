@@ -2,7 +2,7 @@
 
 namespace ComputerShopForm
 {
-    internal interface IProductsRepo
+    public interface IProductsRepo
     {
         List<IProduct> CreateProductList();
         IProduct GetProduct(int id);

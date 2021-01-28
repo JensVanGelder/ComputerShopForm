@@ -5,9 +5,9 @@ using System.Text;
 
 namespace ComputerShopForm
 {
-    internal class ShoppingCart : IPriceCalculator, IShoppingCart
+    public class ShoppingCart : IShoppingCart,IPriceCalculator
     {
-        public List<IProduct> Shoppinglist { get; set; }
+        public List<IProduct> Shoppinglist;
         private static ShoppingCart _cart;
 
         private ShoppingCart()
@@ -49,6 +49,11 @@ namespace ComputerShopForm
         {
             double tax = 0.21;
             return CalculatePrice() * tax;
+        }
+
+        void IShoppingCart.AddProductToCart(IProduct product)
+        {
+            ((IShoppingCart)_cart).AddProductToCart(product);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ComputerShopForm
 {
-    internal interface IProduct
+    public interface IProduct
     {
         string Description { get; set; }
         int Id { get; set; }

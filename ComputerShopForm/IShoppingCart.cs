@@ -2,11 +2,8 @@
 
 namespace ComputerShopForm
 {
-    internal interface IShoppingCart
+    public interface IShoppingCart
     {
-        List<IProduct> Shoppinglist { get; set; }
-
         void AddProductToCart(IProduct product);
-        List<IProduct> ShowShoppingCart();
     }
 }
