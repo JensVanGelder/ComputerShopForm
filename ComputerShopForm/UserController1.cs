@@ -12,6 +12,18 @@ namespace ComputerShopForm
 {
     public partial class UserController1 : UserControl
     {
+        public ShoppingCart _cart;
+        public IProductsRepo _repo;
+
+        public UserController1()
+        {
+            InitializeComponent();
+            _cart = ShoppingCart.GetShoppingCart();
+            _repo = new ProductsRepo();
+        }
+
+        public int Id { get; set; }
+
         public string ProductName
         {
             get { return lblName.Text; }
@@ -41,13 +53,14 @@ namespace ComputerShopForm
             set { lblName.Text = value; }
         }*/
 
-        public UserController1()
-        {
-            InitializeComponent();
-        }
-
         private void UserController1_Load(object sender, EventArgs e)
         {
+        }
+
+        private void btnAddToShoppingCart_Click(object sender, EventArgs e)
+        {
+            var product = _repo.GetProduct(Id);
+            _cart.AddProductToCart(product);
         }
     }
 }

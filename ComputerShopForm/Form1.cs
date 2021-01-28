@@ -31,6 +31,7 @@ namespace ComputerShopForm
                     ProductName = product.Name,
                     ProductPrice = product.Price,
                     ProductImagePath = product.ProductImagePath,
+                    Id = product.Id,
                 };
                 flowLayoutPanel1.Controls.Add(usercontrol);
             }
@@ -38,6 +39,23 @@ namespace ComputerShopForm
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserController1 control = new UserController1();
+            List<IProduct> products = control._cart.Shoppinglist;
+
+            string info = "";
+            double total = 0;
+            foreach (var item in products)
+            {
+                total += item.Price;
+                info += $"{item.Name} Price: {item.Price}";
+                info += "\n";
+            }
+            info += $"\nTotal price: {total} ";
+            MessageBox.Show(info);
         }
     }
 }

@@ -79,6 +79,7 @@ namespace ComputerShopForm
             this.btnAddToShoppingCart.TabIndex = 4;
             this.btnAddToShoppingCart.Text = "Add ";
             this.btnAddToShoppingCart.UseVisualStyleBackColor = true;
+            this.btnAddToShoppingCart.Click += new System.EventHandler(this.btnAddToShoppingCart_Click);
             // 
             // UserController1
             // 
