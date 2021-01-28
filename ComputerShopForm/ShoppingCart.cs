@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ComputerShopForm
 {
-    internal class ShoppingCart : IPriceCalculator
+    internal class ShoppingCart : IPriceCalculator, IShoppingCart
     {
         public List<IProduct> Shoppinglist { get; set; }
         private static ShoppingCart _cart;
