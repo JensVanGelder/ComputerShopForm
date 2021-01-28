@@ -37,15 +37,16 @@ namespace ComputerShopForm
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 39);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 363);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(704, 454);
             this.flowLayoutPanel1.TabIndex = 2;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(284, 39);
+            this.button1.Location = new System.Drawing.Point(617, -1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -54,7 +55,7 @@ namespace ComputerShopForm
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(284, 69);
+            this.button2.Location = new System.Drawing.Point(617, 29);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;

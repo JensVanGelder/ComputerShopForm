@@ -12,27 +12,27 @@ namespace ComputerShopForm
 {
     public partial class Form1 : Form
     {
-        private ShoppingCart shoppingcart = new ShoppingCart();
+        private IProductsRepo productRepo;
 
         public Form1()
         {
             InitializeComponent();
-            /*shoppingcart.AddProductToCart(testproduct4); //vervangen door foreach om lijst met producten
-            shoppingcart.AddProductToCart(testproduct2);
-            shoppingcart.AddProductToCart(testproduct3);
-            shoppingcart.AddProductToCart(testproduct1);*/
+            productRepo = new ProductsRepo();
+            var products = productRepo.CreateProductList();
+            GenerateProductControls(products);
+        }
 
-            int locationX = 0;
-
-            foreach (IProduct product in shoppingcart.Shoppinglist)
+        private void GenerateProductControls(IEnumerable<IProduct> products)
+        {
+            foreach (IProduct product in products)
             {
-                locationX += 200;
-                UserController1 testcontroller = new UserController1();
-                testcontroller.Name = product.Name;
-
-                flowLayoutPanel1.Controls.Add(testcontroller);
-
-                // UserController1.Name = product.Name;
+                UserController1 usercontrol = new UserController1
+                {
+                    ProductName = product.Name,
+                    ProductPrice = product.Price,
+                    ProductImagePath = product.ProductImagePath,
+                };
+                flowLayoutPanel1.Controls.Add(usercontrol);
             }
         }
 

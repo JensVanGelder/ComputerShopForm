@@ -16,7 +16,7 @@ namespace ComputerShopForm
 
         public double Price { get; set; }
         public string Name { get; set; }
-        public string ImagePath { get; set; }
+        public string ProductImagePath { get; set; }
         public string Description { get; set; }
         public int Stock { get; set; }
 
@@ -24,12 +24,12 @@ namespace ComputerShopForm
         {
             Price = price;
             Name = name;
-            ImagePath = imagepath;
+            ProductImagePath = imagepath;
             Description = description;
             Stock = stock;
             _id++;
         }
-     
+
         public override string ToString()
         {
             return $"Product:{Name} - ({Description}) Price: {Price}, Stock: {Stock}";

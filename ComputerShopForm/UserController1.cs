@@ -20,7 +20,20 @@ namespace ComputerShopForm
 
         public double ProductPrice { get; set; }
         public string ProductSummary { get; set; }
-        public string ProductImagePath { get; set; }
+        private string _productImagePath;
+
+        public string ProductImagePath
+        {
+            set
+            {
+                if (value != null)
+                {
+                    _productImagePath = value;
+                    pictureBox1.ImageLocation = _productImagePath;
+                    pictureBox1.Load(_productImagePath);
+                }
+            }
+        }
 
         /*public bool SameDayDelivery
         {
@@ -31,12 +44,6 @@ namespace ComputerShopForm
         public UserController1()
         {
             InitializeComponent();
-        }
-
-        public string Name
-        {
-            get { return lblName.Text; }
-            set { lblName.Text = value; }
         }
 
         private void UserController1_Load(object sender, EventArgs e)
