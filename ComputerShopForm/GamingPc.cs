@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ComputerShopForm
+﻿namespace ComputerShopForm
 {
-    internal class GamingPc : Computer
+    public class GamingPc : Computer
     {
         public string GPU { get; set; }
         public Performance RgbPerformance { get; set; }

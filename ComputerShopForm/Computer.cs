@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ComputerShopForm
+﻿namespace ComputerShopForm
 {
-    internal class Computer : Product
+    public class Computer : Product
     {
         public int Ram { get; set; }
         public string MoBo { get; set; }

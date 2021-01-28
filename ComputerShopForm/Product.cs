@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ComputerShopForm
+﻿namespace ComputerShopForm
 {
-    internal abstract class Product : IProduct
+    public abstract class Product : IProduct
     {
         private int _id;
 

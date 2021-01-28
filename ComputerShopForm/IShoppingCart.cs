@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ComputerShopForm
+﻿namespace ComputerShopForm
 {
     public interface IShoppingCart
     {

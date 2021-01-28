@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace ComputerShopForm
 {
-    public class ShoppingCart : IShoppingCart,IPriceCalculator
+    public class ShoppingCart : IShoppingCart, IPriceCalculator
     {
         public List<IProduct> Shoppinglist;
         private static ShoppingCart _cart;

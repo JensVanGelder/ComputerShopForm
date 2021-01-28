@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ComputerShopForm
 {
-    internal class ProductsRepo : IProductsRepo
+    public class ProductsRepo : IProductsRepo
     {
         // string name, double price, string imagepath, string description, int stock, int ram,
         // string mobo, string hdd, string cpu, string psu, string gpu, Performance rgbperformance,

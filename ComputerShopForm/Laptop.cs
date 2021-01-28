@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ComputerShopForm
+﻿namespace ComputerShopForm
 {
-    internal class Laptop : Computer
+    public class Laptop : Computer
     {
         public int ScreenSize { get; set; } //in INCH
         public string ScreenType { get; set; }
