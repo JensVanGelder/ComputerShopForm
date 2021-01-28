@@ -46,12 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CartControl.Designer.cs">
+      <DependentUpon>CartControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Computer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShoppingCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShoppingCart.Designer.cs">
+      <DependentUpon>FormShoppingCart.cs</DependentUpon>
     </Compile>
     <Compile Include="GamingPc.cs" />
     <Compile Include="IPriceCalculator.cs" />
@@ -72,8 +84,14 @@
       <DependentUpon>UserController1.cs</DependentUpon>
     </Compile>
     <Compile Include="Workstation.cs" />
+    <EmbeddedResource Include="CartControl.resx">
+      <DependentUpon>CartControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShoppingCart.resx">
+      <DependentUpon>FormShoppingCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

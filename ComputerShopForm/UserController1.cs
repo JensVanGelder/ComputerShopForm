@@ -59,7 +59,7 @@ namespace ComputerShopForm
 
         private void btnAddToShoppingCart_Click(object sender, EventArgs e)
         {
-            var product = _repo.GetProduct(Id);
+            var product = _repo.GetProduct(ProductName);
             _cart.AddProductToCart(product);
         }
     }

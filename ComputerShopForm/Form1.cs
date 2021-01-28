@@ -55,7 +55,9 @@ namespace ComputerShopForm
                 info += "\n";
             }
             info += $"\nTotal price: {total} ";
-            MessageBox.Show(info);
+            //MessageBox.Show(info);
+            FormShoppingCart cart = new FormShoppingCart();
+            cart.Show();
         }
     }
 }

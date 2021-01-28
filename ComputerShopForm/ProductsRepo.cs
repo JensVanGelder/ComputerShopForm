@@ -28,12 +28,12 @@ namespace ComputerShopForm
             return products;
         }
 
-        public IProduct GetProduct(int id)
+        public IProduct GetProduct(string name)
         {
             List<IProduct> allProducts = CreateProductList();
 
             // LAMBDA Expression. Return the first object in which the ID property equals user input
-            var selectedProduct = allProducts.Where(x => x.Id == id).FirstOrDefault();
+            var selectedProduct = allProducts.Where(x => x.Name == name).FirstOrDefault();
 
             return selectedProduct;
         }
