@@ -14,11 +14,6 @@ namespace ComputerShopForm
     {
         private ShoppingCart shoppingcart = new ShoppingCart();
 
-        private IProduct testproduct1 = new Desktop("testcomputer1", 1000.3);
-        private IProduct testproduct2 = new Desktop("testcomputer2", 1500.3);
-        private IProduct testproduct3 = new Desktop("testcomputer3", 1600.3);
-        private IProduct testproduct4 = new Desktop("testcomputer4", 1900.3);
-
         public Form1()
         {
             InitializeComponent();

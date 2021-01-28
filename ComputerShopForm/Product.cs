@@ -27,8 +27,9 @@ namespace ComputerShopForm
             ImagePath = imagepath;
             Description = description;
             Stock = stock;
+            _id++;
         }
-
+     
         public override string ToString()
         {
             return $"Product:{Name} - ({Description}) Price: {Price}, Stock: {Stock}";
