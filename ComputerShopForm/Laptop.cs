@@ -12,9 +12,12 @@ namespace ComputerShopForm
         public string ScreenType { get; set; }
         public double WeightInGrams { get; set; }
 
-        public Laptop(string name, double price, string imagepath, string description, int stock)
-           : base(name, price, imagepath, description, stock)
+        public Laptop(string name, double price, string imagepath, string description, int stock, int ram, string mobo, string hdd, string cpu, string psu, int screensize, string screentype, double weightingrams)
+           : base(name, price, imagepath, description, stock, ram, mobo, hdd, cpu, psu)
         {
+            ScreenSize = screensize;
+            ScreenType = screentype;
+            WeightInGrams = weightingrams;
         }
 
         public override string ToString()

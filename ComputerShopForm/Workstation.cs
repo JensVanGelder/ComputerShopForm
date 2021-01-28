@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ComputerShopForm
-{//string hdd, string cpu, string psu, string gpu, Performance rgbperformance, bool fortnite)
+{
     internal class Workstation : Computer
     {
         public string Raidtype { get; set; }
 
-        public Workstation(string name, double price, string imagepath, string description, int stock, int ram, string hdd, string cpu, string psu)
-               : base(name, price, imagepath, description, stock, ram, hdd, cpu, psu)
+        public Workstation(string name, double price, string imagepath, string description, int stock, int ram, string mobo, string hdd, string cpu, string psu, string raidtype)
+               : base(name, price, imagepath, description, stock, ram, mobo, hdd, cpu, psu)
         {
+            Raidtype = raidtype;
         }
 
         public override string ToString()
