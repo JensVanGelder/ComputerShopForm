@@ -54,7 +54,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GamingPc.cs" />
+    <Compile Include="IPriceCalculator.cs" />
     <Compile Include="IProduct.cs" />
+    <Compile Include="IProductsRepo.cs" />
     <Compile Include="Laptop.cs" />
     <Compile Include="Enums\Performance.cs" />
     <Compile Include="Product.cs" />

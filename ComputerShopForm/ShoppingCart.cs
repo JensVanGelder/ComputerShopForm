@@ -5,9 +5,10 @@ using System.Text;
 
 namespace ComputerShopForm
 {
-    internal class ShoppingCart
+    internal class ShoppingCart : IPriceCalculator
     {
         public List<IProduct> Shoppinglist { get; set; }
+        private static ShoppingCart _cart;
 
         public ShoppingCart()
         {
@@ -19,17 +20,18 @@ namespace ComputerShopForm
             Shoppinglist.Add(product);
         }
 
-        public string ShowShoppingCart()
+        public static ShoppingCart GetShoppingCart()
         {
-            string output = "";
-            foreach (IProduct product in Shoppinglist)
+            if (_cart == null)
             {
-                output += "\n" + (product.Name);
-                //Console.WriteLine(CalculatePrice());
-
-                product.ToString();
+                _cart = new ShoppingCart();
             }
-            return output;
+            return _cart;
+        }
+
+        public List<IProduct> ShowShoppingCart()
+        {
+            return Shoppinglist;
         }
 
         public double CalculatePrice()
@@ -41,6 +43,12 @@ namespace ComputerShopForm
             }
 
             return price;
+        }
+
+        public double CalculateTax()
+        {
+            double tax = 0.21;
+            return CalculatePrice() * tax;
         }
     }
 }
