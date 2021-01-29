@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ComputerShopForm
@@ -26,7 +20,6 @@ namespace ComputerShopForm
         public void SetData(IProduct product)
         {
             var computer = product as Computer;
-            string producttype = product.GetThisType();
             pictureBoxProductInfo.Load(product.ProductImagePath);
             txtBoxName.Text = product.Name;
             txtBoxPsu.Text = computer.PSU;

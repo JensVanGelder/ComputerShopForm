@@ -15,10 +15,5 @@
             string add = $"Your workstation is equipped with {Raidtype}";
             return base.ToString() + add;
         }
-
-        public override string GetThisType()
-        {
-            return "Workstation";
-        }
     }
 }

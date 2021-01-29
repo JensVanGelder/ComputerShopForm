@@ -2,7 +2,7 @@
 {
     public abstract class Product : IProduct
     {
-        private static int _id =0;
+        private static int _id = 0;
         private int _myId = 0;
 
         public int Id
