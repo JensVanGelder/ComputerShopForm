@@ -2,12 +2,12 @@
 {
     public abstract class Product : IProduct
     {
-        private int _id;
+        private static int _id =0;
+        private int _myId = 0;
 
         public int Id
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _myId; }
         }
 
         public double Price { get; set; }
@@ -24,6 +24,7 @@
             ProductSummary = summary;
             Stock = stock;
             _id++;
+            _myId = _id;
         }
 
         public override string ToString()

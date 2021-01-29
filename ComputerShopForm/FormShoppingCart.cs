@@ -51,14 +51,14 @@ namespace ComputerShopForm
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            string message = $"your total price is € {_cart.CalculatePrice()}" +
-                $"\nComplete your purchase?";
+            string message = $"Your total price is € {_cart.CalculatePrice()}" +
+                $"\n\nComplete your purchase?";
             DialogResult dr = MessageBox.Show(message, "Payment Screen", MessageBoxButtons.OKCancel);
             if (dr == DialogResult.OK)
             {
                 _logger.LogPurchase(_cart);
                 _cart.ClearCart();
-                MessageBox.Show("Thank you for your purchase");
+                MessageBox.Show("Thank you for your purchase", "Purchase Completed");
                 this.Close();
             }
         }
