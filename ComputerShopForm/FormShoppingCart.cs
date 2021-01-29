@@ -7,6 +7,7 @@ namespace ComputerShopForm
     {
         public ShoppingCart _cart;
 
+
         public FormShoppingCart()
         {
             InitializeComponent();
@@ -18,7 +19,7 @@ namespace ComputerShopForm
                         group product by product.Name into groupProduct
                         let countUniqueProduct = groupProduct.Count()
                         orderby countUniqueProduct descending
-                        select new { Name = groupProduct.Key, Count = countUniqueProduct, ID = groupProduct.First().Id };
+                        select new { Name = groupProduct.Key, Count = countUniqueProduct, ID = groupProduct.First().Id};
 
                 foreach (var product in uniqueCart)
                 {
@@ -43,7 +44,7 @@ namespace ComputerShopForm
                     flowLayoutPanel1.Controls.Add(cartControl);
                 }
 
-                lblTotalPrice.Text = $"Total:           € {_cart.CalculateWithTax()}";
+                lblTotalPrice.Text = $"Total:           € {_cart.CalculatePrice()}";
             }
             
         }

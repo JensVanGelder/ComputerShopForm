@@ -2,14 +2,17 @@
 
 namespace ComputerShopForm
 {
-    public class ShoppingCart : IShoppingCart, IPriceCalculator
+    public class ShoppingCart : IShoppingCart
     {
         public List<IProduct> Shoppinglist;
         public static ShoppingCart _cart;
+        private IPriceCalculator _priceCalculator;
 
         public ShoppingCart()
         {
             Shoppinglist = new List<IProduct>();
+            _priceCalculator = new PriceCalculator();
+
         }
 
         public void AddProductToCart(IProduct product)
@@ -31,25 +34,13 @@ namespace ComputerShopForm
             return Shoppinglist;
         }
 
-        public double CalculatePrice()
-        {
-            double price = new double();
-            foreach (IProduct product in Shoppinglist)
-            {
-                price += product.Price;
-            }
-
-            return price;
-        }
-
-        public double CalculateWithTax()
-        {
-            double tax = 1.21;
-            return CalculatePrice()  *tax;
-        }
         public void ClearCart()
         {
             Shoppinglist.Clear();
+        }
+        public double CalculatePrice()
+        {
+            return _priceCalculator.CalculatePrice(Shoppinglist)+ _priceCalculator.CalculateWithTax(Shoppinglist);
         }
     }
 }

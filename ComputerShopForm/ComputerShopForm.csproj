@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PriceCalculator.cs" />
     <Compile Include="UserControlCart.cs">
       <SubType>UserControl</SubType>
     </Compile>

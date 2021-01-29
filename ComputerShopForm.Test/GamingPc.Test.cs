@@ -15,7 +15,6 @@ namespace ComputerShopForm.Test
         [SetUp]
         public void Setup()
         {
-            testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 1, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
             testcart = ShoppingCart.GetShoppingCart();
         }
 
@@ -23,7 +22,7 @@ namespace ComputerShopForm.Test
         public void GamingPC_WhenStockIsZero_CanNotBeAddedToShoppingCart()
         {
             //ARRANGE
-
+            testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 1, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
             testproduct.Stock = 0;
             //ACT
             //var output1 = testcart.ToString();

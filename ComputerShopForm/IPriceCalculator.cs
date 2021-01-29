@@ -1,9 +1,11 @@
-﻿namespace ComputerShopForm
+﻿using System.Collections.Generic;
+
+namespace ComputerShopForm
 {
     public interface IPriceCalculator
     {
-        double CalculatePrice();
+        double CalculatePrice(List<IProduct> shoppinglist);
 
-        double CalculateWithTax();
+        double CalculateWithTax(List<IProduct> shoppinglist);
     }
 }

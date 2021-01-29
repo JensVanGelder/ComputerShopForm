@@ -1,14 +1,10 @@
 ﻿using NUnit.Framework;
-using ComputerShopForm;
 using System.Collections.Generic;
-using System.IO;
-using System;
 
 namespace ComputerShopForm.Test
 {
     internal class ShoppingCartTest
     {
-        public IPriceCalculator calc;
         public IProduct testproduct;
         public ShoppingCart testcart;
         public List<IProduct> testcart2;
@@ -22,7 +18,7 @@ namespace ComputerShopForm.Test
         }
 
         [Test]
-        public void ShoppingCart_WhenPriceIsCalculated_PriceIsCorrect()
+        public void AddProductToCart_WhenPriceIsCalculated_PriceIsCorrect()
         {
             //ARRANGE
             testcart.AddProductToCart(testproduct);
@@ -30,26 +26,11 @@ namespace ComputerShopForm.Test
             testcart.AddProductToCart(testproduct);
             testcart.AddProductToCart(testproduct);
 
-            testcart2.Add(testproduct);
-            testcart2.Add(testproduct);
-            testcart2.Add(testproduct);
-            testcart2.Add(testproduct);
-
             //ACT
-            //int[] testarray;
-            double priceoflist = new double();
-
-            foreach (IProduct testproduct in testcart2)
-            {
-                priceoflist += testproduct.Price;
-            }
-
             double priceofcart = testcart.CalculatePrice();
-            double expectedprice = 4.0;
 
             //ASSERT
-
-            Assert.AreEqual(priceofcart, priceoflist, expectedprice);
+            Assert.AreEqual(4.0, priceofcart);
         }
     }
 }
