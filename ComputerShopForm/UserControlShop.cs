@@ -5,7 +5,7 @@ namespace ComputerShopForm
 {
     public partial class UserControlShop : UserControl
     {
-        public ShoppingCart _cart;
+        public IShoppingCart _cart;
         public IProductsRepo _repo;
 
         public UserControlShop()

@@ -1,8 +1,5 @@
 using NUnit.Framework;
-using ComputerShopForm;
 using System.Collections.Generic;
-using System.IO;
-using System;
 
 namespace ComputerShopForm.Test
 {

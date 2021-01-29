@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ComputerShopForm
 {
-    class PriceCalculator:IPriceCalculator
+    internal class PriceCalculator : IPriceCalculator
     {
         public double CalculatePrice(List<IProduct> shoppinglist)
         {
