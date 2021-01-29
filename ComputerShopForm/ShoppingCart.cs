@@ -5,7 +5,7 @@ namespace ComputerShopForm
     public class ShoppingCart : IShoppingCart, IPriceCalculator
     {
         public List<IProduct> Shoppinglist;
-        private static ShoppingCart _cart;
+        public static ShoppingCart _cart;
 
         public ShoppingCart()
         {
@@ -44,13 +44,12 @@ namespace ComputerShopForm
 
         public double CalculateTax()
         {
-            double tax = 0.21;
-            return CalculatePrice() * tax;
+            double tax = 1.21;
+            return CalculatePrice()  *tax;
         }
-
-        void IShoppingCart.AddProductToCart(IProduct product)
+        public void ClearCart()
         {
-            ((IShoppingCart)_cart).AddProductToCart(product);
+            Shoppinglist.Clear();
         }
     }
 }

@@ -4,12 +4,12 @@ using System.Windows.Forms;
 
 namespace ComputerShopForm
 {
-    public partial class CartControl : UserControl
+    public partial class UserControlCart : UserControl
     {
         public ShoppingCart _cart;
         public IProductsRepo _repo;
 
-        public CartControl()
+        public UserControlCart()
         {
             InitializeComponent();
             _cart = ShoppingCart.GetShoppingCart();
@@ -18,7 +18,7 @@ namespace ComputerShopForm
 
         public int Id { get; set; }
 
-        public string ProductName
+        public string PName
         {
             get { return lblName.Text; }
             set { lblName.Text = value; }
@@ -55,15 +55,6 @@ namespace ComputerShopForm
         public string CountOccurenceOfValue(int valueToFind)
         {
             string temp = "";
-            //var query = _cart.Shoppinglist.SelectMany(x => x.Name)
-            //                .GroupBy(s => s)
-            //                .Select(g => new { Name = g.Name, Count = g.Count() });
-
-            //foreach (var result in query)
-            //{
-            //    temp+= $"Name: {result.Name}, Count: {result.Count}\n";
-            //}
-            //return temp;
 
             var q = from x in _cart.Shoppinglist
                     group x by x.Name into g

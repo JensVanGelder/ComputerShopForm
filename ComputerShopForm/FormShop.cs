@@ -4,15 +4,18 @@ using System.Windows.Forms;
 
 namespace ComputerShopForm
 {
-    public partial class Form1 : Form
+    public partial class FormShop : Form
     {
-        private IProductsRepo productRepo;
+        private IProductsRepo _repo;
+        private IShoppingCart _cart;
 
-        public Form1()
+        public FormShop()
         {
             InitializeComponent();
-            productRepo = new ProductsRepo();
-            var products = productRepo.CreateProductList();
+            _repo = new ProductsRepo();
+            _cart = ShoppingCart.GetShoppingCart();
+
+            var products = _repo.CreateProductList();
             GenerateProductControls(products);
         }
 
@@ -20,7 +23,7 @@ namespace ComputerShopForm
         {
             foreach (IProduct product in products)
             {
-                UserController1 usercontrol = new UserController1
+                UserControlShop usercontrol = new UserControlShop
                 {
                     ProductName = product.Name,
                     ProductPrice = product.Price,
@@ -28,30 +31,21 @@ namespace ComputerShopForm
                     Id = product.Id,
                 };
                 flowLayoutPanel1.Controls.Add(usercontrol);
+                usercontrol.AddToCartButtonClicked += AddToCartClickedInUserControl;
             }
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UserController1 control = new UserController1();
-            List<IProduct> products = control._cart.Shoppinglist;
-
-            string info = "";
-            double total = 0;
-            foreach (var item in products)
-            {
-                total += item.Price;
-                info += $"{item.Name} Price: {item.Price}";
-                info += "\n";
-            }
-            info += $"\nTotal price: {total} ";
-            //MessageBox.Show(info);
             FormShoppingCart cart = new FormShoppingCart();
             cart.Show();
+        }
+
+        private void AddToCartClickedInUserControl(object sender, EventArgs e)
+        {
+            var userControl = sender as UserControlShop;
+            var product = _repo.GetProduct(userControl.ProductName);
+            _cart.AddProductToCart(product);
         }
     }
 }

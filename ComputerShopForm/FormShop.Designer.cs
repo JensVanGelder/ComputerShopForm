@@ -1,7 +1,7 @@
 ﻿
 namespace ComputerShopForm
 {
-    partial class Form1
+    partial class FormShop
     {
         /// <summary>
         /// Required designer variable.
@@ -41,13 +41,12 @@ namespace ComputerShopForm
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(704, 454);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(731, 599);
             this.flowLayoutPanel1.TabIndex = 2;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(617, -1);
+            this.button1.Location = new System.Drawing.Point(617, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -57,22 +56,23 @@ namespace ComputerShopForm
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(617, 29);
+            this.button2.Location = new System.Drawing.Point(616, 50);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FormShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 454);
-            this.Controls.Add(this.button2);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(731, 599);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "Form1";
+            this.Name = "FormShop";
             this.Text = "Form1";
             this.ResumeLayout(false);
 

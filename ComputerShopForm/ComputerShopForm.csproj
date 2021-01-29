@@ -46,18 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CartControl.cs">
+    <Compile Include="UserControlCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CartControl.Designer.cs">
-      <DependentUpon>CartControl.cs</DependentUpon>
+    <Compile Include="UserControlCart.Designer.cs">
+      <DependentUpon>UserControlCart.cs</DependentUpon>
     </Compile>
     <Compile Include="Computer.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormShop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormShop.Designer.cs">
+      <DependentUpon>FormShop.cs</DependentUpon>
     </Compile>
     <Compile Include="FormShoppingCart.cs">
       <SubType>Form</SubType>
@@ -77,18 +77,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShoppingCart.cs" />
-    <Compile Include="UserController1.cs">
+    <Compile Include="UserControlShop.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserController1.Designer.cs">
-      <DependentUpon>UserController1.cs</DependentUpon>
+    <Compile Include="UserControlShop.Designer.cs">
+      <DependentUpon>UserControlShop.cs</DependentUpon>
     </Compile>
     <Compile Include="Workstation.cs" />
-    <EmbeddedResource Include="CartControl.resx">
-      <DependentUpon>CartControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlCart.resx">
+      <DependentUpon>UserControlCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormShop.resx">
+      <DependentUpon>FormShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormShoppingCart.resx">
       <DependentUpon>FormShoppingCart.cs</DependentUpon>
@@ -101,9 +101,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserController1.resx">
-      <DependentUpon>UserController1.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlShop.resx">
+      <DependentUpon>UserControlShop.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

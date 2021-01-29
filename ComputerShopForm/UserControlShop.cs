@@ -3,12 +3,12 @@ using System.Windows.Forms;
 
 namespace ComputerShopForm
 {
-    public partial class UserController1 : UserControl
+    public partial class UserControlShop : UserControl
     {
         public ShoppingCart _cart;
         public IProductsRepo _repo;
 
-        public UserController1()
+        public UserControlShop()
         {
             InitializeComponent();
             _cart = ShoppingCart.GetShoppingCart();
@@ -22,7 +22,7 @@ namespace ComputerShopForm
             get { return lblProductName.Text; }
             set { lblProductName.Text = value; }
         }
-              
+
         public double ProductPrice
         {
             get { return Convert.ToDouble(lblProductPrice.Text); }
@@ -35,7 +35,7 @@ namespace ComputerShopForm
             set { lblProductSummary.Text = value; }
         }
 
-        private string _productImagePath;        
+        private string _productImagePath;
 
         public string ProductImagePath
         {
@@ -59,7 +59,7 @@ namespace ComputerShopForm
         public bool SameDayDelivery
         {
             get { return Convert.ToBoolean(lblSameDayDelivery.Text); }
-            set 
+            set
             {
                 if (ProductStock > 0)
                 {
@@ -69,33 +69,19 @@ namespace ComputerShopForm
                 {
                     lblSameDayDelivery.Text = $"Tijdelijk niet in voorraad";
                 }
-            }             
-                
+            }
         }
 
-        private void UserController1_Load(object sender, EventArgs e)
-        {
-        }
+        public event EventHandler AddToCartButtonClicked;
 
         private void btnAddToShoppingCart_Click(object sender, EventArgs e)
         {
-            var product = _repo.GetProduct(ProductName);
-            _cart.AddProductToCart(product);
+            OnAddToShoppingCartButtonClicked(e);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        protected virtual void OnAddToShoppingCartButtonClicked(EventArgs e)
         {
-
-        }
-
-        private void lblPrice_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            AddToCartButtonClicked?.Invoke(this, e);
         }
     }
 }

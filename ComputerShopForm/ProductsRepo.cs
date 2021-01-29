@@ -11,7 +11,7 @@ namespace ComputerShopForm
 
         public List<IProduct> CreateProductList()
         {
-            const string PATH = @"C:\Users\michi\OneDrive\Pictures\Saved Pictures\";
+            //const string PATH = @"C:\Users\michi\OneDrive\Pictures\Saved Pictures\";
             var products = new List<IProduct>
             {
                 new Laptop ("HP Oblivion III", 1499,"http://placekitten.com/200/300","A good laptop!",50,8,"AsusRock MAXIMUS Portable", "Seagate LKXII","Intel i5 gen2","HP supplied Laptop PSU",17,"No-glare screen",1245),
@@ -29,7 +29,7 @@ namespace ComputerShopForm
         {
             List<IProduct> allProducts = CreateProductList();
 
-            // LAMBDA Expression. Return the first object in which the ID property equals user input
+            // LAMBDA Expression. Return the first object in which the Name property equals user input
             var selectedProduct = allProducts.Where(x => x.Name == name).FirstOrDefault();
 
             return selectedProduct;

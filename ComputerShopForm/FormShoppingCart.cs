@@ -12,51 +12,58 @@ namespace ComputerShopForm
             InitializeComponent();
             _cart = ShoppingCart.GetShoppingCart();
 
-            var q = from x in _cart.Shoppinglist
-                    group x by x.Name into g
-                    let count = g.Count()
-                    orderby count descending
-                    select new { Name = g.Key, Count = count, ID = g.First().Id };
-
-            foreach (var x in q)
+            if (_cart.Shoppinglist != null)
             {
-                double price = 0;
-                string path = "";
-                foreach (var item in _cart.Shoppinglist)
+                var uniqueCart = from product in _cart.Shoppinglist
+                        group product by product.Name into groupProduct
+                        let countUniqueProduct = groupProduct.Count()
+                        orderby countUniqueProduct descending
+                        select new { Name = groupProduct.Key, Count = countUniqueProduct, ID = groupProduct.First().Id };
+
+                foreach (var product in uniqueCart)
                 {
-                    if (item.Name == x.Name)
+                    double price = 0;
+                    string path = "";
+                    foreach (var item in _cart.Shoppinglist)
                     {
-                        path = item.ProductImagePath;
-                        price = item.Price;
+                        if (item.Name == product.Name)
+                        {
+                            path = item.ProductImagePath;
+                            price = item.Price;
+                        }
                     }
+                    UserControlCart cartControl = new UserControlCart
+                    {
+                        PName = product.Name,
+                        Id = product.ID,
+                        Count = product.Count,
+                        ProductImagePath = path,
+                        ProductPrice = price * product.Count,
+                    };
+                    flowLayoutPanel1.Controls.Add(cartControl);
                 }
-                CartControl cartControl = new CartControl
-                {
-                    ProductName = x.Name,
-                    Id = x.ID,
-                    Count = x.Count,
-                    ProductImagePath = path,
-                    ProductPrice = price * x.Count,
-                };
-                flowLayoutPanel1.Controls.Add(cartControl);
+
+                lblTotalPrice.Text = $"Total:           € {_cart.CalculateTax()}";
             }
+            
+        }
 
-            lblTotalPrice.Text = $"Total: € {_cart.CalculatePrice()}";
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            string message = $"your total price is € {_cart.CalculatePrice()}" +
+                $"\nComplete your purchase?";
+            DialogResult dr = MessageBox.Show(message, "Payment Screen", MessageBoxButtons.OKCancel);
+            if (dr == DialogResult.OK)
+            {
+                _cart.ClearCart();
+                MessageBox.Show("Thank you for your purchase");
+                this.Close();
+            }
+        }
 
-            //foreach (IProduct product in _cart.Shoppinglist)
-            //{
-            //    CartControl cartControl = new CartControl
-            //    {
-            //        ProductName = product.Name,
-            //        ProductPrice = product.Price,
-            //        ProductImagePath = product.ProductImagePath,
-            //        Id = product.Id,
+        private void lblTotalPrice_Click(object sender, System.EventArgs e)
+        {
 
-            //    };
-            //    flowLayoutPanel1.Controls.Add(cartControl);
-            //}
-            //CartControl cartControl2 = new CartControl();
-            //label1.Text = cartControl2.CountOccurenceOfValue(5);
         }
     }
 }

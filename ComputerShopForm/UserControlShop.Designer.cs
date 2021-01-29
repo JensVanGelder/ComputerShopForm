@@ -1,7 +1,7 @@
 ﻿
 namespace ComputerShopForm
 {
-    partial class UserController1
+    partial class UserControlShop
     {
         /// <summary> 
         /// Required designer variable.
@@ -57,7 +57,7 @@ namespace ComputerShopForm
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+
             // 
             // lblProductPrice
             // 
@@ -68,7 +68,7 @@ namespace ComputerShopForm
             this.lblProductPrice.Size = new System.Drawing.Size(89, 15);
             this.lblProductPrice.TabIndex = 2;
             this.lblProductPrice.Text = "ProductPrice";
-            this.lblProductPrice.Click += new System.EventHandler(this.lblPrice_Click);
+
             // 
             // lblProductStock
             // 
@@ -103,7 +103,7 @@ namespace ComputerShopForm
             this.lblProductName.Size = new System.Drawing.Size(117, 20);
             this.lblProductName.TabIndex = 5;
             this.lblProductName.Text = "ProductName";
-            this.lblProductName.Click += new System.EventHandler(this.label1_Click);
+
             // 
             // lblProductSummary
             // 
@@ -142,7 +142,7 @@ namespace ComputerShopForm
             this.Controls.Add(this.lblName);
             this.Name = "UserController1";
             this.Size = new System.Drawing.Size(245, 414);
-            this.Load += new System.EventHandler(this.UserController1_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
