@@ -47,71 +47,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILogger.cs" />
-    <Compile Include="JsonLogger.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="FormProductInfo.cs">
+    <Compile Include="Logger\ILogger.cs" />
+    <Compile Include="Logger\JsonLogger.cs" />
+    <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Forms\FormProductInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProductInfo.Designer.cs">
+    <Compile Include="Forms\FormProductInfo.Designer.cs">
       <DependentUpon>FormProductInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="PriceCalculator.cs" />
-    <Compile Include="TxtLogger.cs" />
-    <Compile Include="UserControlCart.cs">
+    <Compile Include="Logger\TxtLogger.cs" />
+    <Compile Include="UserControllers\UserControlCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlCart.Designer.cs">
+    <Compile Include="UserControllers\UserControlCart.Designer.cs">
       <DependentUpon>UserControlCart.cs</DependentUpon>
     </Compile>
     <Compile Include="Computer.cs" />
-    <Compile Include="FormShop.cs">
+    <Compile Include="Forms\FormShop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormShop.Designer.cs">
+    <Compile Include="Forms\FormShop.Designer.cs">
       <DependentUpon>FormShop.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormShoppingCart.cs">
+    <Compile Include="Forms\FormShoppingCart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormShoppingCart.Designer.cs">
+    <Compile Include="Forms\FormShoppingCart.Designer.cs">
       <DependentUpon>FormShoppingCart.cs</DependentUpon>
     </Compile>
     <Compile Include="GamingPc.cs" />
-    <Compile Include="IPriceCalculator.cs" />
-    <Compile Include="IProduct.cs" />
-    <Compile Include="IProductsRepo.cs" />
-    <Compile Include="IShoppingCart.cs" />
+    <Compile Include="Interfaces\IPriceCalculator.cs" />
+    <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Interfaces\IProductsRepo.cs" />
+    <Compile Include="Interfaces\IShoppingCart.cs" />
     <Compile Include="Laptop.cs" />
     <Compile Include="Enums\Performance.cs" />
     <Compile Include="Product.cs" />
-    <Compile Include="ProductsRepo.cs" />
+    <Compile Include="Repos\ProductsRepo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShoppingCart.cs" />
-    <Compile Include="UserControlProductInfo.cs">
+    <Compile Include="UserControllers\UserControlProductInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlProductInfo.Designer.cs">
+    <Compile Include="UserControllers\UserControlProductInfo.Designer.cs">
       <DependentUpon>UserControlProductInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlShop.cs">
+    <Compile Include="UserControllers\UserControlShop.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlShop.Designer.cs">
+    <Compile Include="UserControllers\UserControlShop.Designer.cs">
       <DependentUpon>UserControlShop.cs</DependentUpon>
     </Compile>
     <Compile Include="Workstation.cs" />
-    <EmbeddedResource Include="FormProductInfo.resx">
+    <EmbeddedResource Include="Forms\FormProductInfo.resx">
       <DependentUpon>FormProductInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlCart.resx">
+    <EmbeddedResource Include="UserControllers\UserControlCart.resx">
       <DependentUpon>UserControlCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormShop.resx">
+    <EmbeddedResource Include="Forms\FormShop.resx">
       <DependentUpon>FormShop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormShoppingCart.resx">
+    <EmbeddedResource Include="Forms\FormShoppingCart.resx">
       <DependentUpon>FormShoppingCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -124,10 +124,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControlProductInfo.resx">
+    <EmbeddedResource Include="UserControllers\UserControlProductInfo.resx">
       <DependentUpon>UserControlProductInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlShop.resx">
+    <EmbeddedResource Include="UserControllers\UserControlShop.resx">
       <DependentUpon>UserControlShop.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
