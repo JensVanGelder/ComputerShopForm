@@ -23,5 +23,10 @@
             string add = $"\nRAM IS {Ram}";
             return base.ToString() + add;
         }
+
+        public override string GetThisType()
+        {
+            return "Computer";
+        }
     }
 }

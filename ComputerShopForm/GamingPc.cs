@@ -21,5 +21,10 @@
             string add = $"Has GPU :{GPU}, {fortnite}";
             return base.ToString() + add;
         }
+
+        public override string GetThisType()
+        {
+            return "GamingPc";
+        }
     }
 }

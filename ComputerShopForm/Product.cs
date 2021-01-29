@@ -30,5 +30,10 @@
         {
             return $"Product:{Name} - ({ProductSummary}) Price: {Price}, Stock: {Stock}";
         }
+
+        public virtual string GetThisType()
+        {
+            return "";
+        }
     }
 }

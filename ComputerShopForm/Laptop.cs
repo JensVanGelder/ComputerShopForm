@@ -19,5 +19,10 @@
             string add = $"Your laptop has a screensize of {ScreenSize} inch.\n A nice {ScreenType} and weighs only {WeightInGrams} grams.";
             return base.ToString() + add;
         }
+
+        public override string GetThisType()
+        {
+            return "Laptop";
+        }
     }
 }
