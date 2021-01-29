@@ -2,7 +2,7 @@
 {
     public interface IProduct
     {
-        int Id { get; set; }
+        int Id { get; }
         string Name { get; set; }
         double Price { get; set; }
         string ProductSummary { get; set; }
