@@ -42,7 +42,7 @@ namespace ComputerShopForm
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 21);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(542, 415);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(542, 547);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // button1

@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Linq;
-
+using System.Windows.Forms;
 
 namespace ComputerShopForm
 {
@@ -36,11 +33,11 @@ namespace ComputerShopForm
                     ProductImagePath = product.ProductImagePath,
                     Id = product.Id,
                 };
-                
+
                 usercontrol.AddToCartButtonClicked += AddToCartClickedInUserControl;
                 _controls.Add(usercontrol);
             }
-            flowLayoutPanel1.Controls.AddRange( _controls.ToArray());
+            flowLayoutPanel1.Controls.AddRange(_controls.ToArray());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -89,7 +86,6 @@ namespace ComputerShopForm
             }
             //var selectedControls = _controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y => y.Visible = true).ToList();
             //_controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y=>y.Visible=true);
-
         }
     }
 }

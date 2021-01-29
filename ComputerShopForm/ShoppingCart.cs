@@ -1,10 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ComputerShopForm
 {
+    [Serializable]
     public class ShoppingCart : IShoppingCart
     {
-        public List<IProduct> Shoppinglist;
+        public string CartInfo
+        {
+            get { return $"Order Placed at: {DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")}, Total Price: € {CalculatePrice()}"; }
+        }
+
+        public List<IProduct> Shoppinglist { get; set; }
+
         public static ShoppingCart _cart;
         private IPriceCalculator _priceCalculator;
 
@@ -12,7 +20,6 @@ namespace ComputerShopForm
         {
             Shoppinglist = new List<IProduct>();
             _priceCalculator = new PriceCalculator();
-
         }
 
         public void AddProductToCart(IProduct product)
@@ -38,9 +45,10 @@ namespace ComputerShopForm
         {
             Shoppinglist.Clear();
         }
+
         public double CalculatePrice()
         {
-            return _priceCalculator.CalculatePrice(Shoppinglist)+ _priceCalculator.CalculateWithTax(Shoppinglist);
+            return _priceCalculator.CalculatePrice(Shoppinglist) + _priceCalculator.CalculateWithTax(Shoppinglist);
         }
     }
 }
