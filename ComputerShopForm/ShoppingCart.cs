@@ -42,7 +42,7 @@ namespace ComputerShopForm
             return price;
         }
 
-        public double CalculateTax()
+        public double CalculateWithTax()
         {
             double tax = 1.21;
             return CalculatePrice()  *tax;

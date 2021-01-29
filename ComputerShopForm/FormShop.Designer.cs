@@ -32,16 +32,17 @@ namespace ComputerShopForm
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 21);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(731, 599);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(542, 415);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // button1
@@ -62,6 +63,25 @@ namespace ComputerShopForm
             this.button2.TabIndex = 4;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(617, 317);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Showall";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(591, 98);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // FormShop
             // 
@@ -69,12 +89,15 @@ namespace ComputerShopForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(731, 599);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FormShop";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -82,6 +105,8 @@ namespace ComputerShopForm
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

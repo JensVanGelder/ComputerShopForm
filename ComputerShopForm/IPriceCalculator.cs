@@ -4,6 +4,6 @@
     {
         double CalculatePrice();
 
-        double CalculateTax();
+        double CalculateWithTax();
     }
 }

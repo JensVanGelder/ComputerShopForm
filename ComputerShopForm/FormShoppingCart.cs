@@ -43,7 +43,7 @@ namespace ComputerShopForm
                     flowLayoutPanel1.Controls.Add(cartControl);
                 }
 
-                lblTotalPrice.Text = $"Total:           € {_cart.CalculateTax()}";
+                lblTotalPrice.Text = $"Total:           € {_cart.CalculateWithTax()}";
             }
             
         }

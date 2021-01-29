@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Linq;
+
 
 namespace ComputerShopForm
 {
@@ -8,12 +12,14 @@ namespace ComputerShopForm
     {
         private IProductsRepo _repo;
         private IShoppingCart _cart;
+        private IList<UserControlShop> _controls;
 
         public FormShop()
         {
             InitializeComponent();
             _repo = new ProductsRepo();
             _cart = ShoppingCart.GetShoppingCart();
+            _controls = new List<UserControlShop>();
 
             var products = _repo.CreateProductList();
             GenerateProductControls(products);
@@ -30,9 +36,11 @@ namespace ComputerShopForm
                     ProductImagePath = product.ProductImagePath,
                     Id = product.Id,
                 };
-                flowLayoutPanel1.Controls.Add(usercontrol);
+                
                 usercontrol.AddToCartButtonClicked += AddToCartClickedInUserControl;
+                _controls.Add(usercontrol);
             }
+            flowLayoutPanel1.Controls.AddRange( _controls.ToArray());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +54,42 @@ namespace ComputerShopForm
             var userControl = sender as UserControlShop;
             var product = _repo.GetProduct(userControl.ProductName);
             _cart.AddProductToCart(product);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (UserControlShop control in flowLayoutPanel1.Controls)
+            {
+                if (control.ProductName == "HP Oblivion III")
+                {
+                    control.Visible = false;
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach (UserControlShop control in flowLayoutPanel1.Controls)
+            {
+                control.Visible = true;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            foreach (UserControlShop control in flowLayoutPanel1.Controls)
+            {
+                control.Visible = false;
+                string prodname = control.ProductName.ToLower();
+                string input = textBox1.Text.ToLower();
+                if (prodname.Contains(input))
+                {
+                    control.Visible = true;
+                }
+            }
+            //var selectedControls = _controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y => y.Visible = true).ToList();
+            //_controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y=>y.Visible=true);
+
         }
     }
 }
