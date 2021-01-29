@@ -37,7 +37,11 @@ namespace ComputerShopForm
             this.lblProductName = new System.Windows.Forms.Label();
             this.lblProductSummary = new System.Windows.Forms.Label();
             this.lblSameDayDelivery = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnShowInfoForm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblName
@@ -54,10 +58,9 @@ namespace ComputerShopForm
             this.pictureBox1.Location = new System.Drawing.Point(28, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(188, 187);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-
             // 
             // lblProductPrice
             // 
@@ -68,7 +71,6 @@ namespace ComputerShopForm
             this.lblProductPrice.Size = new System.Drawing.Size(89, 15);
             this.lblProductPrice.TabIndex = 2;
             this.lblProductPrice.Text = "ProductPrice";
-
             // 
             // lblProductStock
             // 
@@ -103,7 +105,6 @@ namespace ComputerShopForm
             this.lblProductName.Size = new System.Drawing.Size(117, 20);
             this.lblProductName.TabIndex = 5;
             this.lblProductName.Text = "ProductName";
-
             // 
             // lblProductSummary
             // 
@@ -127,7 +128,37 @@ namespace ComputerShopForm
             this.lblSameDayDelivery.TabIndex = 7;
             this.lblSameDayDelivery.Text = "SameDayDelivery";
             // 
-            // UserController1
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnShowInfoForm);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(239, 411);
+            this.panel1.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(-3, -3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(245, 414);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnShowInfoForm
+            // 
+            this.btnShowInfoForm.Location = new System.Drawing.Point(160, 231);
+            this.btnShowInfoForm.Name = "btnShowInfoForm";
+            this.btnShowInfoForm.Size = new System.Drawing.Size(75, 23);
+            this.btnShowInfoForm.TabIndex = 1;
+            this.btnShowInfoForm.Text = "Show info";
+            this.btnShowInfoForm.UseVisualStyleBackColor = true;
+            this.btnShowInfoForm.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // UserControlShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,10 +171,11 @@ namespace ComputerShopForm
             this.Controls.Add(this.lblProductPrice);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblName);
-            this.Name = "UserController1";
+            this.Controls.Add(this.panel1);
+            this.Name = "UserControlShop";
             this.Size = new System.Drawing.Size(245, 414);
-
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +191,8 @@ namespace ComputerShopForm
         private System.Windows.Forms.Label lblProductName;
         private System.Windows.Forms.Label lblProductSummary;
         private System.Windows.Forms.Label lblSameDayDelivery;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnShowInfoForm;
     }
 }

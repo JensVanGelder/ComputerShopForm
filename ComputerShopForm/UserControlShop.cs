@@ -7,6 +7,7 @@ namespace ComputerShopForm
     {
         public ShoppingCart _cart;
         public IProductsRepo _repo;
+        public IProduct _product;
 
         public UserControlShop()
         {
@@ -82,6 +83,28 @@ namespace ComputerShopForm
         protected virtual void OnAddToShoppingCartButtonClicked(EventArgs e)
         {
             AddToCartButtonClicked?.Invoke(this, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var productforinfo = _repo.GetProduct(ProductName);
+            MessageBox.Show(productforinfo.Name);
+            FormProductInfo productinfoform = new FormProductInfo(productforinfo);
+            productinfoform.Show();
+
+            //foreach (IProduct _product in _repo.CreateProductList())
+            //{
+            //    if (_product.Name == this.Name)
+            //    {
+            //    }
+            //}
+
+            //productinfoform.FormInfoProduct = _repo.GetProduct(ProductName);
         }
     }
 }
