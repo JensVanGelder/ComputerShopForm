@@ -12,6 +12,7 @@ namespace ComputerShopForm
         public FormProductInfo(IProduct product)
         {
             InitializeComponent();
+            this.Text = product.Name;
             _repo = new ProductsRepo();
             _productinfolist = _repo.CreateProductList();
             SetData(product);

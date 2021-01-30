@@ -91,5 +91,15 @@ namespace ComputerShopForm
             //var selectedControls = _controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y => y.Visible = true).ToList();
             //_controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y=>y.Visible=true);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
