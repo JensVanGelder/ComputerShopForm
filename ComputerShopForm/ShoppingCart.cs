@@ -27,6 +27,18 @@ namespace ComputerShopForm
             Shoppinglist.Add(product);
         }
 
+        public void RemoveProductFromCart(string productName)
+        {
+            foreach (var item in _cart.Shoppinglist)
+            {
+                if (item.Name == productName)
+                {
+                    _cart.Shoppinglist.Remove(item);
+                    break;
+                }
+            }
+        }
+
         public static ShoppingCart GetShoppingCart()
         {
             if (_cart == null)
