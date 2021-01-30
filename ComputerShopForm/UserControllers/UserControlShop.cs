@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ComputerShopForm
@@ -14,6 +15,7 @@ namespace ComputerShopForm
             InitializeComponent();
             _cart = ShoppingCart.GetShoppingCart();
             _repo = new ProductsRepo();
+
         }
 
         public int Id { get; set; }
@@ -51,10 +53,22 @@ namespace ComputerShopForm
             }
         }
 
+        private int _productStock;
+
         public int ProductStock
         {
-            get { return Convert.ToInt32(lblProductStock.Text); }
-            set { lblProductStock.Text = $"{value}"; }
+            get { return _productStock; }
+            set
+            {
+                if (value <= 0)
+                {
+                    btnAddToShoppingCart.Enabled = false;
+                    btnAddToShoppingCart.BackColor = Color.Gray;
+                    btnAddToShoppingCart.Text = "OUT";
+                }
+                _productStock = value;
+                lblProductStock.Text = $"Stock: {value}";
+            }
         }
 
         public bool SameDayDelivery
@@ -90,21 +104,21 @@ namespace ComputerShopForm
             MessageBox.Show("Test");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void lblProductName_Click(object sender, EventArgs e)
         {
             var productforinfo = _repo.GetProduct(ProductName);
-            MessageBox.Show(productforinfo.Name);
             FormProductInfo productinfoform = new FormProductInfo(productforinfo);
             productinfoform.Show();
+        }
 
-            //foreach (IProduct _product in _repo.CreateProductList())
-            //{
-            //    if (_product.Name == this.Name)
-            //    {
-            //    }
-            //}
+        private void lblProductName_MouseHover(object sender, EventArgs e)
+        {
+            lblProductName.ForeColor = Color.DarkBlue;
+        }
 
-            //productinfoform.FormInfoProduct = _repo.GetProduct(ProductName);
+        private void lblProductName_MouseLeave(object sender, EventArgs e)
+        {
+            lblProductName.ForeColor = Color.Blue;
         }
     }
 }

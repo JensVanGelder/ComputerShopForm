@@ -10,16 +10,18 @@ namespace ComputerShopForm
         private IProductsRepo _repo;
         private IShoppingCart _cart;
         private IList<UserControlShop> _controls;
+        public List<IProduct> productList;
 
         public FormShop()
         {
             InitializeComponent();
+            button1.FlatAppearance.BorderSize = 0;
             _repo = new ProductsRepo();
             _cart = ShoppingCart.GetShoppingCart();
             _controls = new List<UserControlShop>();
 
-            var products = _repo.CreateProductList();
-            GenerateProductControls(products);
+            productList = _repo.CreateProductList();
+            GenerateProductControls(productList);
         }
 
         private void GenerateProductControls(IEnumerable<IProduct> products)
@@ -31,6 +33,8 @@ namespace ComputerShopForm
                     ProductName = product.Name,
                     ProductPrice = product.Price,
                     ProductImagePath = product.ProductImagePath,
+                    ProductSummary = product.ProductSummary,
+                    ProductStock = product.Stock,
                     Id = product.Id,
                 };
 
