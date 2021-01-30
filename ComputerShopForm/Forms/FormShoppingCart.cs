@@ -7,8 +7,8 @@ namespace ComputerShopForm
 {
     public partial class FormShoppingCart : Form
     {
-        public ShoppingCart _cart;
-        public ILogger _logger;
+        private ShoppingCart _cart;
+        private ILogger _logger;
 
         public FormShoppingCart()
         {

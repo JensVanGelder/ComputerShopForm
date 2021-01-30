@@ -32,5 +32,16 @@ namespace ComputerShopForm.Test
             //ASSERT
             Assert.AreEqual(4.0, priceofcart);
         }
+
+        [Test]
+        public void ClearCart_WhenCalled_ShoppinglistIsEmpty()
+        {
+            testcart.AddProductToCart(testproduct);
+            testcart.AddProductToCart(testproduct);
+
+            testcart.ClearCart();
+
+            Assert.AreEqual(0, testcart.Shoppinglist.Count);
+        }
     }
 }

@@ -52,23 +52,6 @@ namespace ComputerShopForm
             }
         }
 
-        public string CountOccurenceOfValue(int valueToFind)
-        {
-            string temp = "";
-
-            var q = from x in _cart.Shoppinglist
-                    group x by x.Name into g
-                    let count = g.Count()
-                    orderby count descending
-                    select new { Name = g.Key, Count = count, ID = g.First().Id };
-
-            foreach (var x in q)
-            {
-                temp += ("\n Name: " + x.Name + " ID: " + x.ID + "Count: " + x.Count);
-            }
-            return temp;
-        }
-
         public event EventHandler RemoveItemButtonClicked;
 
         private void button1_Click(object sender, EventArgs e)
