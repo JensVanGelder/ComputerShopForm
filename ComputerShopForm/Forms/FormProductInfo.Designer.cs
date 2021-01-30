@@ -29,6 +29,7 @@ namespace ComputerShopForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductInfo));
             this.label1 = new System.Windows.Forms.Label();
             this.txtboxInfo = new System.Windows.Forms.TextBox();
             this.txtBoxDescription = new System.Windows.Forms.TextBox();
@@ -152,6 +153,7 @@ namespace ComputerShopForm
             this.pictureBoxProductInfo.Location = new System.Drawing.Point(17, 37);
             this.pictureBoxProductInfo.Name = "pictureBoxProductInfo";
             this.pictureBoxProductInfo.Size = new System.Drawing.Size(176, 198);
+            this.pictureBoxProductInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxProductInfo.TabIndex = 20;
             this.pictureBoxProductInfo.TabStop = false;
             // 
@@ -182,7 +184,7 @@ namespace ComputerShopForm
             this.txtBoxWeight.ReadOnly = true;
             this.txtBoxWeight.Size = new System.Drawing.Size(153, 21);
             this.txtBoxWeight.TabIndex = 24;
-            this.txtBoxWeight.Text = "Not Available";
+            this.txtBoxWeight.Text = "N/A";
             // 
             // label3
             // 
@@ -202,6 +204,7 @@ namespace ComputerShopForm
             this.txtBoxScreenType.ReadOnly = true;
             this.txtBoxScreenType.Size = new System.Drawing.Size(153, 21);
             this.txtBoxScreenType.TabIndex = 26;
+            this.txtBoxScreenType.Text = "N/A";
             // 
             // label5
             // 
@@ -365,6 +368,7 @@ namespace ComputerShopForm
             this.Controls.Add(this.lblPriceDontUse);
             this.Controls.Add(this.lblNameDontUse);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "FormProductInfo";
             this.Text = "FormProductInfo";

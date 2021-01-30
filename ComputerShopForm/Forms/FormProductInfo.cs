@@ -22,8 +22,7 @@ namespace ComputerShopForm
         {
             AddComputerInfo(product);
             AddTypeInfo(product);
-
-            //txtboxInfo.Text = product.ToString();
+            txtboxInfo.Text = product.ToString();
         }
 
         public void AddComputerInfo(IProduct product)
@@ -31,7 +30,12 @@ namespace ComputerShopForm
             var computer = product as Computer;
             pictureBoxProductInfo.Load(computer.ProductImagePath);
             txtBoxName.Text = computer.Name;
+            txtBoxRam.Text = Convert.ToString(computer.Ram);
+            txtBoxMoBo.Text = computer.MoBo;
             txtBoxPsu.Text = computer.PSU;
+            txtBoxCpu.Text = computer.CPU;
+            txtBoxHdd.Text = computer.HDD;
+            txtBoxStock.Text = Convert.ToString(computer.Stock);
             txtBoxPrice.Text = Convert.ToString(product.Price);
             txtBoxDescription.Text = product.ProductSummary;
             txtBoxId.Text = Convert.ToString(product.Id);
@@ -42,9 +46,6 @@ namespace ComputerShopForm
             if (product is GamingPc)
             {
                 var temp = product as GamingPc;
-                txtBoxCpu.Text = temp.CPU;
-                txtBoxHdd.Text = temp.HDD;
-                txtBoxMoBo.Text = temp.MoBo;
             }
             else if (product is Workstation)
             {
