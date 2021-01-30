@@ -24,7 +24,11 @@ namespace ComputerShopForm
 
         public void AddProductToCart(IProduct product)
         {
-            Shoppinglist.Add(product);
+            if (product.Stock > 0)
+            {
+                Shoppinglist.Add(product);
+            }
+            
         }
 
         public static ShoppingCart GetShoppingCart()
