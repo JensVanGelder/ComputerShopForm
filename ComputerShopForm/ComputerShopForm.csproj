@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FormLanding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLanding.Designer.cs">
+      <DependentUpon>FormLanding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logger\ILogger.cs" />
     <Compile Include="Logger\JsonLogger.cs" />
     <Compile Include="Logger\Logger.cs" />
@@ -102,6 +108,9 @@
       <DependentUpon>UserControlShop.cs</DependentUpon>
     </Compile>
     <Compile Include="Workstation.cs" />
+    <EmbeddedResource Include="Forms\FormLanding.resx">
+      <DependentUpon>FormLanding.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormProductInfo.resx">
       <DependentUpon>FormProductInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +160,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\blueball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usr1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lck.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
