@@ -73,6 +73,7 @@ namespace ComputerShopForm
             // 
             // txtboxInfo
             // 
+            this.txtboxInfo.BackColor = System.Drawing.SystemColors.Window;
             this.txtboxInfo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxInfo.Location = new System.Drawing.Point(105, 415);
             this.txtboxInfo.Multiline = true;
@@ -83,6 +84,7 @@ namespace ComputerShopForm
             // 
             // txtBoxDescription
             // 
+            this.txtBoxDescription.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxDescription.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDescription.Location = new System.Drawing.Point(301, 88);
             this.txtBoxDescription.Name = "txtBoxDescription";
@@ -92,6 +94,7 @@ namespace ComputerShopForm
             // 
             // txtBoxPrice
             // 
+            this.txtBoxPrice.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxPrice.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPrice.Location = new System.Drawing.Point(301, 62);
             this.txtBoxPrice.Name = "txtBoxPrice";
@@ -101,6 +104,7 @@ namespace ComputerShopForm
             // 
             // txtBoxName
             // 
+            this.txtBoxName.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxName.Location = new System.Drawing.Point(301, 35);
             this.txtBoxName.Name = "txtBoxName";
@@ -159,6 +163,7 @@ namespace ComputerShopForm
             // 
             // txtBoxStock
             // 
+            this.txtBoxStock.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxStock.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxStock.Location = new System.Drawing.Point(301, 116);
             this.txtBoxStock.Name = "txtBoxStock";
@@ -178,6 +183,7 @@ namespace ComputerShopForm
             // 
             // txtBoxWeight
             // 
+            this.txtBoxWeight.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxWeight.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxWeight.Location = new System.Drawing.Point(301, 193);
             this.txtBoxWeight.Name = "txtBoxWeight";
@@ -198,6 +204,7 @@ namespace ComputerShopForm
             // 
             // txtBoxScreenType
             // 
+            this.txtBoxScreenType.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxScreenType.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxScreenType.Location = new System.Drawing.Point(301, 219);
             this.txtBoxScreenType.Name = "txtBoxScreenType";
@@ -218,6 +225,7 @@ namespace ComputerShopForm
             // 
             // txtBoxPsu
             // 
+            this.txtBoxPsu.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxPsu.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPsu.Location = new System.Drawing.Point(301, 334);
             this.txtBoxPsu.Name = "txtBoxPsu";
@@ -237,6 +245,7 @@ namespace ComputerShopForm
             // 
             // txtBoxCpu
             // 
+            this.txtBoxCpu.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxCpu.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCpu.Location = new System.Drawing.Point(301, 306);
             this.txtBoxCpu.Name = "txtBoxCpu";
@@ -246,6 +255,7 @@ namespace ComputerShopForm
             // 
             // txtBoxHdd
             // 
+            this.txtBoxHdd.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxHdd.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxHdd.Location = new System.Drawing.Point(301, 280);
             this.txtBoxHdd.Name = "txtBoxHdd";
@@ -255,6 +265,7 @@ namespace ComputerShopForm
             // 
             // txtBoxMoBo
             // 
+            this.txtBoxMoBo.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxMoBo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxMoBo.Location = new System.Drawing.Point(301, 253);
             this.txtBoxMoBo.Name = "txtBoxMoBo";
@@ -294,6 +305,7 @@ namespace ComputerShopForm
             // 
             // txtBoxRam
             // 
+            this.txtBoxRam.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxRam.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxRam.Location = new System.Drawing.Point(301, 360);
             this.txtBoxRam.Name = "txtBoxRam";
@@ -313,6 +325,7 @@ namespace ComputerShopForm
             // 
             // txtBoxId
             // 
+            this.txtBoxId.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxId.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxId.Location = new System.Drawing.Point(105, 389);
             this.txtBoxId.Name = "txtBoxId";
