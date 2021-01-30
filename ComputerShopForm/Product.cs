@@ -14,7 +14,23 @@
         public string Name { get; set; }
         public string ProductImagePath { get; set; }
         public string ProductSummary { get; set; }
-        public int Stock { get; set; }
+
+        private int _stock;
+        public int Stock 
+        {
+            get { return _stock ; }
+            set 
+                {
+                    if (value < 0)
+                    {
+                        _stock = 0;
+                    }
+                    else
+                    {
+                        _stock = value;
+                    }
+                } 
+        }
 
         public Product(string name, double price, string imagepath, string summary, int stock)
         {

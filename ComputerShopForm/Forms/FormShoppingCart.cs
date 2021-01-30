@@ -88,14 +88,7 @@ namespace ComputerShopForm
         private void RemoveItemButtonClicked(object sender, EventArgs e)
         {
             var userControl = sender as UserControlCart;
-            foreach (var item in _cart.Shoppinglist)
-            {
-                if (item.Name == userControl.PName)
-                {
-                    _cart.Shoppinglist.Remove(item);
-                    break;
-                }
-            }
+            _cart.RemoveProductFromCart(userControl.PName);
             flowLayoutPanel1.Controls.Clear();
             CreateCombinedShoppingList();
         }
