@@ -4,7 +4,7 @@ namespace ComputerShopForm.Test
 {
     internal class ProductStockTest
     {
-        public Product testproduct;        
+        public Product testproduct;
         public ShoppingCart testcart;
 
         [SetUp]
@@ -12,11 +12,10 @@ namespace ComputerShopForm.Test
         {
             testcart = ShoppingCart.GetShoppingCart();
         }
-               
-        [TestCase(8, 1)]
-        [TestCase(0,0)]
-        [TestCase(-5, 0)]
 
+        [TestCase(8, 1)]
+        [TestCase(0, 0)]
+        [TestCase(-5, 0)]
         public void AddProductToCart_WhenCalledWithGivenStock_ThenCheckIfProductWillIsAddedToCart(int stock, int expectedResult)
         {
             //ARRANGE
@@ -31,6 +30,5 @@ namespace ComputerShopForm.Test
 
             Assert.AreEqual(expectedResult, testcart.Shoppinglist.Count);
         }
-
     }
 }

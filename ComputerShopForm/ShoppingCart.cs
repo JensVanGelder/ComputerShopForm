@@ -28,7 +28,6 @@ namespace ComputerShopForm
             {
                 Shoppinglist.Add(product);
             }
-            
         }
 
         public void RemoveProductFromCart(string productName)
