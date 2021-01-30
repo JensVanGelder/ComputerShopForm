@@ -63,11 +63,12 @@ namespace ComputerShopForm
             // lblProductPrice
             // 
             this.lblProductPrice.AutoSize = true;
-            this.lblProductPrice.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductPrice.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblProductPrice.Location = new System.Drawing.Point(2, 270);
             this.lblProductPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProductPrice.Name = "lblProductPrice";
-            this.lblProductPrice.Size = new System.Drawing.Size(91, 16);
+            this.lblProductPrice.Size = new System.Drawing.Size(111, 18);
             this.lblProductPrice.TabIndex = 2;
             this.lblProductPrice.Text = "ProductPrice";
             // 
@@ -88,14 +89,14 @@ namespace ComputerShopForm
             this.btnAddToShoppingCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddToShoppingCart.FlatAppearance.BorderSize = 0;
             this.btnAddToShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToShoppingCart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToShoppingCart.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddToShoppingCart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddToShoppingCart.Location = new System.Drawing.Point(117, 270);
             this.btnAddToShoppingCart.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAddToShoppingCart.Name = "btnAddToShoppingCart";
-            this.btnAddToShoppingCart.Size = new System.Drawing.Size(44, 35);
+            this.btnAddToShoppingCart.Size = new System.Drawing.Size(44, 32);
             this.btnAddToShoppingCart.TabIndex = 4;
-            this.btnAddToShoppingCart.Text = "ADD";
+            this.btnAddToShoppingCart.Text = "+";
             this.btnAddToShoppingCart.UseVisualStyleBackColor = false;
             this.btnAddToShoppingCart.Click += new System.EventHandler(this.btnAddToShoppingCart_Click);
             // 

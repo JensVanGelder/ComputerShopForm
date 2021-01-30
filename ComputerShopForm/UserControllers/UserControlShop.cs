@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace ComputerShopForm
@@ -15,7 +16,6 @@ namespace ComputerShopForm
             InitializeComponent();
             _cart = ShoppingCart.GetShoppingCart();
             _repo = new ProductsRepo();
-
         }
 
         public int Id { get; set; }
@@ -29,7 +29,11 @@ namespace ComputerShopForm
         public double ProductPrice
         {
             get { return Convert.ToDouble(lblProductPrice.Text); }
-            set { lblProductPrice.Text = $"{value},00 EUR"; }
+            set
+            {
+                CultureInfo be = new CultureInfo("en-FR");
+                lblProductPrice.Text = value.ToString("C", be);
+            }
         }
 
         public string ProductSummary
@@ -62,9 +66,8 @@ namespace ComputerShopForm
             {
                 if (value <= 0)
                 {
-                    btnAddToShoppingCart.Enabled = false;
                     btnAddToShoppingCart.BackColor = Color.Gray;
-                    btnAddToShoppingCart.Text = "OUT";
+                    btnAddToShoppingCart.Enabled = false;
                 }
                 _productStock = value;
                 lblProductStock.Text = $"Stock: {value}";
@@ -82,6 +85,7 @@ namespace ComputerShopForm
                 }
                 else
                 {
+                    lblSameDayDelivery.ForeColor = Color.FromArgb(203, 0, 0);
                     lblSameDayDelivery.Text = $"Tijdelijk niet in voorraad";
                 }
             }

@@ -35,6 +35,7 @@ namespace ComputerShopForm
                     ProductImagePath = product.ProductImagePath,
                     ProductSummary = product.ProductSummary,
                     ProductStock = product.Stock,
+                    SameDayDelivery = true,
                     Id = product.Id,
                 };
 
