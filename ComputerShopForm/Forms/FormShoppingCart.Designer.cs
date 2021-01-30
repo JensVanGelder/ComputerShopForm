@@ -113,7 +113,7 @@ namespace ComputerShopForm
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(522, 20);
             this.lblTotalPrice.TabIndex = 5;
-            this.lblTotalPrice.Text = "Total:        ";
+            this.lblTotalPrice.Text = "Total:                  ";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel2

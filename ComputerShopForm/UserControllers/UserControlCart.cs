@@ -68,5 +68,17 @@ namespace ComputerShopForm
             }
             return temp;
         }
+
+        public event EventHandler RemoveItemButtonClicked;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OnRemoveItemButtonClicked(e);
+        }
+
+        protected virtual void OnRemoveItemButtonClicked(EventArgs e)
+        {
+            RemoveItemButtonClicked?.Invoke(this, e);
+        }
     }
 }

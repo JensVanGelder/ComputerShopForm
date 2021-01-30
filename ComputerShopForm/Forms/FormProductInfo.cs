@@ -6,7 +6,7 @@ namespace ComputerShopForm
 {
     public partial class FormProductInfo : Form
     {
-        private IProductsRepo _repo;
+        private readonly IProductsRepo _repo;
         public List<IProduct> _productinfolist;
 
         public FormProductInfo(IProduct product)
@@ -19,14 +19,25 @@ namespace ComputerShopForm
 
         public void SetData(IProduct product)
         {
+            AddComputerInfo(product);
+            AddTypeInfo(product);
+
+            //txtboxInfo.Text = product.ToString();
+        }
+
+        public void AddComputerInfo(IProduct product)
+        {
             var computer = product as Computer;
-            pictureBoxProductInfo.Load(product.ProductImagePath);
-            txtBoxName.Text = product.Name;
+            pictureBoxProductInfo.Load(computer.ProductImagePath);
+            txtBoxName.Text = computer.Name;
             txtBoxPsu.Text = computer.PSU;
             txtBoxPrice.Text = Convert.ToString(product.Price);
             txtBoxDescription.Text = product.ProductSummary;
             txtBoxId.Text = Convert.ToString(product.Id);
+        }
 
+        public void AddTypeInfo(IProduct product)
+        {
             if (product is GamingPc)
             {
                 var temp = product as GamingPc;
@@ -42,10 +53,8 @@ namespace ComputerShopForm
             {
                 var temp = product as Laptop;
                 txtBoxScreenType.Text = temp.ScreenType;
-                txtBoxWeight.Text = Convert.ToString(temp.WeightInGrams);
+                txtBoxWeight.Text = $"{Convert.ToString(temp.WeightInGrams)} grams";
             }
-
-            //txtboxInfo.Text = product.ToString();
         }
     }
 }

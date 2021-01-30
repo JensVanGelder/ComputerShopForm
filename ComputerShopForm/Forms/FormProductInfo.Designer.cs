@@ -171,6 +171,7 @@ namespace ComputerShopForm
             this.txtBoxWeight.ReadOnly = true;
             this.txtBoxWeight.Size = new System.Drawing.Size(153, 20);
             this.txtBoxWeight.TabIndex = 24;
+            this.txtBoxWeight.Text = "Not Available";
             // 
             // label3
             // 

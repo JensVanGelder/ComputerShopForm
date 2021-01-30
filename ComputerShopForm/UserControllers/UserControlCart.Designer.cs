@@ -78,12 +78,13 @@ namespace ComputerShopForm
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(442, 29);
+            this.button1.Location = new System.Drawing.Point(444, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Remove";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblCount
             // 
