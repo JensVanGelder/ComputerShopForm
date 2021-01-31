@@ -2,17 +2,17 @@
 {
     public class Workstation : Computer
     {
-        public string Raidtype { get; set; }
+        public string RaidType { get; set; }
 
-        public Workstation(string name, double price, string imagepath, string description, int stock, int ram, string mobo, string hdd, string cpu, string psu, string raidtype)
+        public Workstation(string name, double price, string imagepath, string description, int stock, int ram, string mobo, string hdd, string cpu, string psu, string raidType)
                : base(name, price, imagepath, description, stock, ram, mobo, hdd, cpu, psu)
         {
-            Raidtype = raidtype;
+            RaidType = raidType;
         }
 
         public override string ToString()
         {
-            string add = $"Your workstation is equipped with {Raidtype}";
+            string add = $"Your workstation is equipped with {RaidType}";
             return base.ToString() + add;
         }
     }

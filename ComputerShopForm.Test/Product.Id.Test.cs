@@ -4,7 +4,7 @@ namespace ComputerShopForm.Test
 {
     public class ProductIdTest
     {
-        public Product testproduct;
+        private Product _testproduct;
 
         [SetUp]
         public void Setup()

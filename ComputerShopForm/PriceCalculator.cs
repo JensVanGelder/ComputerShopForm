@@ -1,24 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace ComputerShopForm
 {
     internal class PriceCalculator : IPriceCalculator
     {
+        private const double TAX = 0.21;
+
         public double CalculatePrice(List<IProduct> shoppinglist)
         {
-            double price = new double();
-            foreach (IProduct product in shoppinglist)
-            {
-                price += product.Price;
-            }
-
-            return price;
+            return shoppinglist.Sum(product => product.Price);
         }
 
         public double CalculateWithTax(List<IProduct> shoppinglist)
         {
-            double tax = 0.21;
-            return CalculatePrice(shoppinglist) * tax;
+            return CalculatePrice(shoppinglist) * TAX;
         }
     }
 }

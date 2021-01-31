@@ -4,13 +4,13 @@ namespace ComputerShopForm.Test
 {
     internal class ProductStockTest
     {
-        public Product testproduct;
-        public ShoppingCart testcart;
+        private Product _testproduct;
+        private ShoppingCart _testcart;
 
         [SetUp]
         public void Setup()
         {
-            testcart = ShoppingCart.GetShoppingCart();
+            _testcart = ShoppingCart.GetShoppingCart();
         }
 
         [TestCase(8, 1)]
@@ -19,16 +19,19 @@ namespace ComputerShopForm.Test
         public void AddProductToCart_WhenCalledWithGivenStock_ThenCheckIfProductWillIsAddedToCart(int stock, int expectedResult)
         {
             //ARRANGE
-            testcart.ClearCart();
-            testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 0, 1, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
-            testproduct.Stock = stock;
+            _testcart.ClearCart();
+            _testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 0, 1,
+                "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true)
+            {
+                Stock = stock
+            };
 
             //ACT
-            testcart.AddProductToCart(testproduct);
+            _testcart.AddProductToCart(_testproduct);
 
             //ASSERT
 
-            Assert.AreEqual(expectedResult, testcart.Shoppinglist.Count);
+            Assert.AreEqual(expectedResult, _testcart.Shoppinglist.Count);
         }
     }
 }
