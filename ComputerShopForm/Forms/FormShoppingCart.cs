@@ -20,13 +20,14 @@ namespace ComputerShopForm
 
         public void CreateCombinedShoppingList()
         {
-            if (_cart.Shoppinglist != null)
+            if (_cart.ShoppingList != null)
             {
                 button1.Visible = false;
-                if (_cart.Shoppinglist.Count != 0)
+
+                if (_cart.ShoppingList.Count != 0)
                 {
                     button1.Visible = true;
-                    var uniqueCart = from product in _cart.Shoppinglist
+                    var uniqueCart = from product in _cart.ShoppingList
                                      group product by product.Name into groupProduct
                                      let countUniqueProduct = groupProduct.Count()
                                      select new { Name = groupProduct.Key, Count = countUniqueProduct, ID = groupProduct.First().Id };
@@ -43,14 +44,13 @@ namespace ComputerShopForm
             {
                 double price = 0;
                 string path = "";
-                foreach (var item in _cart.Shoppinglist)
+
+                foreach (var item in _cart.ShoppingList.Where(item => item.Name == product.Name))
                 {
-                    if (item.Name == product.Name)
-                    {
-                        path = item.ProductImagePath;
-                        price = item.Price;
-                    }
+                    path = item.ProductImagePath;
+                    price = item.Price;
                 }
+
                 UserControlCart cartControl = new UserControlCart
                 {
                     PName = product.Name,
@@ -59,16 +59,17 @@ namespace ComputerShopForm
                     ProductImagePath = path,
                     ProductPrice = price * product.Count,
                 };
+
                 cartControl.RemoveItemButtonClicked += RemoveItemButtonClicked;
                 flowLayoutPanel1.Controls.Add(cartControl);
             }
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            string message = $"Your total price is € {_cart.CalculatePrice()}" +
-                $"\n\nComplete your purchase?";
+            string message = $"Your total price is € {_cart.CalculatePrice()}\n\nComplete your purchase?";
             DialogResult dr = MessageBox.Show(message, "Payment Screen", MessageBoxButtons.OKCancel);
+
             if (dr == DialogResult.OK)
             {
                 _logger.LogPurchase(_cart);
@@ -80,8 +81,11 @@ namespace ComputerShopForm
 
         private void RemoveItemButtonClicked(object sender, EventArgs e)
         {
-            var userControl = sender as UserControlCart;
-            _cart.RemoveProductFromCart(userControl.PName);
+            if (sender is UserControlCart userControl)
+            {
+                _cart.RemoveProductFromCart(userControl.PName);
+            }
+
             flowLayoutPanel1.Controls.Clear();
             CreateCombinedShoppingList();
         }

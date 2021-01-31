@@ -29,6 +29,7 @@ namespace ComputerShopForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductInfo));
             this.label1 = new System.Windows.Forms.Label();
             this.txtboxInfo = new System.Windows.Forms.TextBox();
             this.txtBoxDescription = new System.Windows.Forms.TextBox();
@@ -63,15 +64,17 @@ namespace ComputerShopForm
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 25);
+            this.label1.Size = new System.Drawing.Size(45, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Info";
             // 
             // txtboxInfo
             // 
+            this.txtboxInfo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtboxInfo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxInfo.Location = new System.Drawing.Point(105, 415);
             this.txtboxInfo.Multiline = true;
             this.txtboxInfo.Name = "txtboxInfo";
@@ -81,61 +84,71 @@ namespace ComputerShopForm
             // 
             // txtBoxDescription
             // 
+            this.txtBoxDescription.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxDescription.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDescription.Location = new System.Drawing.Point(301, 88);
             this.txtBoxDescription.Name = "txtBoxDescription";
             this.txtBoxDescription.ReadOnly = true;
-            this.txtBoxDescription.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxDescription.Size = new System.Drawing.Size(153, 21);
             this.txtBoxDescription.TabIndex = 18;
             // 
             // txtBoxPrice
             // 
+            this.txtBoxPrice.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxPrice.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPrice.Location = new System.Drawing.Point(301, 62);
             this.txtBoxPrice.Name = "txtBoxPrice";
             this.txtBoxPrice.ReadOnly = true;
-            this.txtBoxPrice.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxPrice.Size = new System.Drawing.Size(153, 21);
             this.txtBoxPrice.TabIndex = 17;
             // 
             // txtBoxName
             // 
+            this.txtBoxName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxName.Location = new System.Drawing.Point(301, 35);
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.ReadOnly = true;
-            this.txtBoxName.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxName.Size = new System.Drawing.Size(153, 21);
             this.txtBoxName.TabIndex = 16;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 418);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Extra info:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(212, 91);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Description:";
             // 
             // lblPriceDontUse
             // 
             this.lblPriceDontUse.AutoSize = true;
+            this.lblPriceDontUse.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPriceDontUse.Location = new System.Drawing.Point(212, 65);
             this.lblPriceDontUse.Name = "lblPriceDontUse";
-            this.lblPriceDontUse.Size = new System.Drawing.Size(34, 13);
+            this.lblPriceDontUse.Size = new System.Drawing.Size(40, 13);
             this.lblPriceDontUse.TabIndex = 13;
             this.lblPriceDontUse.Text = "Price:";
             // 
             // lblNameDontUse
             // 
             this.lblNameDontUse.AutoSize = true;
+            this.lblNameDontUse.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameDontUse.Location = new System.Drawing.Point(211, 38);
             this.lblNameDontUse.Name = "lblNameDontUse";
-            this.lblNameDontUse.Size = new System.Drawing.Size(38, 13);
+            this.lblNameDontUse.Size = new System.Drawing.Size(45, 13);
             this.lblNameDontUse.TabIndex = 12;
             this.lblNameDontUse.Text = "Name:";
             // 
@@ -144,160 +157,189 @@ namespace ComputerShopForm
             this.pictureBoxProductInfo.Location = new System.Drawing.Point(17, 37);
             this.pictureBoxProductInfo.Name = "pictureBoxProductInfo";
             this.pictureBoxProductInfo.Size = new System.Drawing.Size(176, 198);
+            this.pictureBoxProductInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxProductInfo.TabIndex = 20;
             this.pictureBoxProductInfo.TabStop = false;
             // 
             // txtBoxStock
             // 
+            this.txtBoxStock.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxStock.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxStock.Location = new System.Drawing.Point(301, 116);
             this.txtBoxStock.Name = "txtBoxStock";
             this.txtBoxStock.ReadOnly = true;
-            this.txtBoxStock.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxStock.Size = new System.Drawing.Size(153, 21);
             this.txtBoxStock.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(212, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "In Stock:";
             // 
             // txtBoxWeight
             // 
+            this.txtBoxWeight.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxWeight.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxWeight.Location = new System.Drawing.Point(301, 193);
             this.txtBoxWeight.Name = "txtBoxWeight";
             this.txtBoxWeight.ReadOnly = true;
-            this.txtBoxWeight.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxWeight.Size = new System.Drawing.Size(153, 21);
             this.txtBoxWeight.TabIndex = 24;
-            this.txtBoxWeight.Text = "Not Available";
+            this.txtBoxWeight.Text = "N/A";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(211, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 23;
             this.label3.Text = "Weight:";
             // 
             // txtBoxScreenType
             // 
+            this.txtBoxScreenType.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxScreenType.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxScreenType.Location = new System.Drawing.Point(301, 219);
             this.txtBoxScreenType.Name = "txtBoxScreenType";
             this.txtBoxScreenType.ReadOnly = true;
-            this.txtBoxScreenType.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxScreenType.Size = new System.Drawing.Size(153, 21);
             this.txtBoxScreenType.TabIndex = 26;
+            this.txtBoxScreenType.Text = "N/A";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(212, 222);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 25;
             this.label5.Text = "Screen Type:";
             // 
             // txtBoxPsu
             // 
+            this.txtBoxPsu.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxPsu.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPsu.Location = new System.Drawing.Point(301, 334);
             this.txtBoxPsu.Name = "txtBoxPsu";
             this.txtBoxPsu.ReadOnly = true;
-            this.txtBoxPsu.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxPsu.Size = new System.Drawing.Size(153, 21);
             this.txtBoxPsu.TabIndex = 34;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(211, 336);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.Size = new System.Drawing.Size(90, 13);
             this.label7.TabIndex = 33;
             this.label7.Text = "Power Supply:";
             // 
             // txtBoxCpu
             // 
+            this.txtBoxCpu.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxCpu.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCpu.Location = new System.Drawing.Point(301, 306);
             this.txtBoxCpu.Name = "txtBoxCpu";
             this.txtBoxCpu.ReadOnly = true;
-            this.txtBoxCpu.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxCpu.Size = new System.Drawing.Size(153, 21);
             this.txtBoxCpu.TabIndex = 32;
             // 
             // txtBoxHdd
             // 
+            this.txtBoxHdd.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxHdd.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxHdd.Location = new System.Drawing.Point(301, 280);
             this.txtBoxHdd.Name = "txtBoxHdd";
             this.txtBoxHdd.ReadOnly = true;
-            this.txtBoxHdd.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxHdd.Size = new System.Drawing.Size(153, 21);
             this.txtBoxHdd.TabIndex = 31;
             // 
             // txtBoxMoBo
             // 
+            this.txtBoxMoBo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxMoBo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxMoBo.Location = new System.Drawing.Point(301, 253);
             this.txtBoxMoBo.Name = "txtBoxMoBo";
             this.txtBoxMoBo.ReadOnly = true;
-            this.txtBoxMoBo.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxMoBo.Size = new System.Drawing.Size(153, 21);
             this.txtBoxMoBo.TabIndex = 30;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(211, 308);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.Size = new System.Drawing.Size(36, 13);
             this.label8.TabIndex = 29;
             this.label8.Text = "CPU:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(211, 282);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 28;
             this.label9.Text = "HDD:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(211, 255);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 13);
+            this.label10.Size = new System.Drawing.Size(84, 13);
             this.label10.TabIndex = 27;
             this.label10.Text = "Motherboard:";
             // 
             // txtBoxRam
             // 
+            this.txtBoxRam.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxRam.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxRam.Location = new System.Drawing.Point(301, 360);
             this.txtBoxRam.Name = "txtBoxRam";
             this.txtBoxRam.ReadOnly = true;
-            this.txtBoxRam.Size = new System.Drawing.Size(153, 20);
+            this.txtBoxRam.Size = new System.Drawing.Size(153, 21);
             this.txtBoxRam.TabIndex = 36;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(211, 362);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 13);
+            this.label11.Size = new System.Drawing.Size(37, 13);
             this.label11.TabIndex = 35;
             this.label11.Text = "RAM:";
             // 
             // txtBoxId
             // 
+            this.txtBoxId.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxId.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxId.Location = new System.Drawing.Point(105, 389);
             this.txtBoxId.Name = "txtBoxId";
             this.txtBoxId.ReadOnly = true;
-            this.txtBoxId.Size = new System.Drawing.Size(24, 20);
+            this.txtBoxId.Size = new System.Drawing.Size(24, 21);
             this.txtBoxId.TabIndex = 38;
             // 
             // lblIDdontuse
             // 
             this.lblIDdontuse.AutoSize = true;
+            this.lblIDdontuse.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDdontuse.Location = new System.Drawing.Point(12, 392);
             this.lblIDdontuse.Name = "lblIDdontuse";
-            this.lblIDdontuse.Size = new System.Drawing.Size(21, 13);
+            this.lblIDdontuse.Size = new System.Drawing.Size(26, 13);
             this.lblIDdontuse.TabIndex = 37;
             this.lblIDdontuse.Text = "ID:";
             // 
@@ -309,8 +351,8 @@ namespace ComputerShopForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(479, 510);
-            this.ControlBox = false;
             this.Controls.Add(this.txtBoxId);
             this.Controls.Add(this.lblIDdontuse);
             this.Controls.Add(this.txtBoxRam);
@@ -339,6 +381,7 @@ namespace ComputerShopForm
             this.Controls.Add(this.lblPriceDontUse);
             this.Controls.Add(this.lblNameDontUse);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "FormProductInfo";
             this.Text = "FormProductInfo";

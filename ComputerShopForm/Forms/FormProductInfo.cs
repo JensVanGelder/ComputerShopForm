@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ComputerShopForm
 {
     public partial class FormProductInfo : Form
     {
-        private readonly IProductsRepo _repo;
-        public List<IProduct> _productinfolist;
-
         public FormProductInfo(IProduct product)
         {
             InitializeComponent();
-            _repo = new ProductsRepo();
-            _productinfolist = _repo.CreateProductList();
             SetData(product);
         }
 
@@ -21,8 +15,7 @@ namespace ComputerShopForm
         {
             AddComputerInfo(product);
             AddTypeInfo(product);
-
-            //txtboxInfo.Text = product.ToString();
+            txtboxInfo.Text = product.ToString();
         }
 
         public void AddComputerInfo(IProduct product)
@@ -30,7 +23,12 @@ namespace ComputerShopForm
             var computer = product as Computer;
             pictureBoxProductInfo.Load(computer.ProductImagePath);
             txtBoxName.Text = computer.Name;
-            txtBoxPsu.Text = computer.PSU;
+            txtBoxRam.Text = Convert.ToString(computer.Ram);
+            txtBoxMoBo.Text = computer.MoBo;
+            txtBoxPsu.Text = computer.Psu;
+            txtBoxCpu.Text = computer.Cpu;
+            txtBoxHdd.Text = computer.Hdd;
+            txtBoxStock.Text = Convert.ToString(computer.Stock);
             txtBoxPrice.Text = Convert.ToString(product.Price);
             txtBoxDescription.Text = product.ProductSummary;
             txtBoxId.Text = Convert.ToString(product.Id);
@@ -40,20 +38,15 @@ namespace ComputerShopForm
         {
             if (product is GamingPc)
             {
-                var temp = product as GamingPc;
-                txtBoxCpu.Text = temp.CPU;
-                txtBoxHdd.Text = temp.HDD;
-                txtBoxMoBo.Text = temp.MoBo;
+                //add GamingPC specifics
             }
             else if (product is Workstation)
             {
-                var temp = product as Workstation;
             }
             else if (product is Laptop)
             {
-                var temp = product as Laptop;
-                txtBoxScreenType.Text = temp.ScreenType;
-                txtBoxWeight.Text = $"{Convert.ToString(temp.WeightInGrams)} grams";
+                //txtBoxScreenType.Text = product.ScreenType;
+                //txtBoxWeight.Text = $"{Convert.ToString(product.WeightInGrams)} grams";
             }
         }
     }

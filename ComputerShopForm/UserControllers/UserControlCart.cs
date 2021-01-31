@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace ComputerShopForm
 {
     public partial class UserControlCart : UserControl
     {
-        public ShoppingCart _cart;
-        public IProductsRepo _repo;
-
         public UserControlCart()
         {
             InitializeComponent();
-            _cart = ShoppingCart.GetShoppingCart();
-            _repo = new ProductsRepo();
         }
 
         public int Id { get; set; }
@@ -37,6 +31,7 @@ namespace ComputerShopForm
         }
 
         public string ProductSummary { get; set; }
+
         private string _productImagePath;
 
         public string ProductImagePath
