@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -35,7 +36,7 @@ namespace ComputerShopForm
                     GenerateUserControls(uniqueCart);
                 }
             }
-            lblTotalPrice.Text = $"Total:           € {_cart.CalculatePrice()}";
+            lblTotalPrice.Text = $"Total:           {_cart.CalculatePrice().ToString("C2", CultureInfo.CreateSpecificCulture("en-FR"))}";
         }
 
         public void GenerateUserControls(IEnumerable<dynamic> uniqueCart)
@@ -67,7 +68,8 @@ namespace ComputerShopForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string message = $"Your total price is € {_cart.CalculatePrice()}\n\nComplete your purchase?";
+            string message = $"{_cart.CartInfo}" +
+                $"\n\nComplete your purchase?";
             DialogResult dr = MessageBox.Show(message, "Payment Screen", MessageBoxButtons.OKCancel);
 
             if (dr == DialogResult.OK)

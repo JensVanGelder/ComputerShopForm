@@ -40,7 +40,6 @@ namespace ComputerShopForm
             this.label4 = new System.Windows.Forms.Label();
             this.lblPriceDontUse = new System.Windows.Forms.Label();
             this.lblNameDontUse = new System.Windows.Forms.Label();
-            this.pictureBoxProductInfo = new System.Windows.Forms.PictureBox();
             this.txtBoxStock = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxWeight = new System.Windows.Forms.TextBox();

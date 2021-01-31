@@ -30,235 +30,267 @@ namespace ComputerShopForm
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormShop));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowMainShopPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnTemp = new System.Windows.Forms.Button();
+            this.btnShowAll = new System.Windows.Forms.Button();
+            this.txtSearchBar = new System.Windows.Forms.TextBox();
+            this.pnlMidTop = new System.Windows.Forms.Panel();
+            this.lblSubTitle = new System.Windows.Forms.Label();
+            this.lblCompanyName = new System.Windows.Forms.Label();
+            this.picBallBox = new System.Windows.Forms.PictureBox();
+            this.pnlTopRightButton = new System.Windows.Forms.Panel();
             this.lblItemsInCart = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BLUEBALL = new System.Windows.Forms.Label();
-            this.BallBox = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.roundButton1 = new ComputerShopForm.RoundButton();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BallBox)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picCartButtonCircle = new System.Windows.Forms.PictureBox();
+            this.pnlLeftSortOptions = new System.Windows.Forms.Panel();
+            this.grpBoxComp = new System.Windows.Forms.GroupBox();
+            this.radLaptop = new System.Windows.Forms.RadioButton();
+            this.radWorkstation = new System.Windows.Forms.RadioButton();
+            this.radGamingPc = new System.Windows.Forms.RadioButton();
+            this.picSocialMedia = new System.Windows.Forms.PictureBox();
+            this.btnShoppingCart = new ComputerShopForm.RoundButton();
+            this.pnlMidTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBallBox)).BeginInit();
+            this.pnlTopRightButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).BeginInit();
+            this.pnlLeftSortOptions.SuspendLayout();
+            this.grpBoxComp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).BeginInit();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flowMainShopPanel
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.flowMainShopPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(259, 100);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(843, 499);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.flowMainShopPanel.AutoScroll = true;
+            this.flowMainShopPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowMainShopPanel.BackColor = System.Drawing.Color.White;
+            this.flowMainShopPanel.Location = new System.Drawing.Point(259, 100);
+            this.flowMainShopPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.flowMainShopPanel.Name = "flowMainShopPanel";
+            this.flowMainShopPanel.Size = new System.Drawing.Size(843, 499);
+            this.flowMainShopPanel.TabIndex = 2;
             // 
-            // button2
+            // btnTemp
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(106)))), ((int)(((byte)(117)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(10, 15);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 27);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTemp.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTemp.ForeColor = System.Drawing.Color.White;
+            this.btnTemp.Location = new System.Drawing.Point(10, 15);
+            this.btnTemp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnTemp.Name = "btnTemp";
+            this.btnTemp.Size = new System.Drawing.Size(91, 27);
+            this.btnTemp.TabIndex = 4;
+            this.btnTemp.Text = "button2";
+            this.btnTemp.UseVisualStyleBackColor = false;
+            this.btnTemp.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnShowAll
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(106)))), ((int)(((byte)(117)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(109, 15);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 27);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Showall";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnShowAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowAll.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAll.ForeColor = System.Drawing.Color.White;
+            this.btnShowAll.Location = new System.Drawing.Point(121, 15);
+            this.btnShowAll.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.Size = new System.Drawing.Size(91, 27);
+            this.btnShowAll.TabIndex = 0;
+            this.btnShowAll.Text = "Showall";
+            this.btnShowAll.UseVisualStyleBackColor = false;
+            this.btnShowAll.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox1
+            // txtSearchBar
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSearchBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(323, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.MaximumSize = new System.Drawing.Size(570, 21);
-            this.textBox1.MinimumSize = new System.Drawing.Size(75, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(570, 21);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "What are you looking for?";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBar.Location = new System.Drawing.Point(349, 51);
+            this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSearchBar.MaximumSize = new System.Drawing.Size(570, 21);
+            this.txtSearchBar.MinimumSize = new System.Drawing.Size(7, 7);
+            this.txtSearchBar.Name = "txtSearchBar";
+            this.txtSearchBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSearchBar.Size = new System.Drawing.Size(570, 22);
+            this.txtSearchBar.TabIndex = 5;
+            this.txtSearchBar.Text = "What are you looking for?";
+            this.txtSearchBar.Enter += new System.EventHandler(this.txtSearchBar_Enter);
+            this.txtSearchBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBar_KeyDown);
             // 
-            // panel1
+            // pnlMidTop
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.BallBox);
-            this.panel1.Controls.Add(this.lblItemsInCart);
-            this.panel1.Controls.Add(this.BLUEBALL);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.roundButton1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1102, 100);
-            this.panel1.TabIndex = 6;
+            this.pnlMidTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlMidTop.Controls.Add(this.lblSubTitle);
+            this.pnlMidTop.Controls.Add(this.lblCompanyName);
+            this.pnlMidTop.Controls.Add(this.picBallBox);
+            this.pnlMidTop.Controls.Add(this.pnlTopRightButton);
+            this.pnlMidTop.Controls.Add(this.txtSearchBar);
+            this.pnlMidTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMidTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlMidTop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pnlMidTop.Name = "pnlMidTop";
+            this.pnlMidTop.Size = new System.Drawing.Size(1102, 100);
+            this.pnlMidTop.TabIndex = 6;
+            // 
+            // lblSubTitle
+            // 
+            this.lblSubTitle.AutoSize = true;
+            this.lblSubTitle.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTitle.ForeColor = System.Drawing.Color.White;
+            this.lblSubTitle.Location = new System.Drawing.Point(207, 53);
+            this.lblSubTitle.Name = "lblSubTitle";
+            this.lblSubTitle.Size = new System.Drawing.Size(88, 23);
+            this.lblSubTitle.TabIndex = 10;
+            this.lblSubTitle.Text = "GLOBAL";
+            // 
+            // lblCompanyName
+            // 
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanyName.ForeColor = System.Drawing.Color.Transparent;
+            this.lblCompanyName.Location = new System.Drawing.Point(105, 11);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(195, 42);
+            this.lblCompanyName.TabIndex = 6;
+            this.lblCompanyName.Text = "BLUEBALL";
+            // 
+            // picBallBox
+            // 
+            this.picBallBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.picBallBox.Image = global::ComputerShopForm.Properties.Resources.blueball;
+            this.picBallBox.Location = new System.Drawing.Point(0, 0);
+            this.picBallBox.Name = "picBallBox";
+            this.picBallBox.Size = new System.Drawing.Size(133, 100);
+            this.picBallBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBallBox.TabIndex = 7;
+            this.picBallBox.TabStop = false;
+            // 
+            // pnlTopRightButton
+            // 
+            this.pnlTopRightButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlTopRightButton.Controls.Add(this.lblItemsInCart);
+            this.pnlTopRightButton.Controls.Add(this.picCartButtonCircle);
+            this.pnlTopRightButton.Controls.Add(this.btnShoppingCart);
+            this.pnlTopRightButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlTopRightButton.Location = new System.Drawing.Point(993, 0);
+            this.pnlTopRightButton.Name = "pnlTopRightButton";
+            this.pnlTopRightButton.Size = new System.Drawing.Size(109, 100);
+            this.pnlTopRightButton.TabIndex = 0;
             // 
             // lblItemsInCart
             // 
             this.lblItemsInCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblItemsInCart.BackColor = System.Drawing.Color.Transparent;
-            this.lblItemsInCart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemsInCart.Location = new System.Drawing.Point(1040, 32);
+            this.lblItemsInCart.BackColor = System.Drawing.Color.White;
+            this.lblItemsInCart.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemsInCart.Location = new System.Drawing.Point(73, 11);
             this.lblItemsInCart.Name = "lblItemsInCart";
-            this.lblItemsInCart.Size = new System.Drawing.Size(23, 11);
+            this.lblItemsInCart.Size = new System.Drawing.Size(18, 15);
             this.lblItemsInCart.TabIndex = 8;
             this.lblItemsInCart.Text = "0";
             this.lblItemsInCart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblItemsInCart.Visible = false;
             // 
-            // label1
+            // picCartButtonCircle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(106, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 42);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "BLUEBALL";
+            this.picCartButtonCircle.BackgroundImage = global::ComputerShopForm.Properties.Resources.wdotsmaller;
+            this.picCartButtonCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picCartButtonCircle.InitialImage = null;
+            this.picCartButtonCircle.Location = new System.Drawing.Point(69, 6);
+            this.picCartButtonCircle.Name = "picCartButtonCircle";
+            this.picCartButtonCircle.Size = new System.Drawing.Size(25, 25);
+            this.picCartButtonCircle.TabIndex = 10;
+            this.picCartButtonCircle.TabStop = false;
+            this.picCartButtonCircle.Visible = false;
             // 
-            // BLUEBALL
+            // pnlLeftSortOptions
             // 
-            this.BLUEBALL.Location = new System.Drawing.Point(0, 0);
-            this.BLUEBALL.Name = "BLUEBALL";
-            this.BLUEBALL.Size = new System.Drawing.Size(100, 23);
-            this.BLUEBALL.TabIndex = 9;
+            this.pnlLeftSortOptions.AutoScroll = true;
+            this.pnlLeftSortOptions.BackColor = System.Drawing.Color.White;
+            this.pnlLeftSortOptions.Controls.Add(this.picSocialMedia);
+            this.pnlLeftSortOptions.Controls.Add(this.grpBoxComp);
+            this.pnlLeftSortOptions.Controls.Add(this.btnShowAll);
+            this.pnlLeftSortOptions.Controls.Add(this.btnTemp);
+            this.pnlLeftSortOptions.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlLeftSortOptions.Location = new System.Drawing.Point(0, 100);
+            this.pnlLeftSortOptions.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pnlLeftSortOptions.Name = "pnlLeftSortOptions";
+            this.pnlLeftSortOptions.Size = new System.Drawing.Size(251, 499);
+            this.pnlLeftSortOptions.TabIndex = 7;
             // 
-            // BallBox
+            // grpBoxComp
             // 
-            this.BallBox.Image = global::ComputerShopForm.Properties.Resources.blueball;
-            this.BallBox.Location = new System.Drawing.Point(0, 0);
-            this.BallBox.Name = "BallBox";
-            this.BallBox.Size = new System.Drawing.Size(133, 100);
-            this.BallBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BallBox.TabIndex = 7;
-            this.BallBox.TabStop = false;
+            this.grpBoxComp.Controls.Add(this.radLaptop);
+            this.grpBoxComp.Controls.Add(this.radWorkstation);
+            this.grpBoxComp.Controls.Add(this.radGamingPc);
+            this.grpBoxComp.Location = new System.Drawing.Point(12, 59);
+            this.grpBoxComp.Name = "grpBoxComp";
+            this.grpBoxComp.Size = new System.Drawing.Size(200, 93);
+            this.grpBoxComp.TabIndex = 11;
+            this.grpBoxComp.TabStop = false;
+            this.grpBoxComp.Text = "Computer";
             // 
-            // panel2
+            // radLaptop
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(0, 100);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 499);
-            this.panel2.TabIndex = 7;
+            this.radLaptop.AutoSize = true;
+            this.radLaptop.Location = new System.Drawing.Point(6, 67);
+            this.radLaptop.Name = "radLaptop";
+            this.radLaptop.Size = new System.Drawing.Size(63, 17);
+            this.radLaptop.TabIndex = 2;
+            this.radLaptop.TabStop = true;
+            this.radLaptop.Text = "Laptop";
+            this.radLaptop.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // radWorkstation
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::ComputerShopForm.Properties.Resources.cart;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(995, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 52);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.radWorkstation.AutoSize = true;
+            this.radWorkstation.Location = new System.Drawing.Point(5, 44);
+            this.radWorkstation.Name = "radWorkstation";
+            this.radWorkstation.Size = new System.Drawing.Size(92, 17);
+            this.radWorkstation.TabIndex = 1;
+            this.radWorkstation.TabStop = true;
+            this.radWorkstation.Text = "Workstation";
+            this.radWorkstation.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // radGamingPc
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::ComputerShopForm.Properties.Resources.Social_Media_banner;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 459);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(245, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.radGamingPc.AutoSize = true;
+            this.radGamingPc.Location = new System.Drawing.Point(6, 21);
+            this.radGamingPc.Name = "radGamingPc";
+            this.radGamingPc.Size = new System.Drawing.Size(86, 17);
+            this.radGamingPc.TabIndex = 0;
+            this.radGamingPc.TabStop = true;
+            this.radGamingPc.Text = "Gaming Pc";
+            this.radGamingPc.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // picSocialMedia
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(63, 17);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Laptop";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 43);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 17);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Gaming PC";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 66);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(92, 17);
-            this.radioButton3.TabIndex = 7;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Workstation";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.picSocialMedia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundButton1.BackgroundImage = global::ComputerShopForm.Properties.Resources.cartsmol_20_1_60x60_1_45x45;
-            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.roundButton1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.Location = new System.Drawing.Point(1005, 3);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(85, 85);
-            this.roundButton1.TabIndex = 7;
-            this.roundButton1.Text = "0";
-            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
+            this.picSocialMedia.BackColor = System.Drawing.Color.White;
+            this.picSocialMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picSocialMedia.Image = global::ComputerShopForm.Properties.Resources.Social_Media_banner;
+            this.picSocialMedia.Location = new System.Drawing.Point(3, 450);
+            this.picSocialMedia.Name = "picSocialMedia";
+            this.picSocialMedia.Size = new System.Drawing.Size(245, 46);
+            this.picSocialMedia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSocialMedia.TabIndex = 10;
+            this.picSocialMedia.TabStop = false;
+            // 
+            // btnShoppingCart
+            // 
+            this.btnShoppingCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShoppingCart.BackgroundImage = global::ComputerShopForm.Properties.Resources.cartWsmall2;
+            this.btnShoppingCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnShoppingCart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShoppingCart.Location = new System.Drawing.Point(12, 5);
+            this.btnShoppingCart.Name = "btnShoppingCart";
+            this.btnShoppingCart.Size = new System.Drawing.Size(85, 85);
+            this.btnShoppingCart.TabIndex = 7;
+            this.btnShoppingCart.Text = "0";
+            this.btnShoppingCart.Click += new System.EventHandler(this.rndbtnShoppingCart_Click);
             // 
             // FormShop
             // 
@@ -266,40 +298,46 @@ namespace ComputerShopForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1102, 599);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlLeftSortOptions);
+            this.Controls.Add(this.flowMainShopPanel);
+            this.Controls.Add(this.pnlMidTop);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "FormShop";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BallBox)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlMidTop.ResumeLayout(false);
+            this.pnlMidTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBallBox)).EndInit();
+            this.pnlTopRightButton.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).EndInit();
+            this.pnlLeftSortOptions.ResumeLayout(false);
+            this.grpBoxComp.ResumeLayout(false);
+            this.grpBoxComp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label BLUEBALL;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private RoundButton roundButton1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel flowMainShopPanel;
+        private System.Windows.Forms.Button btnTemp;
+        private System.Windows.Forms.Button btnShowAll;
+        private System.Windows.Forms.TextBox txtSearchBar;
+        private System.Windows.Forms.Panel pnlMidTop;
+        private System.Windows.Forms.Panel pnlLeftSortOptions;
+        private RoundButton btnShoppingCart;
         private System.Windows.Forms.Label lblItemsInCart;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox BallBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picSocialMedia;
+        private System.Windows.Forms.PictureBox picBallBox;
+        private System.Windows.Forms.Label lblCompanyName;
+        private System.Windows.Forms.Panel pnlTopRightButton;
+        private System.Windows.Forms.PictureBox picCartButtonCircle;
+        private System.Windows.Forms.Label lblSubTitle;
+        private System.Windows.Forms.GroupBox grpBoxComp;
+        private System.Windows.Forms.RadioButton radLaptop;
+        private System.Windows.Forms.RadioButton radWorkstation;
+        private System.Windows.Forms.RadioButton radGamingPc;
     }
 }
 

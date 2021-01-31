@@ -101,7 +101,7 @@ namespace ComputerShopForm
         private void lblProductName_MouseHover(object sender, EventArgs e)
         {
             lblProductName.ForeColor = Color.DarkBlue;
-            this.BackColor = Color.GhostWhite;
+            this.BackColor = Color.WhiteSmoke;
         }
 
         private void lblProductName_MouseLeave(object sender, EventArgs e)

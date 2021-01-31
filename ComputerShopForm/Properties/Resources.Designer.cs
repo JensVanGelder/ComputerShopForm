@@ -73,9 +73,29 @@ namespace ComputerShopForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cart {
+        internal static System.Drawing.Bitmap cartsmol_20_1_60x60_1_45x45 {
             get {
-                object obj = ResourceManager.GetObject("cart", resourceCulture);
+                object obj = ResourceManager.GetObject("cartsmol_20_1_60x60_1_45x45", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cartW {
+            get {
+                object obj = ResourceManager.GetObject("cartW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cartWsmall2 {
+            get {
+                object obj = ResourceManager.GetObject("cartWsmall2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +143,9 @@ namespace ComputerShopForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cartsmol_20_1_60x60_1_45x45 {
+        internal static System.Drawing.Bitmap wdotsmaller {
             get {
-                object obj = ResourceManager.GetObject("cartsmol_20_1_60x60_1_45x45", resourceCulture);
+                object obj = ResourceManager.GetObject("wdotsmaller", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
