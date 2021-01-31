@@ -60,8 +60,8 @@ namespace ComputerShopForm.Test
         [Test]
         public void GetShoppingCart_WhenCalledIfCartIsNull_MakesNewCart()
         {
-            testcart = ShoppingCart.GetShoppingCart();
-            Assert.IsNotNull(testcart);
+            _testcart = ShoppingCart.GetShoppingCart();
+            Assert.IsNotNull(_testcart);
         }
     }
 }

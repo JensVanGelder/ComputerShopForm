@@ -109,11 +109,6 @@ namespace ComputerShopForm
             cart.Show();
         }
 
-        private void FormShop_Enter(object sender, EventArgs e)
-        {
-            lblItemsInCart.Text = _cart.Shoppinglist.Count().ToString();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

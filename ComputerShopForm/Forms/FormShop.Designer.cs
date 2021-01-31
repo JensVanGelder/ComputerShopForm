@@ -45,11 +45,9 @@ namespace ComputerShopForm
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BallBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.roundButton1 = new ComputerShopForm.RoundButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BallBox)).BeginInit();
             this.SuspendLayout();
@@ -156,7 +154,6 @@ namespace ComputerShopForm
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -182,18 +179,7 @@ namespace ComputerShopForm
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Location = new System.Drawing.Point(10, 61);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 93);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Computers";
+
             // 
             // radioButton1
             // 
@@ -278,15 +264,6 @@ namespace ComputerShopForm
             this.roundButton1.TabIndex = 7;
             this.roundButton1.Text = "0";
             this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(264, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "global";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FormShop
             // 
@@ -302,12 +279,9 @@ namespace ComputerShopForm
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "FormShop";
-            this.Enter += new System.EventHandler(this.FormShop_Enter);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BallBox)).EndInit();
             this.ResumeLayout(false);
@@ -322,7 +296,6 @@ namespace ComputerShopForm
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label BLUEBALL;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;

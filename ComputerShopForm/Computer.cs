@@ -22,9 +22,9 @@
         {
             string add = $"\nRAM IS {Ram}" +
                 $"\nMobo: {MoBo}" +
-                $"\nHDD: {HDD}" +
-                $"\nCPU: {CPU}" +
-                $"\nPSU: {PSU}";
+                $"\nHDD: {Hdd}" +
+                $"\nCPU: {Cpu}" +
+                $"\nPSU: {Psu}";
             return base.ToString() + add;
         }
     }
