@@ -14,7 +14,6 @@ namespace ComputerShopForm
         public FormShop()
         {
             InitializeComponent();
-            button1.FlatAppearance.BorderSize = 0;
             _repo = new ProductsRepo();
             _cart = ShoppingCart.GetShoppingCart();
             _controls = new List<UserControlShop>();
@@ -43,13 +42,7 @@ namespace ComputerShopForm
                 _controls.Add(usercontrol);
             }
 
-            flowLayoutPanel1.Controls.AddRange(_controls.ToArray());
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormShoppingCart cart = new FormShoppingCart();
-            cart.Show();
+            flowMainShopPanel.Controls.AddRange(_controls.ToArray());
         }
 
         private void AddToCartClickedInUserControl(object sender, EventArgs e)
@@ -58,12 +51,15 @@ namespace ComputerShopForm
             {
                 var product = _repo.GetProduct(userControl.ProductName);
                 _cart.AddProductToCart(product);
+                lblItemsInCart.Visible = true;
+                picCartButtonCircle.Visible = true;
+                lblItemsInCart.Text = $"{_cart.ShoppingList.Count}";
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (UserControlShop control in flowLayoutPanel1.Controls)
+            foreach (UserControlShop control in flowMainShopPanel.Controls)
             {
                 if (control.ProductName == "HP Oblivion III")
                 {
@@ -74,26 +70,20 @@ namespace ComputerShopForm
 
         private void button3_Click(object sender, EventArgs e)
         {
-            foreach (UserControlShop control in flowLayoutPanel1.Controls)
+            foreach (UserControlShop control in flowMainShopPanel.Controls)
             {
                 control.Visible = true;
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //var selectedControls = _controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y => y.Visible = true).ToList();
-            //_controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y=>y.Visible=true);
-        }
-
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void txtSearchBar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                foreach (UserControlShop control in flowLayoutPanel1.Controls)
+                foreach (UserControlShop control in flowMainShopPanel.Controls)
                 {
                     control.Visible = false;
-                    string input = textBox1.Text.ToLower();
+                    string input = txtSearchBar.Text.ToLower();
                     if (control.ProductName.ToLower().Contains(input) || control.ProductSummary.ToLower().Contains(input)
                         || control.ProductFullInfo.ToLower().Contains(input))
                     {
@@ -103,20 +93,18 @@ namespace ComputerShopForm
             }
         }
 
-        private void roundButton1_Click(object sender, EventArgs e)
+        private void rndbtnShoppingCart_Click(object sender, EventArgs e)
         {
             FormShoppingCart cart = new FormShoppingCart();
             cart.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void txtSearchBar_Enter(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            if (txtSearchBar.Text == "What are you looking for?")
+            {
+                txtSearchBar.Text = "";
+            }
         }
     }
 }

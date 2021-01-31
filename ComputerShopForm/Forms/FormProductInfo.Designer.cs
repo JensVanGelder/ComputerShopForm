@@ -39,7 +39,6 @@ namespace ComputerShopForm
             this.label4 = new System.Windows.Forms.Label();
             this.lblPriceDontUse = new System.Windows.Forms.Label();
             this.lblNameDontUse = new System.Windows.Forms.Label();
-            this.pictureBoxProductInfo = new System.Windows.Forms.PictureBox();
             this.txtBoxStock = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxWeight = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@ namespace ComputerShopForm
             this.label11 = new System.Windows.Forms.Label();
             this.txtBoxId = new System.Windows.Forms.TextBox();
             this.lblIDdontuse = new System.Windows.Forms.Label();
+            this.pictureBoxProductInfo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,15 +151,6 @@ namespace ComputerShopForm
             this.lblNameDontUse.Size = new System.Drawing.Size(45, 13);
             this.lblNameDontUse.TabIndex = 12;
             this.lblNameDontUse.Text = "Name:";
-            // 
-            // pictureBoxProductInfo
-            // 
-            this.pictureBoxProductInfo.Location = new System.Drawing.Point(17, 37);
-            this.pictureBoxProductInfo.Name = "pictureBoxProductInfo";
-            this.pictureBoxProductInfo.Size = new System.Drawing.Size(176, 198);
-            this.pictureBoxProductInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProductInfo.TabIndex = 20;
-            this.pictureBoxProductInfo.TabStop = false;
             // 
             // txtBoxStock
             // 
@@ -342,6 +333,15 @@ namespace ComputerShopForm
             this.lblIDdontuse.Size = new System.Drawing.Size(26, 13);
             this.lblIDdontuse.TabIndex = 37;
             this.lblIDdontuse.Text = "ID:";
+            // 
+            // pictureBoxProductInfo
+            // 
+            this.pictureBoxProductInfo.Location = new System.Drawing.Point(17, 37);
+            this.pictureBoxProductInfo.Name = "pictureBoxProductInfo";
+            this.pictureBoxProductInfo.Size = new System.Drawing.Size(176, 198);
+            this.pictureBoxProductInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProductInfo.TabIndex = 20;
+            this.pictureBoxProductInfo.TabStop = false;
             // 
             // FormProductInfo
             // 

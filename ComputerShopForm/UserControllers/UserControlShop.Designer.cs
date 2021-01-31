@@ -80,10 +80,10 @@ namespace ComputerShopForm
             this.btnAddToShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToShoppingCart.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddToShoppingCart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddToShoppingCart.Location = new System.Drawing.Point(117, 270);
+            this.btnAddToShoppingCart.Location = new System.Drawing.Point(129, 270);
             this.btnAddToShoppingCart.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAddToShoppingCart.Name = "btnAddToShoppingCart";
-            this.btnAddToShoppingCart.Size = new System.Drawing.Size(44, 32);
+            this.btnAddToShoppingCart.Size = new System.Drawing.Size(32, 32);
             this.btnAddToShoppingCart.TabIndex = 4;
             this.btnAddToShoppingCart.Text = "+";
             this.btnAddToShoppingCart.UseVisualStyleBackColor = false;
