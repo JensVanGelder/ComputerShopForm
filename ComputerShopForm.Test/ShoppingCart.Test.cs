@@ -28,7 +28,7 @@ namespace ComputerShopForm.Test
             double priceofcart = _testcart.CalculatePrice();
 
             //ASSERT
-            Assert.AreEqual(4.0*1.21, priceofcart);
+            Assert.AreEqual(4.0 * 1.21, priceofcart);
         }
 
         [Test]
@@ -57,6 +57,7 @@ namespace ComputerShopForm.Test
 
             Assert.AreEqual(0, _testcart.ShoppingList.Count);
         }
+
         [Test]
         public void GetShoppingCart_WhenCalledIfCartIsNull_MakesNewCart()
         {

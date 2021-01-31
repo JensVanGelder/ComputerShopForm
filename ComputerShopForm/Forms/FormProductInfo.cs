@@ -21,7 +21,7 @@ namespace ComputerShopForm
         public void AddComputerInfo(IProduct product)
         {
             var computer = product as Computer;
-            pictureBoxProductInfo.Load(computer.ProductImagePath);
+            picProductImage.Load(computer.ProductImagePath);
             txtBoxName.Text = computer.Name;
             txtBoxRam.Text = Convert.ToString(computer.Ram);
             txtBoxMoBo.Text = computer.MoBo;
@@ -49,7 +49,7 @@ namespace ComputerShopForm
                 case Workstation workstation:
                     {
                         txtBoxRaid.Text = workstation.RaidType;
-                        break;                        
+                        break;
                     }
 
                 case Laptop laptop:
@@ -62,10 +62,7 @@ namespace ComputerShopForm
 
                 default:
                     break;
-            }                   
+            }
         }
-              
-
-       
     }
 }

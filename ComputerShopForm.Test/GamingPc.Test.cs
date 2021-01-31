@@ -17,7 +17,7 @@ namespace ComputerShopForm.Test
         {
             //ARRANGE
             _testcart = ShoppingCart.GetShoppingCart();
-            _testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 1, "TestMOBO", 
+            _testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 1, "TestMOBO",
                 "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true)
             {
                 Stock = 0

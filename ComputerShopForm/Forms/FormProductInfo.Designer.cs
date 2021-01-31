@@ -69,7 +69,8 @@ namespace ComputerShopForm
             this.txtBoxFortnite = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductInfo)).BeginInit();
+            this.picProductImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picProductImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -162,15 +163,6 @@ namespace ComputerShopForm
             this.lblNameDontUse.Size = new System.Drawing.Size(45, 13);
             this.lblNameDontUse.TabIndex = 12;
             this.lblNameDontUse.Text = "Name:";
-            // 
-            // pictureBoxProductInfo
-            // 
-            this.pictureBoxProductInfo.Location = new System.Drawing.Point(34, 52);
-            this.pictureBoxProductInfo.Name = "pictureBoxProductInfo";
-            this.pictureBoxProductInfo.Size = new System.Drawing.Size(279, 279);
-            this.pictureBoxProductInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProductInfo.TabIndex = 20;
-            this.pictureBoxProductInfo.TabStop = false;
             // 
             // txtBoxStock
             // 
@@ -459,7 +451,14 @@ namespace ComputerShopForm
             this.label16.TabIndex = 47;
             this.label16.Text = "Fortnite Proof:";
             // 
-          
+            // picProductImage
+            // 
+            this.picProductImage.Location = new System.Drawing.Point(34, 49);
+            this.picProductImage.Name = "picProductImage";
+            this.picProductImage.Size = new System.Drawing.Size(279, 279);
+            this.picProductImage.TabIndex = 49;
+            this.picProductImage.TabStop = false;
+            // 
             // FormProductInfo
             // 
             this.AccessibleDescription = "In this form you we show the additional available information of the selected pro" +
@@ -470,6 +469,7 @@ namespace ComputerShopForm
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(630, 614);
+            this.Controls.Add(this.picProductImage);
             this.Controls.Add(this.txtBoxFortnite);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtBoxRgb);
@@ -498,7 +498,6 @@ namespace ComputerShopForm
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBoxStock);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBoxProductInfo);
             this.Controls.Add(this.txtboxInfo);
             this.Controls.Add(this.txtBoxDescription);
             this.Controls.Add(this.txtBoxPrice);
@@ -513,7 +512,7 @@ namespace ComputerShopForm
             this.Name = "FormProductInfo";
             this.Text = "FormProductInfo";
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProductImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -560,5 +559,6 @@ namespace ComputerShopForm
         private System.Windows.Forms.TextBox txtBoxFortnite;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox picProductImage;
     }
 }
