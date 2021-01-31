@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -9,7 +8,7 @@ namespace ComputerShopForm
     public partial class FormShop : Form
     {
         private IProductsRepo _repo;
-        private IShoppingCart _cart;
+        private ShoppingCart _cart;
         private IList<UserControlShop> _controls;
         public List<IProduct> productList;
 
@@ -20,7 +19,6 @@ namespace ComputerShopForm
             _repo = new ProductsRepo();
             _cart = ShoppingCart.GetShoppingCart();
             _controls = new List<UserControlShop>();
-
             productList = _repo.CreateProductList();
             GenerateProductControls(productList);
         }
@@ -37,6 +35,7 @@ namespace ComputerShopForm
                     ProductSummary = product.ProductSummary,
                     ProductStock = product.Stock,
                     SameDayDelivery = true,
+                    ProductFullInfo = product.ToString(),
                     Id = product.Id,
                 };
 
@@ -57,6 +56,7 @@ namespace ComputerShopForm
             var userControl = sender as UserControlShop;
             var product = _repo.GetProduct(userControl.ProductName);
             _cart.AddProductToCart(product);
+            lblItemsInCart.Text = _cart.Shoppinglist.Count().ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,13 +86,14 @@ namespace ComputerShopForm
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 foreach (UserControlShop control in flowLayoutPanel1.Controls)
                 {
                     control.Visible = false;
                     string input = textBox1.Text.ToLower();
-                    if (ProductName.ToLower().Contains(input)||control.ProductSummary.ToLower().Contains(input))
+                    if (control.ProductName.ToLower().Contains(input) || control.ProductSummary.ToLower().Contains(input)
+                        || control.ProductFullInfo.ToLower().Contains(input))
                     {
                         control.Visible = true;
                     }
@@ -104,6 +105,11 @@ namespace ComputerShopForm
         {
             FormShoppingCart cart = new FormShoppingCart();
             cart.Show();
+        }
+
+        private void FormShop_Enter(object sender, EventArgs e)
+        {
+            lblItemsInCart.Text = _cart.Shoppinglist.Count().ToString();
         }
     }
 }

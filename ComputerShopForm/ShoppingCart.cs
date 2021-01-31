@@ -58,7 +58,7 @@ namespace ComputerShopForm
 
         public double CalculatePrice()
         {
-            return _priceCalculator.CalculatePrice(Shoppinglist) + _priceCalculator.CalculateTax(Shoppinglist);
+            return Math.Round(_priceCalculator.CalculatePrice(Shoppinglist) + _priceCalculator.CalculateTax(Shoppinglist),2);
         }
     }
 }

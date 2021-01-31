@@ -16,8 +16,6 @@ namespace ComputerShopForm
             _cart = ShoppingCart.GetShoppingCart();
             _logger = new JsonLogger();
             CreateCombinedShoppingList();
-
-            //button remove
         }
 
         public void CreateCombinedShoppingList()
@@ -34,9 +32,9 @@ namespace ComputerShopForm
                                      select new { Name = groupProduct.Key, Count = countUniqueProduct, ID = groupProduct.First().Id };
 
                     GenerateUserControls(uniqueCart);
-                    lblTotalPrice.Text = $"Total:           € {_cart.CalculatePrice()}";
                 }
             }
+            lblTotalPrice.Text = $"Total:           € {_cart.CalculatePrice()}";
         }
 
         public void GenerateUserControls(IEnumerable<dynamic> uniqueCart)

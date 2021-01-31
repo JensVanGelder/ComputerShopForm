@@ -29,20 +29,20 @@ namespace ComputerShopForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormShop));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.roundButton1 = new ComputerShopForm.RoundButton();
+            this.lblItemsInCart = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.roundButton1 = new ComputerShopForm.RoundButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -110,10 +110,10 @@ namespace ComputerShopForm
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.roundButton1);
+            this.panel1.Controls.Add(this.lblItemsInCart);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.roundButton1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -121,16 +121,16 @@ namespace ComputerShopForm
             this.panel1.Size = new System.Drawing.Size(1102, 100);
             this.panel1.TabIndex = 6;
             // 
-            // roundButton1
+            // lblItemsInCart
             // 
-            this.roundButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.roundButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton1.BackgroundImage")));
-            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.roundButton1.Location = new System.Drawing.Point(877, 3);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(85, 85);
-            this.roundButton1.TabIndex = 7;
-            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
+            this.lblItemsInCart.BackColor = System.Drawing.Color.Transparent;
+            this.lblItemsInCart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemsInCart.Location = new System.Drawing.Point(1040, 32);
+            this.lblItemsInCart.Name = "lblItemsInCart";
+            this.lblItemsInCart.Size = new System.Drawing.Size(23, 11);
+            this.lblItemsInCart.TabIndex = 8;
+            this.lblItemsInCart.Text = "0";
+            this.lblItemsInCart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -143,25 +143,11 @@ namespace ComputerShopForm
             this.label1.TabIndex = 6;
             this.label1.Text = "BLUEBALL";
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::ComputerShopForm.Properties.Resources.cart;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(995, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 70);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
@@ -172,6 +158,22 @@ namespace ComputerShopForm
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(251, 499);
             this.panel2.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::ComputerShopForm.Properties.Resources.cart;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(10, 170);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 70);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -218,6 +220,19 @@ namespace ComputerShopForm
             this.radioButton3.Text = "Workstation";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
+            // roundButton1
+            // 
+            this.roundButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.roundButton1.BackgroundImage = global::ComputerShopForm.Properties.Resources.cartsmol_20_1_60x60_1_45x45;
+            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.roundButton1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton1.Location = new System.Drawing.Point(1005, 3);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Size = new System.Drawing.Size(85, 85);
+            this.roundButton1.TabIndex = 7;
+            this.roundButton1.Text = "0";
+            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
+            // 
             // FormShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -231,6 +246,7 @@ namespace ComputerShopForm
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "FormShop";
+            this.Enter += new System.EventHandler(this.FormShop_Enter);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -242,7 +258,6 @@ namespace ComputerShopForm
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
@@ -254,6 +269,8 @@ namespace ComputerShopForm
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private RoundButton roundButton1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblItemsInCart;
     }
 }
 

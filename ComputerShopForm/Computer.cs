@@ -20,7 +20,11 @@
 
         public override string ToString()
         {
-            string add = $"\nRAM IS {Ram}";
+            string add = $"\nRAM IS {Ram}" +
+                $"\nMobo: {MoBo}" +
+                $"\nHDD: {HDD}" +
+                $"\nCPU: {CPU}" +
+                $"\nPSU: {PSU}";
             return base.ToString() + add;
         }
     }

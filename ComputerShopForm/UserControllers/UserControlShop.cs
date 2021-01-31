@@ -42,6 +42,7 @@ namespace ComputerShopForm
             set { lblProductSummary.Text = value; }
         }
 
+        public string ProductFullInfo { get; set; }
         private string _productImagePath;
 
         public string ProductImagePath

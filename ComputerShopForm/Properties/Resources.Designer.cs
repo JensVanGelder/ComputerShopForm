@@ -69,5 +69,15 @@ namespace ComputerShopForm.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cartsmol_20_1_60x60_1_45x45 {
+            get {
+                object obj = ResourceManager.GetObject("cartsmol_20_1_60x60_1_45x45", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
