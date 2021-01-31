@@ -58,6 +58,9 @@
     </Compile>
     <Compile Include="PriceCalculator.cs" />
     <Compile Include="Logger\TxtLogger.cs" />
+    <Compile Include="Buttons\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControllers\UserControlCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,12 +92,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShoppingCart.cs" />
-    <Compile Include="UserControllers\UserControlProductInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControllers\UserControlProductInfo.Designer.cs">
-      <DependentUpon>UserControlProductInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControllers\UserControlShop.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +107,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormShop.resx">
       <DependentUpon>FormShop.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormShoppingCart.resx">
       <DependentUpon>FormShoppingCart.cs</DependentUpon>
@@ -124,9 +122,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControllers\UserControlProductInfo.resx">
-      <DependentUpon>UserControlProductInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControllers\UserControlShop.resx">
       <DependentUpon>UserControlShop.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,7 +138,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\cart.png" />
   </ItemGroup>

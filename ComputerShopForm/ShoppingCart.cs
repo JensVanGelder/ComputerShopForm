@@ -14,7 +14,7 @@ namespace ComputerShopForm
         public List<IProduct> Shoppinglist { get; set; }
 
         public static ShoppingCart _cart;
-        private IPriceCalculator _priceCalculator;
+        private readonly IPriceCalculator _priceCalculator;
 
         public ShoppingCart()
         {
@@ -51,11 +51,6 @@ namespace ComputerShopForm
             return _cart;
         }
 
-        public List<IProduct> ShowShoppingCart()
-        {
-            return Shoppinglist;
-        }
-
         public void ClearCart()
         {
             Shoppinglist.Clear();
@@ -63,7 +58,7 @@ namespace ComputerShopForm
 
         public double CalculatePrice()
         {
-            return _priceCalculator.CalculatePrice(Shoppinglist) + _priceCalculator.CalculateWithTax(Shoppinglist);
+            return _priceCalculator.CalculatePrice(Shoppinglist) + _priceCalculator.CalculateTax(Shoppinglist);
         }
     }
 }

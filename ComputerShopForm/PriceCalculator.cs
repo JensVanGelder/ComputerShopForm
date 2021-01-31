@@ -2,7 +2,7 @@
 
 namespace ComputerShopForm
 {
-    internal class PriceCalculator : IPriceCalculator
+    public class PriceCalculator : IPriceCalculator
     {
         public double CalculatePrice(List<IProduct> shoppinglist)
         {
@@ -15,7 +15,7 @@ namespace ComputerShopForm
             return price;
         }
 
-        public double CalculateWithTax(List<IProduct> shoppinglist)
+        public double CalculateTax(List<IProduct> shoppinglist)
         {
             double tax = 0.21;
             return CalculatePrice(shoppinglist) * tax;

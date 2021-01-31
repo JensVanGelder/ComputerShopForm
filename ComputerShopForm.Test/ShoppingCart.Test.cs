@@ -13,7 +13,6 @@ namespace ComputerShopForm.Test
         public void Setup()
         {
             testcart = ShoppingCart.GetShoppingCart();
-
             testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 0, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
         }
 
@@ -30,7 +29,7 @@ namespace ComputerShopForm.Test
             double priceofcart = testcart.CalculatePrice();
 
             //ASSERT
-            Assert.AreEqual(4.0, priceofcart);
+            Assert.AreEqual(4.0*1.21, priceofcart);
         }
 
         [Test]
@@ -58,6 +57,12 @@ namespace ComputerShopForm.Test
             testcart.ClearCart();
 
             Assert.AreEqual(0, testcart.Shoppinglist.Count);
+        }
+        [Test]
+        public void GetShoppingCart_WhenCalledIfCartIsNull_MakesNewCart()
+        {
+            testcart = ShoppingCart.GetShoppingCart();
+            Assert.IsNotNull(testcart);
         }
     }
 }

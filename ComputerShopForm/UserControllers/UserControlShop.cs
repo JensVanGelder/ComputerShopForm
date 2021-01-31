@@ -103,11 +103,6 @@ namespace ComputerShopForm
             AddToCartButtonClicked?.Invoke(this, e);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Test");
-        }
-
         private void lblProductName_Click(object sender, EventArgs e)
         {
             var productforinfo = _repo.GetProduct(ProductName);
@@ -118,11 +113,13 @@ namespace ComputerShopForm
         private void lblProductName_MouseHover(object sender, EventArgs e)
         {
             lblProductName.ForeColor = Color.DarkBlue;
+            this.BackColor = Color.GhostWhite;
         }
 
         private void lblProductName_MouseLeave(object sender, EventArgs e)
         {
-            lblProductName.ForeColor = Color.Blue;
+            lblProductName.ForeColor = Color.DodgerBlue;
+            this.BackColor = Color.White;
         }
     }
 }

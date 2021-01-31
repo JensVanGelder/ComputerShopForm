@@ -6,6 +6,6 @@ namespace ComputerShopForm
     {
         double CalculatePrice(List<IProduct> shoppinglist);
 
-        double CalculateWithTax(List<IProduct> shoppinglist);
+        double CalculateTax(List<IProduct> shoppinglist);
     }
 }

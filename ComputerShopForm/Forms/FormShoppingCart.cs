@@ -31,7 +31,6 @@ namespace ComputerShopForm
                     var uniqueCart = from product in _cart.Shoppinglist
                                      group product by product.Name into groupProduct
                                      let countUniqueProduct = groupProduct.Count()
-                                     orderby countUniqueProduct descending
                                      select new { Name = groupProduct.Key, Count = countUniqueProduct, ID = groupProduct.First().Id };
 
                     GenerateUserControls(uniqueCart);
@@ -79,10 +78,6 @@ namespace ComputerShopForm
                 MessageBox.Show("Thank you for your purchase", "Purchase Completed");
                 this.Close();
             }
-        }
-
-        private void lblTotalPrice_Click(object sender, System.EventArgs e)
-        {
         }
 
         private void RemoveItemButtonClicked(object sender, EventArgs e)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ComputerShopForm.Test
 {
-    public class Tests
+    public class GamingPcTest
     {
         public GamingPc testproduct;
         public ShoppingCart testcart;
@@ -22,15 +22,14 @@ namespace ComputerShopForm.Test
             testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 1, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
             testproduct.Stock = 0;
             //ACT
-            //var output1 = testcart.ToString();
+            testcart.ClearCart();
             int number1incart = testcart.Shoppinglist.Count;
 
             testcart.AddProductToCart(testproduct);
             int number2incart = testcart.Shoppinglist.Count;
-            //var output2 = testcart.ToString();
 
             //ASSERT
-            Assert.AreNotEqual(number1incart, number2incart);
+            Assert.AreEqual(number1incart, number2incart);
         }
     }
 }
