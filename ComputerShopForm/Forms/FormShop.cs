@@ -10,7 +10,6 @@ namespace ComputerShopForm
         private IProductsRepo _repo;
         private IShoppingCart _cart;
         private IList<UserControlShop> _controls;
-        public List<IProduct> productList;
 
         public FormShop()
         {
@@ -20,7 +19,7 @@ namespace ComputerShopForm
             _cart = ShoppingCart.GetShoppingCart();
             _controls = new List<UserControlShop>();
 
-            productList = _repo.CreateProductList();
+            IList<IProduct> productList = _repo.CreateProductList();
             GenerateProductControls(productList);
         }
 
@@ -28,7 +27,7 @@ namespace ComputerShopForm
         {
             foreach (IProduct product in products)
             {
-                UserControlShop usercontrol = new UserControlShop
+                var usercontrol = new UserControlShop
                 {
                     ProductName = product.Name,
                     ProductPrice = product.Price,
@@ -42,6 +41,7 @@ namespace ComputerShopForm
                 usercontrol.AddToCartButtonClicked += AddToCartClickedInUserControl;
                 _controls.Add(usercontrol);
             }
+
             flowLayoutPanel1.Controls.AddRange(_controls.ToArray());
         }
 
@@ -53,9 +53,11 @@ namespace ComputerShopForm
 
         private void AddToCartClickedInUserControl(object sender, EventArgs e)
         {
-            var userControl = sender as UserControlShop;
-            var product = _repo.GetProduct(userControl.ProductName);
-            _cart.AddProductToCart(product);
+            if (sender is UserControlShop userControl)
+            {
+                var product = _repo.GetProduct(userControl.ProductName);
+                _cart.AddProductToCart(product);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -91,6 +93,16 @@ namespace ComputerShopForm
             }
             //var selectedControls = _controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y => y.Visible = true).ToList();
             //_controls.Where(x => x.ProductName.ToLower() == textBox1.Text.ToLower()).Select(y=>y.Visible=true);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

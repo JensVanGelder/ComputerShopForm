@@ -1,36 +1,38 @@
 using NUnit.Framework;
-using System.Collections.Generic;
 
 namespace ComputerShopForm.Test
 {
     public class Tests
     {
-        public GamingPc testproduct;
-        public ShoppingCart testcart;
-        public List<IProduct> testcart2;
+        private GamingPc _testproduct;
+        private ShoppingCart _testcart;
 
         [SetUp]
         public void Setup()
         {
-            testcart = ShoppingCart.GetShoppingCart();
         }
 
         [Test]
         public void GamingPC_WhenStockIsZero_CanNotBeAddedToShoppingCart()
         {
             //ARRANGE
-            testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 1, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
-            testproduct.Stock = 0;
+            _testcart = ShoppingCart.GetShoppingCart();
+            _testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 1, "TestMOBO", 
+                "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true)
+            {
+                Stock = 0
+            };
+
             //ACT
             //var output1 = testcart.ToString();
-            int number1incart = testcart.Shoppinglist.Count;
+            int number1InCart = _testcart.ShoppingList.Count;
 
-            testcart.AddProductToCart(testproduct);
-            int number2incart = testcart.Shoppinglist.Count;
+            _testcart.AddProductToCart(_testproduct);
+            int number2InCart = _testcart.ShoppingList.Count;
             //var output2 = testcart.ToString();
 
             //ASSERT
-            Assert.AreNotEqual(number1incart, number2incart);
+            Assert.AreNotEqual(number1InCart, number2InCart);
         }
     }
 }
