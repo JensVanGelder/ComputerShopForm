@@ -36,18 +36,36 @@ namespace ComputerShopForm
 
         public void AddTypeInfo(IProduct product)
         {
-            if (product is GamingPc)
+            switch (product)
             {
-                //add GamingPC specifics
-            }
-            else if (product is Workstation)
-            {
-            }
-            else if (product is Laptop)
-            {
-                //txtBoxScreenType.Text = product.ScreenType;
-                //txtBoxWeight.Text = $"{Convert.ToString(product.WeightInGrams)} grams";
-            }
+                case GamingPc gamingPc:
+                    {
+                        txtBoxGpu.Text = gamingPc.Gpu;
+                        txtBoxFortnite.Text = Convert.ToString(gamingPc.CanPlayFortniteOnHigh);
+                        txtBoxRgb.Text = Convert.ToString(gamingPc.RgbPerformance);
+                        break;
+                    }
+
+                case Workstation workstation:
+                    {
+                        txtBoxRaid.Text = workstation.RaidType;
+                        break;                        
+                    }
+
+                case Laptop laptop:
+                    {
+                        txtBoxScreenSize.Text = Convert.ToString(laptop.ScreenSize);
+                        txtBoxScreenType.Text = laptop.ScreenType;
+                        txtBoxWeight.Text = Convert.ToString(laptop.WeightInGrams);
+                        break;
+                    }
+
+                default:
+                    break;
+            }                   
         }
+              
+
+       
     }
 }
