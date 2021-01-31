@@ -22,14 +22,14 @@ namespace ComputerShopForm
 
         public void CreateCombinedShoppingList()
         {
-            if (_cart.Shoppinglist != null)
+            if (_cart.ShoppingList != null)
             {
                 button1.Visible = false;
 
-                if (_cart.Shoppinglist.Count != 0)
+                if (_cart.ShoppingList.Count != 0)
                 {
                     button1.Visible = true;
-                    var uniqueCart = from product in _cart.Shoppinglist
+                    var uniqueCart = from product in _cart.ShoppingList
                                      group product by product.Name into groupProduct
                                      let countUniqueProduct = groupProduct.Count()
                                      orderby countUniqueProduct descending
@@ -48,7 +48,7 @@ namespace ComputerShopForm
                 double price = 0;
                 string path = "";
 
-                foreach (var item in _cart.Shoppinglist.Where(item => item.Name == product.Name))
+                foreach (var item in _cart.ShoppingList.Where(item => item.Name == product.Name))
                 {
                     path = item.ProductImagePath;
                     price = item.Price;

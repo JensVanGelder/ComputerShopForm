@@ -31,7 +31,7 @@ namespace ComputerShopForm.Test
 
             //ASSERT
 
-            Assert.AreEqual(expectedResult, _testcart.Shoppinglist.Count);
+            Assert.AreEqual(expectedResult, _testcart.ShoppingList.Count);
         }
     }
 }

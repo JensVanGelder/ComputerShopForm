@@ -25,10 +25,10 @@ namespace ComputerShopForm.Test
 
             //ACT
             //var output1 = testcart.ToString();
-            int number1InCart = _testcart.Shoppinglist.Count;
+            int number1InCart = _testcart.ShoppingList.Count;
 
             _testcart.AddProductToCart(_testproduct);
-            int number2InCart = _testcart.Shoppinglist.Count;
+            int number2InCart = _testcart.ShoppingList.Count;
             //var output2 = testcart.ToString();
 
             //ASSERT

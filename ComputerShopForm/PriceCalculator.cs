@@ -5,7 +5,7 @@ namespace ComputerShopForm
 {
     internal class PriceCalculator : IPriceCalculator
     {
-        private const double TAX = 0.21;
+        private const double Tax = 0.21;
 
         public double CalculatePrice(List<IProduct> shoppinglist)
         {
@@ -14,7 +14,7 @@ namespace ComputerShopForm
 
         public double CalculateWithTax(List<IProduct> shoppinglist)
         {
-            return CalculatePrice(shoppinglist) * TAX;
+            return CalculatePrice(shoppinglist) * Tax;
         }
     }
 }

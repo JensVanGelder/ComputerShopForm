@@ -23,7 +23,7 @@ namespace ComputerShopForm
             {
                 pictureBoxProductInfo.Load(computer.ProductImagePath);
                 txtBoxName.Text = computer.Name;
-                txtBoxPsu.Text = computer.PSU;
+                txtBoxPsu.Text = computer.Psu;
             }
 
             txtBoxPrice.Text = Convert.ToString(product.Price);
@@ -37,8 +37,8 @@ namespace ComputerShopForm
             {
                 case GamingPc pc:
                 {
-                    txtBoxCpu.Text = pc.CPU;
-                    txtBoxHdd.Text = pc.HDD;
+                    txtBoxCpu.Text = pc.Cpu;
+                    txtBoxHdd.Text = pc.Hdd;
                     txtBoxMoBo.Text = pc.MoBo;
                     break;
                 }

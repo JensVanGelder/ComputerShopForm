@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace ComputerShopForm.Test
 {
@@ -19,6 +20,7 @@ namespace ComputerShopForm.Test
             //ACT
 
             //ASSERT
+            throw new NotImplementedException();
         }
     }
 }

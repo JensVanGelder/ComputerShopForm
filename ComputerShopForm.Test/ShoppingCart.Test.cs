@@ -44,7 +44,7 @@ namespace ComputerShopForm.Test
             _testcart.RemoveProductFromCart(_testproduct.Name);
 
             //ASSERT
-            Assert.AreEqual(_testcart.Shoppinglist.Count, 3);
+            Assert.AreEqual(_testcart.ShoppingList.Count, 3);
         }
 
         [Test]
@@ -55,7 +55,7 @@ namespace ComputerShopForm.Test
 
             _testcart.ClearCart();
 
-            Assert.AreEqual(0, _testcart.Shoppinglist.Count);
+            Assert.AreEqual(0, _testcart.ShoppingList.Count);
         }
     }
 }
