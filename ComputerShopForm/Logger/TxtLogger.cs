@@ -10,7 +10,7 @@ namespace ComputerShopForm
             using (StreamWriter writer = new StreamWriter("log.txt", true))
             {
                 writer.WriteLine($"---------------\nPurchase made at {DateTime.Now} for a total of € {cart.CalculatePrice()}:");
-                foreach (IProduct product in cart.Shoppinglist)
+                foreach (IProduct product in cart.ShoppingList)
                 {
                     writer.WriteLine($"   {product.Name} - € {product.Price}");
                 }

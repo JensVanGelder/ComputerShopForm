@@ -1,10 +1,11 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace ComputerShopForm.Test
 {
     public class ProductIdTest
     {
-        public Product testproduct;
+        private Product _testproduct;
 
         [SetUp]
         public void Setup()
@@ -19,6 +20,7 @@ namespace ComputerShopForm.Test
             //ACT
 
             //ASSERT
+            throw new NotImplementedException();
         }
     }
 }

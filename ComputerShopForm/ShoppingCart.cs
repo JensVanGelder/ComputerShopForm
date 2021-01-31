@@ -1,44 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ComputerShopForm
 {
     [Serializable]
     public class ShoppingCart : IShoppingCart
     {
-        public string CartInfo
-        {
-            get { return $"Order Placed at: {DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")}, Total Price: € {CalculatePrice()}"; }
-        }
+        public List<IProduct> ShoppingList { get; set; }
 
-        public List<IProduct> Shoppinglist { get; set; }
-
-        public static ShoppingCart _cart;
+        private static ShoppingCart _cart;
         private IPriceCalculator _priceCalculator;
 
         public ShoppingCart()
         {
-            Shoppinglist = new List<IProduct>();
+            ShoppingList = new List<IProduct>();
             _priceCalculator = new PriceCalculator();
+        }
+
+        public string CartInfo
+        {
+            get { return $"Order Placed at: {DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")}, Total Price: € {CalculatePrice()}"; }
         }
 
         public void AddProductToCart(IProduct product)
         {
             if (product.Stock > 0)
             {
-                Shoppinglist.Add(product);
+                ShoppingList.Add(product);
             }
         }
 
         public void RemoveProductFromCart(string productName)
         {
-            foreach (var item in _cart.Shoppinglist)
+            foreach (var item in _cart.ShoppingList.Where(item => item.Name == productName))
             {
-                if (item.Name == productName)
-                {
-                    _cart.Shoppinglist.Remove(item);
-                    break;
-                }
+                _cart.ShoppingList.Remove(item);
+                break;
             }
         }
 
@@ -53,17 +51,17 @@ namespace ComputerShopForm
 
         public List<IProduct> ShowShoppingCart()
         {
-            return Shoppinglist;
+            return ShoppingList;
         }
 
         public void ClearCart()
         {
-            Shoppinglist.Clear();
+            ShoppingList.Clear();
         }
 
         public double CalculatePrice()
         {
-            return _priceCalculator.CalculatePrice(Shoppinglist) + _priceCalculator.CalculateWithTax(Shoppinglist);
+            return _priceCalculator.CalculatePrice(ShoppingList) + _priceCalculator.CalculateWithTax(ShoppingList);
         }
     }
 }

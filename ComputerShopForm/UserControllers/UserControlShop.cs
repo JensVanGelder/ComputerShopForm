@@ -6,16 +6,12 @@ namespace ComputerShopForm
 {
     public partial class UserControlShop : UserControl
     {
-        public IShoppingCart _cart;
-        public IProductsRepo _repo;
-        public IProduct _product;
+        private IProductsRepo _repo;
 
         public UserControlShop()
         {
             InitializeComponent();
-            _cart = ShoppingCart.GetShoppingCart();
             _repo = new ProductsRepo();
-
         }
 
         public int Id { get; set; }
@@ -74,17 +70,7 @@ namespace ComputerShopForm
         public bool SameDayDelivery
         {
             get { return Convert.ToBoolean(lblSameDayDelivery.Text); }
-            set
-            {
-                if (ProductStock > 0)
-                {
-                    lblSameDayDelivery.Text = $"Morgen bij jou";
-                }
-                else
-                {
-                    lblSameDayDelivery.Text = $"Tijdelijk niet in voorraad";
-                }
-            }
+            set { lblSameDayDelivery.Text = ProductStock > 0 ? "Morgen bij jou" : "Tijdelijk niet in voorraad"; }
         }
 
         public event EventHandler AddToCartButtonClicked;
@@ -97,11 +83,6 @@ namespace ComputerShopForm
         protected virtual void OnAddToShoppingCartButtonClicked(EventArgs e)
         {
             AddToCartButtonClicked?.Invoke(this, e);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Test");
         }
 
         private void lblProductName_Click(object sender, EventArgs e)

@@ -1,20 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ComputerShopForm
 {
     public partial class FormProductInfo : Form
     {
-        private readonly IProductsRepo _repo;
-        public List<IProduct> _productinfolist;
-
         public FormProductInfo(IProduct product)
         {
             InitializeComponent();
-            this.Text = product.Name;
-            _repo = new ProductsRepo();
-            _productinfolist = _repo.CreateProductList();
             SetData(product);
         }
 
@@ -43,7 +36,7 @@ namespace ComputerShopForm
 
         public void AddTypeInfo(IProduct product)
         {
-            if (product is GamingPc)
+            switch (product)
             {
                 var temp = product as GamingPc;
             }

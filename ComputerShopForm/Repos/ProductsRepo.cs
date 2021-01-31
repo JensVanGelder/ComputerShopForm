@@ -41,7 +41,7 @@ namespace ComputerShopForm
             List<IProduct> allProducts = CreateProductList();
 
             // LAMBDA Expression. Return the first object in which the Name property equals user input
-            var selectedProduct = allProducts.Where(x => x.Name == name).FirstOrDefault();
+            var selectedProduct = allProducts.FirstOrDefault(x => x.Name == name);
 
             return selectedProduct;
         }
