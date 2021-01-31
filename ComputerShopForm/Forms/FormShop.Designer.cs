@@ -39,13 +39,13 @@ namespace ComputerShopForm
             this.label1 = new System.Windows.Forms.Label();
             this.BLUEBALL = new System.Windows.Forms.Label();
             this.BallBox = new System.Windows.Forms.PictureBox();
-            this.roundButton1 = new ComputerShopForm.RoundButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.roundButton1 = new ComputerShopForm.RoundButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BallBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -101,12 +101,12 @@ namespace ComputerShopForm
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(339, 35);
+            this.textBox1.Location = new System.Drawing.Point(323, 42);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.MaximumSize = new System.Drawing.Size(570, 21);
             this.textBox1.MinimumSize = new System.Drawing.Size(75, 21);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(570, 20);
+            this.textBox1.Size = new System.Drawing.Size(570, 21);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "What are you looking for?";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -115,10 +115,10 @@ namespace ComputerShopForm
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.lblItemsInCart);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.BLUEBALL);
             this.panel1.Controls.Add(this.BallBox);
+            this.panel1.Controls.Add(this.lblItemsInCart);
+            this.panel1.Controls.Add(this.BLUEBALL);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.roundButton1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -146,7 +146,7 @@ namespace ComputerShopForm
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(106, 14);
+            this.label1.Location = new System.Drawing.Point(106, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 42);
             this.label1.TabIndex = 6;
@@ -168,20 +168,6 @@ namespace ComputerShopForm
             this.BallBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BallBox.TabIndex = 7;
             this.BallBox.TabStop = false;
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundButton1.BackgroundImage = global::ComputerShopForm.Properties.Resources.cartsmol_20_1_60x60_1_45x45;
-            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.roundButton1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.Location = new System.Drawing.Point(1005, 3);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(85, 85);
-            this.roundButton1.TabIndex = 7;
-            this.roundButton1.Text = "0";
-            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
             // 
             // panel2
             // 
@@ -259,6 +245,20 @@ namespace ComputerShopForm
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Workstation";
             this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundButton1.BackgroundImage = global::ComputerShopForm.Properties.Resources.cartsmol_20_1_60x60_1_45x45;
+            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.roundButton1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton1.Location = new System.Drawing.Point(1005, 3);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Size = new System.Drawing.Size(85, 85);
+            this.roundButton1.TabIndex = 7;
+            this.roundButton1.Text = "0";
+            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
             // 
             // FormShop
             // 

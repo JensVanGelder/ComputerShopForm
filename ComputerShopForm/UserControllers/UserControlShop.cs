@@ -75,7 +75,8 @@ namespace ComputerShopForm
         public bool SameDayDelivery
         {
             get { return Convert.ToBoolean(lblSameDayDelivery.Text); }
-            set { lblSameDayDelivery.Text = ProductStock > 0 ? "Morgen bij jou" : "Tijdelijk niet in voorraad"; }
+            set { lblSameDayDelivery.Text = ProductStock > 0 ? "Delivered tomorrow!" : "Currently out of stock.";
+                lblSameDayDelivery.ForeColor = ProductStock > 0 ?  Color.DarkSeaGreen : Color.FromArgb(206, 0, 0); }
         }
 
         public event EventHandler AddToCartButtonClicked;
