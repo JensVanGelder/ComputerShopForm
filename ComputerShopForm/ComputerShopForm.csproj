@@ -47,12 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileReaders\CsvFileReader.cs" />
     <Compile Include="Forms\FormLanding.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormLanding.Designer.cs">
       <DependentUpon>FormLanding.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileReaders\IFileReader.cs" />
     <Compile Include="Logger\ILogger.cs" />
     <Compile Include="Logger\JsonLogger.cs" />
     <Compile Include="Logger\Logger.cs" />
@@ -67,6 +69,8 @@
     <Compile Include="Buttons\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ProductInfoHandler.cs" />
+    <Compile Include="Repos\FileProductsRepo.cs" />
     <Compile Include="UserControllers\UserControlCart.cs">
       <SubType>UserControl</SubType>
     </Compile>

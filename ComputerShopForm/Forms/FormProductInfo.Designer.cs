@@ -29,7 +29,6 @@ namespace ComputerShopForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductInfo));
             this.lblInfoTitle = new System.Windows.Forms.Label();
             this.txtboxInfo = new System.Windows.Forms.TextBox();
@@ -68,8 +67,9 @@ namespace ComputerShopForm
             this.label15 = new System.Windows.Forms.Label();
             this.txtBoxFortnite = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.picProductImage = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.cmbTypeSelecter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picProductImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -459,6 +459,34 @@ namespace ComputerShopForm
             this.picProductImage.TabIndex = 49;
             this.picProductImage.TabStop = false;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Location = new System.Drawing.Point(205, 469);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(93, 23);
+            this.btnAdd.TabIndex = 50;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Visible = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // cmbTypeSelecter
+            // 
+            this.cmbTypeSelecter.FormattingEnabled = true;
+            this.cmbTypeSelecter.Items.AddRange(new object[] {
+            "GamingPc",
+            "Workstation",
+            "Laptop"});
+            this.cmbTypeSelecter.Location = new System.Drawing.Point(360, 12);
+            this.cmbTypeSelecter.Name = "cmbTypeSelecter";
+            this.cmbTypeSelecter.Size = new System.Drawing.Size(123, 21);
+            this.cmbTypeSelecter.TabIndex = 51;
+            this.cmbTypeSelecter.Visible = false;
+            this.cmbTypeSelecter.SelectedIndexChanged += new System.EventHandler(this.cmbTypeSelecter_SelectedIndexChanged);
+            // 
             // FormProductInfo
             // 
             this.AccessibleDescription = "In this form you we show the additional available information of the selected pro" +
@@ -469,6 +497,8 @@ namespace ComputerShopForm
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(630, 614);
+            this.Controls.Add(this.cmbTypeSelecter);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.picProductImage);
             this.Controls.Add(this.txtBoxFortnite);
             this.Controls.Add(this.label16);
@@ -557,7 +587,8 @@ namespace ComputerShopForm
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtBoxFortnite;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox picProductImage;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ComboBox cmbTypeSelecter;
     }
 }

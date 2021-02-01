@@ -12,7 +12,7 @@ namespace ComputerShopForm.Test
         {
             _testcart = ShoppingCart.GetShoppingCart();
 
-            _testproduct = new GamingPc("TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 0, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
+            _testproduct = new GamingPc(1,"TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 0, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
         }
 
         [Test]
@@ -25,7 +25,7 @@ namespace ComputerShopForm.Test
             _testcart.AddProductToCart(_testproduct);
 
             //ACT
-            double priceofcart = _testcart.CalculatePrice();
+            double priceofcart = _testcart.GetPriceWithTax();
 
             //ASSERT
             Assert.AreEqual(4.0 * 1.21, priceofcart);

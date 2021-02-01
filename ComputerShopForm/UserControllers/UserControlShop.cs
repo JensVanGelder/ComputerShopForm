@@ -7,12 +7,12 @@ namespace ComputerShopForm
 {
     public partial class UserControlShop : UserControl
     {
-        private IProductsRepo _repo;
+        private ProductsRepo _repo;
 
-        public UserControlShop()
+        public UserControlShop(ProductsRepo repo)
         {
             InitializeComponent();
-            _repo = new ProductsRepo();
+            _repo = repo;
         }
 
         public int Id { get; set; }
@@ -96,7 +96,7 @@ namespace ComputerShopForm
 
         private void lblProductName_Click(object sender, EventArgs e)
         {
-            var productforinfo = _repo.GetProduct(Id);
+            var productforinfo = _repo.GetProduct(Id, _repo.prods);
             FormProductInfo productinfoform = new FormProductInfo(productforinfo);
             productinfoform.Show();
         }

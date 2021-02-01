@@ -41,26 +41,27 @@ namespace ComputerShopForm
             this.lblItemsInCart = new System.Windows.Forms.Label();
             this.picCartButtonCircle = new System.Windows.Forms.PictureBox();
             this.pnlLeftSortOptions = new System.Windows.Forms.Panel();
-            this.pnlSocialMedia = new System.Windows.Forms.Panel();
-            this.picSocialMedia = new System.Windows.Forms.PictureBox();
-            this.grpType = new System.Windows.Forms.GroupBox();
-            this.chkGaming = new System.Windows.Forms.CheckBox();
-            this.chkWorkstation = new System.Windows.Forms.CheckBox();
-            this.chkLaptop = new System.Windows.Forms.CheckBox();
-            this.btnShoppingCart = new ComputerShopForm.RoundButton();
             this.grpBrand = new System.Windows.Forms.GroupBox();
             this.chkMsi = new System.Windows.Forms.CheckBox();
             this.chkHp = new System.Windows.Forms.CheckBox();
             this.chkAsus = new System.Windows.Forms.CheckBox();
+            this.grpType = new System.Windows.Forms.GroupBox();
+            this.chkLaptop = new System.Windows.Forms.CheckBox();
+            this.chkWorkstation = new System.Windows.Forms.CheckBox();
+            this.chkGaming = new System.Windows.Forms.CheckBox();
+            this.pnlSocialMedia = new System.Windows.Forms.Panel();
+            this.picSocialMedia = new System.Windows.Forms.PictureBox();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnShoppingCart = new ComputerShopForm.RoundButton();
             this.pnlMidTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBallBox)).BeginInit();
             this.pnlTopRightButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).BeginInit();
             this.pnlLeftSortOptions.SuspendLayout();
+            this.grpBrand.SuspendLayout();
+            this.grpType.SuspendLayout();
             this.pnlSocialMedia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).BeginInit();
-            this.grpType.SuspendLayout();
-            this.grpBrand.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowMainShopPanel
@@ -83,7 +84,7 @@ namespace ComputerShopForm
             this.btnShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowAll.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAll.ForeColor = System.Drawing.Color.White;
-            this.btnShowAll.Location = new System.Drawing.Point(68, 16);
+            this.btnShowAll.Location = new System.Drawing.Point(22, 16);
             this.btnShowAll.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnShowAll.Name = "btnShowAll";
             this.btnShowAll.Size = new System.Drawing.Size(91, 27);
@@ -199,6 +200,7 @@ namespace ComputerShopForm
             // 
             this.pnlLeftSortOptions.AutoScroll = true;
             this.pnlLeftSortOptions.BackColor = System.Drawing.Color.White;
+            this.pnlLeftSortOptions.Controls.Add(this.btnAddProduct);
             this.pnlLeftSortOptions.Controls.Add(this.grpBrand);
             this.pnlLeftSortOptions.Controls.Add(this.grpType);
             this.pnlLeftSortOptions.Controls.Add(this.pnlSocialMedia);
@@ -210,86 +212,6 @@ namespace ComputerShopForm
             this.pnlLeftSortOptions.Name = "pnlLeftSortOptions";
             this.pnlLeftSortOptions.Size = new System.Drawing.Size(251, 499);
             this.pnlLeftSortOptions.TabIndex = 7;
-            // 
-            // pnlSocialMedia
-            // 
-            this.pnlSocialMedia.Controls.Add(this.picSocialMedia);
-            this.pnlSocialMedia.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlSocialMedia.Location = new System.Drawing.Point(0, 450);
-            this.pnlSocialMedia.Name = "pnlSocialMedia";
-            this.pnlSocialMedia.Size = new System.Drawing.Size(251, 49);
-            this.pnlSocialMedia.TabIndex = 11;
-            // 
-            // picSocialMedia
-            // 
-            this.picSocialMedia.BackColor = System.Drawing.Color.White;
-            this.picSocialMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picSocialMedia.Image = global::ComputerShopForm.Properties.Resources.Social_Media_banner;
-            this.picSocialMedia.Location = new System.Drawing.Point(3, 3);
-            this.picSocialMedia.Name = "picSocialMedia";
-            this.picSocialMedia.Size = new System.Drawing.Size(245, 43);
-            this.picSocialMedia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSocialMedia.TabIndex = 10;
-            this.picSocialMedia.TabStop = false;
-            // 
-            // grpType
-            // 
-            this.grpType.Controls.Add(this.chkLaptop);
-            this.grpType.Controls.Add(this.chkWorkstation);
-            this.grpType.Controls.Add(this.chkGaming);
-            this.grpType.Location = new System.Drawing.Point(22, 62);
-            this.grpType.Name = "grpType";
-            this.grpType.Size = new System.Drawing.Size(200, 100);
-            this.grpType.TabIndex = 12;
-            this.grpType.TabStop = false;
-            this.grpType.Text = "Type";
-            // 
-            // chkGaming
-            // 
-            this.chkGaming.AutoSize = true;
-            this.chkGaming.Location = new System.Drawing.Point(17, 21);
-            this.chkGaming.Name = "chkGaming";
-            this.chkGaming.Size = new System.Drawing.Size(90, 17);
-            this.chkGaming.TabIndex = 0;
-            this.chkGaming.Text = "Gaming PC";
-            this.chkGaming.UseVisualStyleBackColor = true;
-            this.chkGaming.CheckedChanged += new System.EventHandler(this.chkGaming_CheckedChanged);
-            // 
-            // chkWorkstation
-            // 
-            this.chkWorkstation.AutoSize = true;
-            this.chkWorkstation.Location = new System.Drawing.Point(17, 45);
-            this.chkWorkstation.Name = "chkWorkstation";
-            this.chkWorkstation.Size = new System.Drawing.Size(93, 17);
-            this.chkWorkstation.TabIndex = 1;
-            this.chkWorkstation.Text = "Workstation";
-            this.chkWorkstation.UseVisualStyleBackColor = true;
-            this.chkWorkstation.CheckedChanged += new System.EventHandler(this.chkWorkstation_CheckedChanged);
-            // 
-            // chkLaptop
-            // 
-            this.chkLaptop.AutoSize = true;
-            this.chkLaptop.Location = new System.Drawing.Point(17, 69);
-            this.chkLaptop.Name = "chkLaptop";
-            this.chkLaptop.Size = new System.Drawing.Size(64, 17);
-            this.chkLaptop.TabIndex = 2;
-            this.chkLaptop.Text = "Laptop";
-            this.chkLaptop.UseVisualStyleBackColor = true;
-            this.chkLaptop.CheckedChanged += new System.EventHandler(this.chkLaptop_CheckedChanged);
-            // 
-            // btnShoppingCart
-            // 
-            this.btnShoppingCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShoppingCart.BackgroundImage = global::ComputerShopForm.Properties.Resources.cartWsmall2;
-            this.btnShoppingCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnShoppingCart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShoppingCart.Location = new System.Drawing.Point(12, 5);
-            this.btnShoppingCart.Name = "btnShoppingCart";
-            this.btnShoppingCart.Size = new System.Drawing.Size(85, 85);
-            this.btnShoppingCart.TabIndex = 7;
-            this.btnShoppingCart.Text = "0";
-            this.btnShoppingCart.Click += new System.EventHandler(this.rndbtnShoppingCart_Click);
             // 
             // grpBrand
             // 
@@ -333,6 +255,100 @@ namespace ComputerShopForm
             this.chkAsus.Text = "ASUS";
             this.chkAsus.UseVisualStyleBackColor = true;
             // 
+            // grpType
+            // 
+            this.grpType.Controls.Add(this.chkLaptop);
+            this.grpType.Controls.Add(this.chkWorkstation);
+            this.grpType.Controls.Add(this.chkGaming);
+            this.grpType.Location = new System.Drawing.Point(22, 62);
+            this.grpType.Name = "grpType";
+            this.grpType.Size = new System.Drawing.Size(200, 100);
+            this.grpType.TabIndex = 12;
+            this.grpType.TabStop = false;
+            this.grpType.Text = "Type";
+            // 
+            // chkLaptop
+            // 
+            this.chkLaptop.AutoSize = true;
+            this.chkLaptop.Location = new System.Drawing.Point(17, 69);
+            this.chkLaptop.Name = "chkLaptop";
+            this.chkLaptop.Size = new System.Drawing.Size(64, 17);
+            this.chkLaptop.TabIndex = 2;
+            this.chkLaptop.Text = "Laptop";
+            this.chkLaptop.UseVisualStyleBackColor = true;
+            this.chkLaptop.CheckedChanged += new System.EventHandler(this.chkLaptop_CheckedChanged);
+            // 
+            // chkWorkstation
+            // 
+            this.chkWorkstation.AutoSize = true;
+            this.chkWorkstation.Location = new System.Drawing.Point(17, 45);
+            this.chkWorkstation.Name = "chkWorkstation";
+            this.chkWorkstation.Size = new System.Drawing.Size(93, 17);
+            this.chkWorkstation.TabIndex = 1;
+            this.chkWorkstation.Text = "Workstation";
+            this.chkWorkstation.UseVisualStyleBackColor = true;
+            this.chkWorkstation.CheckedChanged += new System.EventHandler(this.chkWorkstation_CheckedChanged);
+            // 
+            // chkGaming
+            // 
+            this.chkGaming.AutoSize = true;
+            this.chkGaming.Location = new System.Drawing.Point(17, 21);
+            this.chkGaming.Name = "chkGaming";
+            this.chkGaming.Size = new System.Drawing.Size(90, 17);
+            this.chkGaming.TabIndex = 0;
+            this.chkGaming.Text = "Gaming PC";
+            this.chkGaming.UseVisualStyleBackColor = true;
+            this.chkGaming.CheckedChanged += new System.EventHandler(this.chkGaming_CheckedChanged);
+            // 
+            // pnlSocialMedia
+            // 
+            this.pnlSocialMedia.Controls.Add(this.picSocialMedia);
+            this.pnlSocialMedia.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlSocialMedia.Location = new System.Drawing.Point(0, 450);
+            this.pnlSocialMedia.Name = "pnlSocialMedia";
+            this.pnlSocialMedia.Size = new System.Drawing.Size(251, 49);
+            this.pnlSocialMedia.TabIndex = 11;
+            // 
+            // picSocialMedia
+            // 
+            this.picSocialMedia.BackColor = System.Drawing.Color.White;
+            this.picSocialMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picSocialMedia.Image = global::ComputerShopForm.Properties.Resources.Social_Media_banner;
+            this.picSocialMedia.Location = new System.Drawing.Point(3, 3);
+            this.picSocialMedia.Name = "picSocialMedia";
+            this.picSocialMedia.Size = new System.Drawing.Size(245, 43);
+            this.picSocialMedia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSocialMedia.TabIndex = 10;
+            this.picSocialMedia.TabStop = false;
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAddProduct.FlatAppearance.BorderSize = 0;
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddProduct.Location = new System.Drawing.Point(131, 16);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(91, 27);
+            this.btnAddProduct.TabIndex = 14;
+            this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnShoppingCart
+            // 
+            this.btnShoppingCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShoppingCart.BackgroundImage = global::ComputerShopForm.Properties.Resources.cartWsmall2;
+            this.btnShoppingCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnShoppingCart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShoppingCart.Location = new System.Drawing.Point(12, 5);
+            this.btnShoppingCart.Name = "btnShoppingCart";
+            this.btnShoppingCart.Size = new System.Drawing.Size(85, 85);
+            this.btnShoppingCart.TabIndex = 7;
+            this.btnShoppingCart.Text = "0";
+            this.btnShoppingCart.Click += new System.EventHandler(this.rndbtnShoppingCart_Click);
+            // 
             // FormShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -354,12 +370,12 @@ namespace ComputerShopForm
             this.pnlTopRightButton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).EndInit();
             this.pnlLeftSortOptions.ResumeLayout(false);
-            this.pnlSocialMedia.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).EndInit();
-            this.grpType.ResumeLayout(false);
-            this.grpType.PerformLayout();
             this.grpBrand.ResumeLayout(false);
             this.grpBrand.PerformLayout();
+            this.grpType.ResumeLayout(false);
+            this.grpType.PerformLayout();
+            this.pnlSocialMedia.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,6 +403,7 @@ namespace ComputerShopForm
         private System.Windows.Forms.CheckBox chkMsi;
         private System.Windows.Forms.CheckBox chkHp;
         private System.Windows.Forms.CheckBox chkAsus;
+        private System.Windows.Forms.Button btnAddProduct;
     }
 }
 

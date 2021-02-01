@@ -5,6 +5,7 @@ namespace ComputerShopForm
 {
     public class ProductsRepo : IProductsRepo
     {
+        public List<IProduct> prods;
         public List<IProduct> CreateProductList()
         {
             var products = new List<IProduct>
@@ -31,12 +32,9 @@ namespace ComputerShopForm
             return products;
         }
 
-        public IProduct GetProduct(int id)
+        public IProduct GetProduct(int id, List<IProduct> products)
         {
-            List<IProduct> allProducts = CreateProductList();
-
-            var selectedProduct = allProducts.FirstOrDefault(x => x.Id == id);
-
+            var selectedProduct = products.FirstOrDefault(x => x.Id == id);
             return selectedProduct;
         }
     }

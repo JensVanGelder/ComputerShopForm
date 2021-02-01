@@ -7,7 +7,7 @@ namespace ComputerShopForm
 {
     public partial class FormShop : Form
     {
-        private IProductsRepo _repo;
+        public ProductsRepo _repo;
         private ShoppingCart _cart;
         private IList<UserControlShop> _controls;
 
@@ -17,16 +17,15 @@ namespace ComputerShopForm
             _repo = new ProductsRepo();
             _cart = ShoppingCart.GetShoppingCart();
             _controls = new List<UserControlShop>();
-
-            IList<IProduct> productList = _repo.CreateProductList();
-            GenerateProductControls(productList);
+            _repo.prods = _repo.CreateProductList();
+            GenerateProductControls(_repo.prods);
         }
 
         private void GenerateProductControls(IEnumerable<IProduct> products)
         {
             foreach (IProduct product in products)
             {
-                var usercontrol = new UserControlShop
+                var usercontrol = new UserControlShop(_repo)
                 {
                     ProductName = product.Name,
                     ProductPrice = product.Price,
@@ -49,7 +48,7 @@ namespace ComputerShopForm
         {
             if (sender is UserControlShop userControl)
             {
-                var product = _repo.GetProduct(userControl.Id);
+                var product = _repo.GetProduct(userControl.Id,_repo.prods);
                 _cart.AddProductToCart(product);
                 lblItemsInCart.Visible = true;
                 picCartButtonCircle.Visible = true;
@@ -59,6 +58,9 @@ namespace ComputerShopForm
 
         private void button3_Click(object sender, EventArgs e)
         {
+            _controls.Clear();
+            flowMainShopPanel.Controls.Clear();
+            GenerateProductControls(_repo.prods);
             foreach (UserControlShop control in flowMainShopPanel.Controls)
             {
                 control.Visible = true;
@@ -100,7 +102,7 @@ namespace ComputerShopForm
         {
             lblItemsInCart.Text = _cart.ShoppingList.Count().ToString();
         }
-          
+
         private void chkGaming_CheckedChanged(object sender, EventArgs e)
         {
             foreach (UserControlShop control in flowMainShopPanel.Controls)
@@ -136,6 +138,12 @@ namespace ComputerShopForm
                     control.Visible = true;
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormProductInfo editable = new FormProductInfo(this);
+            editable.Show();
         }
     }
 }
