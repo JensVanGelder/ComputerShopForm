@@ -36,9 +36,12 @@ namespace ComputerShopForm
             this.pnlMidTop = new System.Windows.Forms.Panel();
             this.pnlTopRightButton = new System.Windows.Forms.Panel();
             this.lblItemsInCart = new System.Windows.Forms.Label();
+            this.picCartButtonCircle = new System.Windows.Forms.PictureBox();
             this.lblSubTitle = new System.Windows.Forms.Label();
             this.lblCompanyName = new System.Windows.Forms.Label();
+            this.picBallBox = new System.Windows.Forms.PictureBox();
             this.pnlLeftSortOptions = new System.Windows.Forms.Panel();
+            this.picSocialMedia = new System.Windows.Forms.PictureBox();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.grpType = new System.Windows.Forms.GroupBox();
             this.chkLaptop = new System.Windows.Forms.CheckBox();
@@ -46,19 +49,16 @@ namespace ComputerShopForm
             this.chkGaming = new System.Windows.Forms.CheckBox();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.picSocialMedia = new System.Windows.Forms.PictureBox();
-            this.picCartButtonCircle = new System.Windows.Forms.PictureBox();
             this.btnShoppingCart = new ComputerShopForm.RoundButton();
-            this.picBallBox = new System.Windows.Forms.PictureBox();
             this.pnlMidTop.SuspendLayout();
             this.pnlTopRightButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBallBox)).BeginInit();
             this.pnlLeftSortOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).BeginInit();
             this.grpType.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBallBox)).BeginInit();
             this.SuspendLayout();
             // 
             // flowMainShopPanel
@@ -81,7 +81,7 @@ namespace ComputerShopForm
             this.btnShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowAll.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAll.ForeColor = System.Drawing.Color.White;
-            this.btnShowAll.Location = new System.Drawing.Point(22, 115);
+            this.btnShowAll.Location = new System.Drawing.Point(22, 66);
             this.btnShowAll.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnShowAll.Name = "btnShowAll";
             this.btnShowAll.Size = new System.Drawing.Size(91, 27);
@@ -148,6 +148,18 @@ namespace ComputerShopForm
             this.lblItemsInCart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblItemsInCart.Visible = false;
             // 
+            // picCartButtonCircle
+            // 
+            this.picCartButtonCircle.BackgroundImage = global::ComputerShopForm.Properties.Resources.wdotsmaller;
+            this.picCartButtonCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picCartButtonCircle.InitialImage = null;
+            this.picCartButtonCircle.Location = new System.Drawing.Point(69, 6);
+            this.picCartButtonCircle.Name = "picCartButtonCircle";
+            this.picCartButtonCircle.Size = new System.Drawing.Size(25, 25);
+            this.picCartButtonCircle.TabIndex = 10;
+            this.picCartButtonCircle.TabStop = false;
+            this.picCartButtonCircle.Visible = false;
+            // 
             // lblSubTitle
             // 
             this.lblSubTitle.AutoSize = true;
@@ -170,6 +182,18 @@ namespace ComputerShopForm
             this.lblCompanyName.TabIndex = 6;
             this.lblCompanyName.Text = "BLUEBALL";
             // 
+            // picBallBox
+            // 
+            this.picBallBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.picBallBox.BackgroundImage = global::ComputerShopForm.Properties.Resources.blueball;
+            this.picBallBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBallBox.Location = new System.Drawing.Point(0, 0);
+            this.picBallBox.Name = "picBallBox";
+            this.picBallBox.Size = new System.Drawing.Size(133, 100);
+            this.picBallBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBallBox.TabIndex = 7;
+            this.picBallBox.TabStop = false;
+            // 
             // pnlLeftSortOptions
             // 
             this.pnlLeftSortOptions.AutoScroll = true;
@@ -185,13 +209,26 @@ namespace ComputerShopForm
             this.pnlLeftSortOptions.Size = new System.Drawing.Size(251, 449);
             this.pnlLeftSortOptions.TabIndex = 7;
             // 
+            // picSocialMedia
+            // 
+            this.picSocialMedia.BackColor = System.Drawing.Color.White;
+            this.picSocialMedia.BackgroundImage = global::ComputerShopForm.Properties.Resources.Social_Media_banner;
+            this.picSocialMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picSocialMedia.Location = new System.Drawing.Point(3, 6);
+            this.picSocialMedia.Name = "picSocialMedia";
+            this.picSocialMedia.Size = new System.Drawing.Size(245, 43);
+            this.picSocialMedia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSocialMedia.TabIndex = 10;
+            this.picSocialMedia.TabStop = false;
+            this.picSocialMedia.Click += new System.EventHandler(this.picSocialMedia_Click);
+            // 
             // btnAddProduct
             // 
             this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAddProduct.FlatAppearance.BorderSize = 0;
             this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.Location = new System.Drawing.Point(131, 115);
+            this.btnAddProduct.Location = new System.Drawing.Point(131, 66);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(91, 27);
             this.btnAddProduct.TabIndex = 14;
@@ -204,7 +241,7 @@ namespace ComputerShopForm
             this.grpType.Controls.Add(this.chkLaptop);
             this.grpType.Controls.Add(this.chkWorkstation);
             this.grpType.Controls.Add(this.chkGaming);
-            this.grpType.Location = new System.Drawing.Point(22, 161);
+            this.grpType.Location = new System.Drawing.Point(22, 112);
             this.grpType.Name = "grpType";
             this.grpType.Size = new System.Drawing.Size(200, 100);
             this.grpType.TabIndex = 12;
@@ -214,7 +251,7 @@ namespace ComputerShopForm
             // chkLaptop
             // 
             this.chkLaptop.AutoSize = true;
-            this.chkLaptop.Location = new System.Drawing.Point(17, 69);
+            this.chkLaptop.Location = new System.Drawing.Point(15, 23);
             this.chkLaptop.Name = "chkLaptop";
             this.chkLaptop.Size = new System.Drawing.Size(64, 17);
             this.chkLaptop.TabIndex = 2;
@@ -225,7 +262,7 @@ namespace ComputerShopForm
             // chkWorkstation
             // 
             this.chkWorkstation.AutoSize = true;
-            this.chkWorkstation.Location = new System.Drawing.Point(17, 45);
+            this.chkWorkstation.Location = new System.Drawing.Point(15, 70);
             this.chkWorkstation.Name = "chkWorkstation";
             this.chkWorkstation.Size = new System.Drawing.Size(93, 17);
             this.chkWorkstation.TabIndex = 1;
@@ -236,7 +273,7 @@ namespace ComputerShopForm
             // chkGaming
             // 
             this.chkGaming.AutoSize = true;
-            this.chkGaming.Location = new System.Drawing.Point(17, 21);
+            this.chkGaming.Location = new System.Drawing.Point(15, 46);
             this.chkGaming.Name = "chkGaming";
             this.chkGaming.Size = new System.Drawing.Size(90, 17);
             this.chkGaming.TabIndex = 0;
@@ -264,32 +301,9 @@ namespace ComputerShopForm
             this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(0, -1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(288, 38);
+            this.pictureBox2.Size = new System.Drawing.Size(160, 38);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            // 
-            // picSocialMedia
-            // 
-            this.picSocialMedia.BackColor = System.Drawing.Color.White;
-            this.picSocialMedia.BackgroundImage = global::ComputerShopForm.Properties.Resources.Social_Media_banner;
-            this.picSocialMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picSocialMedia.Location = new System.Drawing.Point(3, 6);
-            this.picSocialMedia.Name = "picSocialMedia";
-            this.picSocialMedia.Size = new System.Drawing.Size(245, 43);
-            this.picSocialMedia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSocialMedia.TabIndex = 10;
-            this.picSocialMedia.TabStop = false;
-            // 
-            // picCartButtonCircle
-            // 
-            this.picCartButtonCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picCartButtonCircle.InitialImage = null;
-            this.picCartButtonCircle.Location = new System.Drawing.Point(69, 6);
-            this.picCartButtonCircle.Name = "picCartButtonCircle";
-            this.picCartButtonCircle.Size = new System.Drawing.Size(25, 25);
-            this.picCartButtonCircle.TabIndex = 10;
-            this.picCartButtonCircle.TabStop = false;
-            this.picCartButtonCircle.Visible = false;
             // 
             // btnShoppingCart
             // 
@@ -304,18 +318,6 @@ namespace ComputerShopForm
             this.btnShoppingCart.TabIndex = 7;
             this.btnShoppingCart.Text = "0";
             this.btnShoppingCart.Click += new System.EventHandler(this.rndbtnShoppingCart_Click);
-            // 
-            // picBallBox
-            // 
-            this.picBallBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.picBallBox.BackgroundImage = global::ComputerShopForm.Properties.Resources.blueball;
-            this.picBallBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBallBox.Location = new System.Drawing.Point(0, 0);
-            this.picBallBox.Name = "picBallBox";
-            this.picBallBox.Size = new System.Drawing.Size(133, 100);
-            this.picBallBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBallBox.TabIndex = 7;
-            this.picBallBox.TabStop = false;
             // 
             // FormShop
             // 
@@ -336,14 +338,14 @@ namespace ComputerShopForm
             this.pnlMidTop.ResumeLayout(false);
             this.pnlMidTop.PerformLayout();
             this.pnlTopRightButton.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBallBox)).EndInit();
             this.pnlLeftSortOptions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).EndInit();
             this.grpType.ResumeLayout(false);
             this.grpType.PerformLayout();
             this.pnlFooter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBallBox)).EndInit();
             this.ResumeLayout(false);
 
         }

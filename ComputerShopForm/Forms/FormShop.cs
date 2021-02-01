@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ComputerShopForm
 {
@@ -144,6 +145,11 @@ namespace ComputerShopForm
         {
             FormProductInfo editable = new FormProductInfo(this);
             editable.Show();
+        }
+
+        private void picSocialMedia_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.linkedin.com/in/ward-impe/");
         }
     }
 }
