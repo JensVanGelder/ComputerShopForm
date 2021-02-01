@@ -93,6 +93,7 @@ namespace ComputerShopForm
             this.txtboxInfo.ReadOnly = true;
             this.txtboxInfo.Size = new System.Drawing.Size(475, 78);
             this.txtboxInfo.TabIndex = 19;
+            this.txtboxInfo.Text = "N/A";
             // 
             // txtBoxDescription
             // 
@@ -113,6 +114,7 @@ namespace ComputerShopForm
             this.txtBoxPrice.ReadOnly = true;
             this.txtBoxPrice.Size = new System.Drawing.Size(153, 21);
             this.txtBoxPrice.TabIndex = 17;
+            this.txtBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxPrice_KeyPress);
             // 
             // txtBoxName
             // 
@@ -173,6 +175,7 @@ namespace ComputerShopForm
             this.txtBoxStock.ReadOnly = true;
             this.txtBoxStock.Size = new System.Drawing.Size(153, 21);
             this.txtBoxStock.TabIndex = 22;
+            this.txtBoxStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxStock_KeyPress);
             // 
             // lblInStock
             // 
@@ -194,6 +197,7 @@ namespace ComputerShopForm
             this.txtBoxWeight.Size = new System.Drawing.Size(153, 21);
             this.txtBoxWeight.TabIndex = 24;
             this.txtBoxWeight.Text = "N/A";
+            this.txtBoxWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxWeight_KeyPress);
             // 
             // label3
             // 
@@ -315,6 +319,7 @@ namespace ComputerShopForm
             this.txtBoxRam.ReadOnly = true;
             this.txtBoxRam.Size = new System.Drawing.Size(153, 21);
             this.txtBoxRam.TabIndex = 36;
+            this.txtBoxRam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxRam_KeyPress);
             // 
             // lblRam
             // 
@@ -335,6 +340,7 @@ namespace ComputerShopForm
             this.txtBoxId.ReadOnly = true;
             this.txtBoxId.Size = new System.Drawing.Size(75, 21);
             this.txtBoxId.TabIndex = 38;
+            this.txtBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxId_KeyPress);
             // 
             // lblIDdontuse
             // 
@@ -376,6 +382,7 @@ namespace ComputerShopForm
             this.txtBoxScreenSize.Size = new System.Drawing.Size(153, 21);
             this.txtBoxScreenSize.TabIndex = 41;
             this.txtBoxScreenSize.Text = "N/A";
+            this.txtBoxScreenSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxScreenSize_KeyPress);
             // 
             // txtBoxRaid
             // 

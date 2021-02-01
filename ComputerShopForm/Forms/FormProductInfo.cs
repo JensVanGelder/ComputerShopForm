@@ -9,95 +9,114 @@ namespace ComputerShopForm
         public List<IProduct> newProducts;
         private FormShop _shop;
         private ProductInfoHandler _handler;
+
         public string TextName
         {
             get { return txtBoxName.Text; }
             set { txtBoxName.Text = value; }
         }
+
         public int TextId
         {
             get { return Convert.ToInt32(txtBoxId.Text); }
             set { txtBoxId.Text = value.ToString(); }
         }
+
         public double TextPrice
         {
             get { return Convert.ToDouble(txtBoxPrice.Text); }
             set { txtBoxPrice.Text = value.ToString(); }
         }
+
         public string TextImage
         {
             get { return picProductImage.Text; }
             set { picProductImage.Text = value; }
         }
+
         public string TextSummary
         {
             get { return txtBoxDescription.Text; }
             set { txtBoxDescription.Text = value; }
         }
+
         public int TextStock
         {
             get { return Convert.ToInt32(txtBoxStock.Text); }
             set { txtBoxStock.Text = value.ToString(); }
         }
+
         public int TextRam
         {
             get { return Convert.ToInt32(txtBoxRam.Text); }
             set { txtBoxRam.Text = value.ToString(); }
         }
+
         public string TextMoBo
         {
             get { return txtBoxMoBo.Text; }
             set { txtBoxMoBo.Text = value; }
         }
+
         public string TextHdd
         {
             get { return txtBoxHdd.Text; }
             set { txtBoxHdd.Text = value; }
         }
+
         public string TextCpu
         {
             get { return txtBoxCpu.Text; }
             set { txtBoxCpu.Text = value; }
         }
+
         public string TextPsu
         {
             get { return txtBoxPsu.Text; }
             set { txtBoxPsu.Text = value; }
         }
+
         public string TextGpu
         {
             get { return txtBoxGpu.Text; }
             set { txtBoxGpu.Text = value; }
         }
+
         public Performance TextRgb
         {
             get { return Performance.Unknown; }
             set { txtBoxRgb.Text = Performance.Unknown.ToString(); }
         }
+
         public string TextFortnite
         {
             get { return txtBoxFortnite.Text; }
         }
+
         public string TextScreenType
         {
             get { return txtBoxScreenType.Text; }
         }
+
         public string TextScreenSize
         {
             get { return txtBoxScreenSize.Text; }
         }
+
         public string TextWeight
         {
             get { return txtBoxWeight.Text; }
         }
+
         public string TextRaid
         {
             get { return txtBoxRaid.Text; }
         }
+
         public FormProductInfo(IProduct product)
         {
             InitializeComponent();
-            //this.Text = product.Name;
+            this.Text = product.Name;
             SetData(product);
         }
 
@@ -105,7 +124,7 @@ namespace ComputerShopForm
         {
             InitializeComponent();
             _handler = new ProductInfoHandler(this);
-            SetAllTextboxesToWrite();
+            _handler.SetAllTextboxesToWrite();
             btnAdd.Visible = true;
             cmbTypeSelecter.Visible = true;
             lblInfoTitle.Text = "Add Product";
@@ -167,42 +186,34 @@ namespace ComputerShopForm
             }
         }
 
-        private void SetAllTextboxesToWrite()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    TextBox tb = ctrl as TextBox;
-                    if (tb.ReadOnly)
-                    {
-                        tb.ReadOnly = false;
-                    }
-                }
-            }
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            switch (cmbTypeSelecter.SelectedIndex)
+            if (_handler.CheckIfEmpty())
             {
-                case 0:
-                    var gamePc = _handler.CreateGamingPc();
-                    _shop._repo.prods.Add(gamePc);
-                    break;
+                MessageBox.Show("Some required fields are empty");
+            }
+            else
+            {
+                switch (cmbTypeSelecter.SelectedIndex)
+                {
+                    case 0:
+                        var gamePc = _handler.CreateGamingPc();
+                        _shop._repo.prods.Add(gamePc);
+                        break;
 
-                case 1:
-                    var workstation = _handler.CreateWorkstation();
-                    _shop._repo.prods.Add(workstation);
-                    break;
+                    case 1:
+                        var workstation = _handler.CreateWorkstation();
+                        _shop._repo.prods.Add(workstation);
+                        break;
 
-                case 2:
-                    var laptop = _handler.CreateLaptop();
-                    _shop._repo.prods.Add(laptop);
-                    break;
+                    case 2:
+                        var laptop = _handler.CreateLaptop();
+                        _shop._repo.prods.Add(laptop);
+                        break;
 
-                default:
-                    break;
+                    default:
+                        break;
+                }
             }
         }
 
@@ -211,15 +222,16 @@ namespace ComputerShopForm
             switch (cmbTypeSelecter.SelectedIndex)
             {
                 case 0:
-                    SetAllTextboxesToWrite();
+                    _handler.SetAllTextboxesToWrite();
                     txtBoxRaid.ReadOnly = true;
+                    txtBoxRaid.Text = "N/A";
                     txtBoxScreenSize.ReadOnly = true;
                     txtBoxScreenType.ReadOnly = true;
                     txtBoxWeight.ReadOnly = true;
                     break;
 
                 case 1:
-                    SetAllTextboxesToWrite();
+                    _handler.SetAllTextboxesToWrite();
                     txtBoxFortnite.ReadOnly = true;
                     txtBoxGpu.ReadOnly = true;
                     txtBoxScreenSize.ReadOnly = true;
@@ -228,7 +240,7 @@ namespace ComputerShopForm
                     break;
 
                 case 2:
-                    SetAllTextboxesToWrite();
+                    _handler.SetAllTextboxesToWrite();
                     txtBoxGpu.ReadOnly = true;
                     txtBoxFortnite.ReadOnly = true;
                     txtBoxRaid.ReadOnly = true;
@@ -237,6 +249,36 @@ namespace ComputerShopForm
                 default:
                     break;
             }
+        }
+
+        private void txtBoxStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            _handler.CheckInput(e);
+        }
+
+        private void txtBoxPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            _handler.CheckInput(e);
+        }
+
+        private void txtBoxRam_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            _handler.CheckInput(e);
+        }
+
+        private void txtBoxWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            _handler.CheckInput(e);
+        }
+
+        private void txtBoxScreenSize_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            _handler.CheckInput(e);
+        }
+
+        private void txtBoxId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            _handler.CheckInput(e);
         }
     }
 }

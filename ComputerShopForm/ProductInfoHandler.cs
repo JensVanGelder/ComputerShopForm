@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ComputerShopForm
 {
-    class ProductInfoHandler
+    internal class ProductInfoHandler
     {
         private FormProductInfo _form;
+
         public ProductInfoHandler(FormProductInfo form)
         {
             _form = form;
@@ -33,6 +31,7 @@ namespace ComputerShopForm
                 Convert.ToDouble(_form.TextWeight)
                 );
         }
+
         public IProduct CreateWorkstation()
         {
             return new Workstation(
@@ -50,6 +49,7 @@ namespace ComputerShopForm
                 _form.TextRaid
                 );
         }
+
         public IProduct CreateGamingPc()
         {
             return new GamingPc(
@@ -68,6 +68,46 @@ namespace ComputerShopForm
                 _form.TextRgb,
                 true
                 );
+        }
+
+        public void CheckInput(KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("error");
+            }
+        }
+
+        public bool CheckIfEmpty()
+        {
+            bool check = false;
+            foreach (Control text in _form.Controls)
+            {
+                if (text is TextBox)
+                {
+                    if (string.IsNullOrEmpty(text.Text))
+                    {
+                        check = true;
+                        break;
+                    }
+                }
+            }
+            return check;
+        }
+
+        public void SetAllTextboxesToWrite()
+        {
+            foreach (Control ctrl in _form.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox tb = ctrl as TextBox;
+                    if (tb.ReadOnly)
+                    {
+                        tb.ReadOnly = false;
+                    }
+                }
+            }
         }
     }
 }
