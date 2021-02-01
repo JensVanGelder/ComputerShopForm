@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace ComputerShopForm
@@ -27,7 +28,7 @@ namespace ComputerShopForm
         public double ProductPrice
         {
             get { return Convert.ToDouble(lblPrice.Text); }
-            set { lblPrice.Text = $"€ {value}"; }
+            set { lblPrice.Text = $"{value.ToString("C2", CultureInfo.CreateSpecificCulture("en-FR"))}"; }
         }
 
         public string ProductSummary { get; set; }
@@ -41,8 +42,8 @@ namespace ComputerShopForm
                 if (value != null)
                 {
                     _productImagePath = value;
-                    pictureBox1.ImageLocation = _productImagePath;
-                    pictureBox1.Load(_productImagePath);
+                    picProductImage.ImageLocation = _productImagePath;
+                    picProductImage.Load(_productImagePath);
                 }
             }
         }

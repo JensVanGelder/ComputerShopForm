@@ -4,8 +4,8 @@
     {
         public string RaidType { get; set; }
 
-        public Workstation(string name, double price, string imagepath, string description, int stock, int ram, string mobo, string hdd, string cpu, string psu, string raidType)
-               : base(name, price, imagepath, description, stock, ram, mobo, hdd, cpu, psu)
+        public Workstation(int id, string name, double price, string imagepath, string description, int stock, int ram, string mobo, string hdd, string cpu, string psu, string raidType)
+               : base(id, name, price, imagepath, description, stock, ram, mobo, hdd, cpu, psu)
         {
             RaidType = raidType;
         }

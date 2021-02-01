@@ -6,6 +6,6 @@ namespace ComputerShopForm
     {
         List<IProduct> CreateProductList();
 
-        IProduct GetProduct(string name);
+        IProduct GetProduct(int id);
     }
 }

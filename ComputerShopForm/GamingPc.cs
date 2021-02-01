@@ -8,8 +8,8 @@
 
         public bool CanPlayFortniteOnHigh { get; set; }
 
-        public GamingPc(string name, double price, string imagepath, string summary, int stock, int ram, string mobo, string hdd, string cpu, string psu, string gpu, Performance rgbperformance, bool fortnite)
-            : base(name, price, imagepath, summary, stock, ram, mobo, hdd, cpu, psu)
+        public GamingPc(int id, string name, double price, string imagepath, string summary, int stock, int ram, string mobo, string hdd, string cpu, string psu, string gpu, Performance rgbperformance, bool fortnite)
+            : base(id, name, price, imagepath, summary, stock, ram, mobo, hdd, cpu, psu)
         {
             Gpu = gpu;
             RgbPerformance = rgbperformance;

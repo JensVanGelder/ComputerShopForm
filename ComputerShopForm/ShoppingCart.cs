@@ -20,7 +20,7 @@ namespace ComputerShopForm
 
         public string CartInfo
         {
-            get { return $"Order Placed at: {DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")}, Total Price: € {CalculatePrice()}"; }
+            get { return $"Order Placed at: {DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")}, Total Price: € {GetPrice()}"; }
         }
 
         public void AddProductToCart(IProduct product)
@@ -59,9 +59,15 @@ namespace ComputerShopForm
             ShoppingList.Clear();
         }
 
-        public double CalculatePrice()
+        public double GetPriceWithTax()
         {
             return Math.Round(_priceCalculator.CalculatePrice(ShoppingList) + _priceCalculator.CalculateTax(ShoppingList), 2);
         }
+
+        public double GetPrice()
+        {
+            return Math.Round(_priceCalculator.CalculatePrice(ShoppingList), 2);
+        }
+
     }
 }

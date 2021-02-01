@@ -6,8 +6,8 @@
         public string ScreenType { get; set; }
         public double WeightInGrams { get; set; }
 
-        public Laptop(string name, double price, string imagepath, string summary, int stock, int ram, string mobo, string hdd, string cpu, string psu, int screensize, string screentype, double weightingrams)
-           : base(name, price, imagepath, summary, stock, ram, mobo, hdd, cpu, psu)
+        public Laptop(int id, string name, double price, string imagepath, string summary, int stock, int ram, string mobo, string hdd, string cpu, string psu, int screensize, string screentype, double weightingrams)
+           : base(id, name, price, imagepath, summary, stock, ram, mobo, hdd, cpu, psu)
         {
             ScreenSize = screensize;
             ScreenType = screentype;

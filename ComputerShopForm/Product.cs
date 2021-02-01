@@ -20,14 +20,14 @@
             set { _stock = value < 0 ? 0 : value; }
         }
 
-        protected Product(string name, double price, string imagepath, string summary, int stock)
+        protected Product(int id, string name, double price, string imagepath, string summary, int stock)
         {
+            Id = id;
             Price = price;
             Name = name;
             ProductImagePath = imagepath;
             ProductSummary = summary;
-            Stock = stock;
-            Id++;
+            Stock = stock;            
         }
 
         public override string ToString()

@@ -96,7 +96,7 @@ namespace ComputerShopForm
 
         private void lblProductName_Click(object sender, EventArgs e)
         {
-            var productforinfo = _repo.GetProduct(ProductName);
+            var productforinfo = _repo.GetProduct(Id);
             FormProductInfo productinfoform = new FormProductInfo(productforinfo);
             productinfoform.Show();
         }

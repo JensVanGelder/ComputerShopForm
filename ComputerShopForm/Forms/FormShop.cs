@@ -49,22 +49,11 @@ namespace ComputerShopForm
         {
             if (sender is UserControlShop userControl)
             {
-                var product = _repo.GetProduct(userControl.ProductName);
+                var product = _repo.GetProduct(userControl.Id);
                 _cart.AddProductToCart(product);
                 lblItemsInCart.Visible = true;
                 picCartButtonCircle.Visible = true;
                 lblItemsInCart.Text = $"{_cart.ShoppingList.Count}";
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            foreach (UserControlShop control in flowMainShopPanel.Controls)
-            {
-                if (control.ProductName == "HP Oblivion III")
-                {
-                    control.Visible = false;
-                }
             }
         }
 
@@ -104,6 +93,48 @@ namespace ComputerShopForm
             if (txtSearchBar.Text == "What are you looking for?")
             {
                 txtSearchBar.Text = "";
+            }
+        }
+
+        private void FormShop_Activated(object sender, EventArgs e)
+        {
+            lblItemsInCart.Text = _cart.ShoppingList.Count().ToString();
+        }
+          
+        private void chkGaming_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (UserControlShop control in flowMainShopPanel.Controls)
+            {
+                string input = "fortnite";
+                if (control.ProductFullInfo.ToLower().Contains(input))
+                {
+                    control.Visible = true;
+                }
+            }
+        }
+
+        private void chkWorkstation_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (UserControlShop control in flowMainShopPanel.Controls)
+            {
+                string input = "workstation";
+                if (control.ProductFullInfo.ToLower().Contains(input))
+                {
+                    control.Visible = true;
+                }
+            }
+        }
+
+        private void chkLaptop_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (UserControlShop control in flowMainShopPanel.Controls)
+            {
+                control.Visible = false;
+                string input = chkLaptop.Text.ToLower();
+                if (control.ProductFullInfo.ToLower().Contains(input))
+                {
+                    control.Visible = true;
+                }
             }
         }
     }

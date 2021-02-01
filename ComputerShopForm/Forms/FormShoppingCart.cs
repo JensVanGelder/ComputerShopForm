@@ -36,8 +36,9 @@ namespace ComputerShopForm
                     GenerateUserControls(uniqueCart);
                 }
             }
-            lblTotalPrice.Text = $"Total:           {_cart.CalculatePrice().ToString("C2", CultureInfo.CreateSpecificCulture("en-FR"))}";
+            SetPriceLabels();
         }
+
 
         public void GenerateUserControls(IEnumerable<dynamic> uniqueCart)
         {
@@ -66,6 +67,15 @@ namespace ComputerShopForm
             }
         }
 
+        public void SetPriceLabels()
+        {
+            PriceCalculator calculator = new PriceCalculator();
+            lblTotalPrice.Text = _cart.GetPrice().ToString("C2", CultureInfo.CreateSpecificCulture("en-FR"))
+            +"\n" + (_cart.GetPrice()*calculator.Tax).ToString("C2", CultureInfo.CreateSpecificCulture("en-FR"))
+            +"\n"+ _cart.GetPriceWithTax().ToString("C2", CultureInfo.CreateSpecificCulture("en-FR"));
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             string message = $"{_cart.CartInfo}" +
@@ -90,6 +100,11 @@ namespace ComputerShopForm
 
             flowLayoutPanel1.Controls.Clear();
             CreateCombinedShoppingList();
+        }
+
+        private void userControlCart1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

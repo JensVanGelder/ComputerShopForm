@@ -31,7 +31,7 @@ namespace ComputerShopForm
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductInfo));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblInfoTitle = new System.Windows.Forms.Label();
             this.txtboxInfo = new System.Windows.Forms.TextBox();
             this.txtBoxDescription = new System.Windows.Forms.TextBox();
             this.txtBoxPrice = new System.Windows.Forms.TextBox();
@@ -41,7 +41,7 @@ namespace ComputerShopForm
             this.lblPriceDontUse = new System.Windows.Forms.Label();
             this.lblNameDontUse = new System.Windows.Forms.Label();
             this.txtBoxStock = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblInStock = new System.Windows.Forms.Label();
             this.txtBoxWeight = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtBoxScreenType = new System.Windows.Forms.TextBox();
@@ -53,12 +53,12 @@ namespace ComputerShopForm
             this.txtBoxMoBo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblMotherBoard = new System.Windows.Forms.Label();
             this.txtBoxRam = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblRam = new System.Windows.Forms.Label();
             this.txtBoxId = new System.Windows.Forms.TextBox();
             this.lblIDdontuse = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblScreenSize = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtBoxScreenSize = new System.Windows.Forms.TextBox();
             this.txtBoxRaid = new System.Windows.Forms.TextBox();
@@ -73,15 +73,15 @@ namespace ComputerShopForm
             ((System.ComponentModel.ISupportInitialize)(this.picProductImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblInfoTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Info";
+            this.lblInfoTitle.AutoSize = true;
+            this.lblInfoTitle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoTitle.Location = new System.Drawing.Point(31, 18);
+            this.lblInfoTitle.Name = "lblInfoTitle";
+            this.lblInfoTitle.Size = new System.Drawing.Size(45, 18);
+            this.lblInfoTitle.TabIndex = 1;
+            this.lblInfoTitle.Text = "Info";
             // 
             // txtboxInfo
             // 
@@ -174,15 +174,15 @@ namespace ComputerShopForm
             this.txtBoxStock.Size = new System.Drawing.Size(153, 21);
             this.txtBoxStock.TabIndex = 22;
             // 
-            // label2
+            // lblInStock
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(357, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "In Stock:";
+            this.lblInStock.AutoSize = true;
+            this.lblInStock.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInStock.Location = new System.Drawing.Point(357, 133);
+            this.lblInStock.Name = "lblInStock";
+            this.lblInStock.Size = new System.Drawing.Size(60, 13);
+            this.lblInStock.TabIndex = 21;
+            this.lblInStock.Text = "In Stock:";
             // 
             // txtBoxWeight
             // 
@@ -296,15 +296,15 @@ namespace ComputerShopForm
             this.label9.TabIndex = 28;
             this.label9.Text = "HDD:";
             // 
-            // label10
+            // lblMotherBoard
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(357, 184);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 13);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Motherboard:";
+            this.lblMotherBoard.AutoSize = true;
+            this.lblMotherBoard.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotherBoard.Location = new System.Drawing.Point(357, 184);
+            this.lblMotherBoard.Name = "lblMotherBoard";
+            this.lblMotherBoard.Size = new System.Drawing.Size(84, 13);
+            this.lblMotherBoard.TabIndex = 27;
+            this.lblMotherBoard.Text = "Motherboard:";
             // 
             // txtBoxRam
             // 
@@ -316,15 +316,15 @@ namespace ComputerShopForm
             this.txtBoxRam.Size = new System.Drawing.Size(153, 21);
             this.txtBoxRam.TabIndex = 36;
             // 
-            // label11
+            // lblRam
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(357, 291);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 13);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "RAM:";
+            this.lblRam.AutoSize = true;
+            this.lblRam.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRam.Location = new System.Drawing.Point(357, 291);
+            this.lblRam.Name = "lblRam";
+            this.lblRam.Size = new System.Drawing.Size(37, 13);
+            this.lblRam.TabIndex = 35;
+            this.lblRam.Text = "RAM:";
             // 
             // txtBoxId
             // 
@@ -346,15 +346,15 @@ namespace ComputerShopForm
             this.lblIDdontuse.TabIndex = 37;
             this.lblIDdontuse.Text = "ID:";
             // 
-            // label12
+            // lblScreenSize
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(31, 423);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 13);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Screen Size:";
+            this.lblScreenSize.AutoSize = true;
+            this.lblScreenSize.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScreenSize.Location = new System.Drawing.Point(31, 423);
+            this.lblScreenSize.Name = "lblScreenSize";
+            this.lblScreenSize.Size = new System.Drawing.Size(80, 13);
+            this.lblScreenSize.TabIndex = 39;
+            this.lblScreenSize.Text = "Screen Size:";
             // 
             // label13
             // 
@@ -479,11 +479,11 @@ namespace ComputerShopForm
             this.Controls.Add(this.txtBoxRaid);
             this.Controls.Add(this.txtBoxScreenSize);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblScreenSize);
             this.Controls.Add(this.txtBoxId);
             this.Controls.Add(this.lblIDdontuse);
             this.Controls.Add(this.txtBoxRam);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblRam);
             this.Controls.Add(this.txtBoxPsu);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtBoxCpu);
@@ -491,13 +491,13 @@ namespace ComputerShopForm
             this.Controls.Add(this.txtBoxMoBo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblMotherBoard);
             this.Controls.Add(this.txtBoxScreenType);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBoxWeight);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBoxStock);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblInStock);
             this.Controls.Add(this.txtboxInfo);
             this.Controls.Add(this.txtBoxDescription);
             this.Controls.Add(this.txtBoxPrice);
@@ -506,7 +506,7 @@ namespace ComputerShopForm
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblPriceDontUse);
             this.Controls.Add(this.lblNameDontUse);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblInfoTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "FormProductInfo";
@@ -520,7 +520,7 @@ namespace ComputerShopForm
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblInfoTitle;
         private System.Windows.Forms.TextBox txtboxInfo;
         private System.Windows.Forms.TextBox txtBoxDescription;
         private System.Windows.Forms.TextBox txtBoxPrice;
@@ -529,9 +529,8 @@ namespace ComputerShopForm
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblPriceDontUse;
         private System.Windows.Forms.Label lblNameDontUse;
-        private System.Windows.Forms.PictureBox pictureBoxProductInfo;
         private System.Windows.Forms.TextBox txtBoxStock;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblInStock;
         private System.Windows.Forms.TextBox txtBoxWeight;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtBoxScreenType;
@@ -543,12 +542,12 @@ namespace ComputerShopForm
         private System.Windows.Forms.TextBox txtBoxMoBo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblMotherBoard;
         private System.Windows.Forms.TextBox txtBoxRam;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblRam;
         private System.Windows.Forms.TextBox txtBoxId;
         private System.Windows.Forms.Label lblIDdontuse;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblScreenSize;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBoxScreenSize;
         private System.Windows.Forms.TextBox txtBoxRaid;

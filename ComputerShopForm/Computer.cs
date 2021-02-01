@@ -8,8 +8,8 @@
         public string Cpu { get; set; }
         public string Psu { get; set; }
 
-        public Computer(string name, double price, string imagepath, string summary, int stock, int ram, string mobo, string hdd, string cpu, string psu)
-            : base(name, price, imagepath, summary, stock)
+        public Computer(int id,string name, double price, string imagepath, string summary, int stock, int ram, string mobo, string hdd, string cpu, string psu)
+            : base(id, name, price, imagepath, summary, stock)
         {
             Ram = ram;
             MoBo = mobo;

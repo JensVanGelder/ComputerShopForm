@@ -5,7 +5,12 @@ namespace ComputerShopForm
 {
     public class PriceCalculator : IPriceCalculator
     {
-        private const double Tax = 0.21;
+        private const double _tax = 0.21;
+
+        public double Tax
+        {
+            get { return _tax; }
+        }
 
         public double CalculatePrice(List<IProduct> shoppinglist)
         {
