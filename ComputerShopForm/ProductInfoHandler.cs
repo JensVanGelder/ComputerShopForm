@@ -74,7 +74,7 @@ namespace ComputerShopForm
         {
             if (e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Please enter a correct value.");
             }
         }
 

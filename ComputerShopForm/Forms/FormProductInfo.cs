@@ -127,6 +127,7 @@ namespace ComputerShopForm
             _handler.SetAllTextboxesToWrite();
             btnAdd.Visible = true;
             cmbTypeSelecter.Visible = true;
+            cmbTypeSelecter.SelectedIndex = 0;
             lblInfoTitle.Text = "Add Product";
             _shop = shop;
         }
@@ -215,6 +216,7 @@ namespace ComputerShopForm
                         break;
                 }
             }
+            MessageBox.Show("Product has been added.");
         }
 
         private void cmbTypeSelecter_SelectedIndexChanged(object sender, EventArgs e)
@@ -237,6 +239,7 @@ namespace ComputerShopForm
                     txtBoxScreenSize.ReadOnly = true;
                     txtBoxScreenType.ReadOnly = true;
                     txtBoxWeight.ReadOnly = true;
+                    txtBoxRgb.ReadOnly = true;
                     break;
 
                 case 2:
@@ -244,6 +247,7 @@ namespace ComputerShopForm
                     txtBoxGpu.ReadOnly = true;
                     txtBoxFortnite.ReadOnly = true;
                     txtBoxRaid.ReadOnly = true;
+                    txtBoxRgb.ReadOnly = true;
                     break;
 
                 default:

@@ -70,6 +70,7 @@ namespace ComputerShopForm
             this.picProductImage = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbTypeSelecter = new System.Windows.Forms.ComboBox();
+            this.lblTypeDONTUSE = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picProductImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +104,7 @@ namespace ComputerShopForm
             this.txtBoxDescription.Name = "txtBoxDescription";
             this.txtBoxDescription.ReadOnly = true;
             this.txtBoxDescription.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxDescription.TabIndex = 18;
+            this.txtBoxDescription.TabIndex = 3;
             // 
             // txtBoxPrice
             // 
@@ -113,7 +114,7 @@ namespace ComputerShopForm
             this.txtBoxPrice.Name = "txtBoxPrice";
             this.txtBoxPrice.ReadOnly = true;
             this.txtBoxPrice.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxPrice.TabIndex = 17;
+            this.txtBoxPrice.TabIndex = 2;
             this.txtBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxPrice_KeyPress);
             // 
             // txtBoxName
@@ -124,7 +125,7 @@ namespace ComputerShopForm
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.ReadOnly = true;
             this.txtBoxName.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxName.TabIndex = 16;
+            this.txtBoxName.TabIndex = 1;
             // 
             // label6
             // 
@@ -174,7 +175,7 @@ namespace ComputerShopForm
             this.txtBoxStock.Name = "txtBoxStock";
             this.txtBoxStock.ReadOnly = true;
             this.txtBoxStock.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxStock.TabIndex = 22;
+            this.txtBoxStock.TabIndex = 4;
             this.txtBoxStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxStock_KeyPress);
             // 
             // lblInStock
@@ -195,7 +196,7 @@ namespace ComputerShopForm
             this.txtBoxWeight.Name = "txtBoxWeight";
             this.txtBoxWeight.ReadOnly = true;
             this.txtBoxWeight.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxWeight.TabIndex = 24;
+            this.txtBoxWeight.TabIndex = 11;
             this.txtBoxWeight.Text = "N/A";
             this.txtBoxWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxWeight_KeyPress);
             // 
@@ -217,7 +218,7 @@ namespace ComputerShopForm
             this.txtBoxScreenType.Name = "txtBoxScreenType";
             this.txtBoxScreenType.ReadOnly = true;
             this.txtBoxScreenType.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxScreenType.TabIndex = 26;
+            this.txtBoxScreenType.TabIndex = 13;
             this.txtBoxScreenType.Text = "N/A";
             // 
             // label5
@@ -238,7 +239,7 @@ namespace ComputerShopForm
             this.txtBoxPsu.Name = "txtBoxPsu";
             this.txtBoxPsu.ReadOnly = true;
             this.txtBoxPsu.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxPsu.TabIndex = 34;
+            this.txtBoxPsu.TabIndex = 8;
             // 
             // label7
             // 
@@ -258,7 +259,7 @@ namespace ComputerShopForm
             this.txtBoxCpu.Name = "txtBoxCpu";
             this.txtBoxCpu.ReadOnly = true;
             this.txtBoxCpu.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxCpu.TabIndex = 32;
+            this.txtBoxCpu.TabIndex = 7;
             // 
             // txtBoxHdd
             // 
@@ -268,7 +269,7 @@ namespace ComputerShopForm
             this.txtBoxHdd.Name = "txtBoxHdd";
             this.txtBoxHdd.ReadOnly = true;
             this.txtBoxHdd.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxHdd.TabIndex = 31;
+            this.txtBoxHdd.TabIndex = 6;
             // 
             // txtBoxMoBo
             // 
@@ -278,7 +279,7 @@ namespace ComputerShopForm
             this.txtBoxMoBo.Name = "txtBoxMoBo";
             this.txtBoxMoBo.ReadOnly = true;
             this.txtBoxMoBo.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxMoBo.TabIndex = 30;
+            this.txtBoxMoBo.TabIndex = 5;
             // 
             // label8
             // 
@@ -318,7 +319,7 @@ namespace ComputerShopForm
             this.txtBoxRam.Name = "txtBoxRam";
             this.txtBoxRam.ReadOnly = true;
             this.txtBoxRam.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxRam.TabIndex = 36;
+            this.txtBoxRam.TabIndex = 9;
             this.txtBoxRam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxRam_KeyPress);
             // 
             // lblRam
@@ -339,7 +340,7 @@ namespace ComputerShopForm
             this.txtBoxId.Name = "txtBoxId";
             this.txtBoxId.ReadOnly = true;
             this.txtBoxId.Size = new System.Drawing.Size(75, 21);
-            this.txtBoxId.TabIndex = 38;
+            this.txtBoxId.TabIndex = 18;
             this.txtBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxId_KeyPress);
             // 
             // lblIDdontuse
@@ -380,7 +381,7 @@ namespace ComputerShopForm
             this.txtBoxScreenSize.Name = "txtBoxScreenSize";
             this.txtBoxScreenSize.ReadOnly = true;
             this.txtBoxScreenSize.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxScreenSize.TabIndex = 41;
+            this.txtBoxScreenSize.TabIndex = 15;
             this.txtBoxScreenSize.Text = "N/A";
             this.txtBoxScreenSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxScreenSize_KeyPress);
             // 
@@ -392,7 +393,7 @@ namespace ComputerShopForm
             this.txtBoxRaid.Name = "txtBoxRaid";
             this.txtBoxRaid.ReadOnly = true;
             this.txtBoxRaid.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxRaid.TabIndex = 42;
+            this.txtBoxRaid.TabIndex = 10;
             this.txtBoxRaid.Text = "N/A";
             // 
             // txtBoxGpu
@@ -403,7 +404,7 @@ namespace ComputerShopForm
             this.txtBoxGpu.Name = "txtBoxGpu";
             this.txtBoxGpu.ReadOnly = true;
             this.txtBoxGpu.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxGpu.TabIndex = 44;
+            this.txtBoxGpu.TabIndex = 12;
             this.txtBoxGpu.Text = "N/A";
             // 
             // label14
@@ -424,7 +425,7 @@ namespace ComputerShopForm
             this.txtBoxRgb.Name = "txtBoxRgb";
             this.txtBoxRgb.ReadOnly = true;
             this.txtBoxRgb.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxRgb.TabIndex = 46;
+            this.txtBoxRgb.TabIndex = 14;
             this.txtBoxRgb.Text = "N/A";
             // 
             // label15
@@ -445,7 +446,7 @@ namespace ComputerShopForm
             this.txtBoxFortnite.Name = "txtBoxFortnite";
             this.txtBoxFortnite.ReadOnly = true;
             this.txtBoxFortnite.Size = new System.Drawing.Size(153, 21);
-            this.txtBoxFortnite.TabIndex = 48;
+            this.txtBoxFortnite.TabIndex = 16;
             this.txtBoxFortnite.Text = "N/A";
             // 
             // label16
@@ -471,6 +472,8 @@ namespace ComputerShopForm
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(205, 469);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(93, 23);
@@ -487,12 +490,22 @@ namespace ComputerShopForm
             "GamingPc",
             "Workstation",
             "Laptop"});
-            this.cmbTypeSelecter.Location = new System.Drawing.Point(360, 12);
+            this.cmbTypeSelecter.Location = new System.Drawing.Point(446, 12);
             this.cmbTypeSelecter.Name = "cmbTypeSelecter";
-            this.cmbTypeSelecter.Size = new System.Drawing.Size(123, 21);
+            this.cmbTypeSelecter.Size = new System.Drawing.Size(153, 21);
             this.cmbTypeSelecter.TabIndex = 51;
             this.cmbTypeSelecter.Visible = false;
             this.cmbTypeSelecter.SelectedIndexChanged += new System.EventHandler(this.cmbTypeSelecter_SelectedIndexChanged);
+            // 
+            // lblTypeDONTUSE
+            // 
+            this.lblTypeDONTUSE.AutoSize = true;
+            this.lblTypeDONTUSE.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTypeDONTUSE.Location = new System.Drawing.Point(357, 15);
+            this.lblTypeDONTUSE.Name = "lblTypeDONTUSE";
+            this.lblTypeDONTUSE.Size = new System.Drawing.Size(39, 13);
+            this.lblTypeDONTUSE.TabIndex = 52;
+            this.lblTypeDONTUSE.Text = "Type:";
             // 
             // FormProductInfo
             // 
@@ -504,6 +517,7 @@ namespace ComputerShopForm
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(630, 614);
+            this.Controls.Add(this.lblTypeDONTUSE);
             this.Controls.Add(this.cmbTypeSelecter);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.picProductImage);
@@ -547,7 +561,7 @@ namespace ComputerShopForm
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "FormProductInfo";
-            this.Text = "FormProductInfo";
+            this.Text = "Add your product";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.picProductImage)).EndInit();
             this.ResumeLayout(false);
@@ -597,5 +611,6 @@ namespace ComputerShopForm
         private System.Windows.Forms.PictureBox picProductImage;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cmbTypeSelecter;
+        private System.Windows.Forms.Label lblTypeDONTUSE;
     }
 }
