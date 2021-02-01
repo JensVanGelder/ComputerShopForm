@@ -12,7 +12,7 @@ namespace ComputerShopForm.Test
         {
             _testcart = ShoppingCart.GetShoppingCart();
 
-            _testproduct = new GamingPc(1,"TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 0, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
+            _testproduct = new GamingPc(1, "TestComputer", 1, "https://placekitten.com/200/300", "Test description", 1, 0, "TestMOBO", "TestHDD", "TestCPU", "TestPSU", "TestGPU", Performance.Affordable, true);
         }
 
         [Test]

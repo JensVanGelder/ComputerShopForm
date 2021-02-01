@@ -68,6 +68,5 @@ namespace ComputerShopForm
         {
             return Math.Round(_priceCalculator.CalculatePrice(ShoppingList), 2);
         }
-
     }
 }

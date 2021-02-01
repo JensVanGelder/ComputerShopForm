@@ -27,7 +27,7 @@
             Name = name;
             ProductImagePath = imagepath;
             ProductSummary = summary;
-            Stock = stock;            
+            Stock = stock;
         }
 
         public override string ToString()

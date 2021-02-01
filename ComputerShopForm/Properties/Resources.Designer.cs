@@ -73,16 +73,6 @@ namespace ComputerShopForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cartsmol_20_1_60x60_1_45x45 {
-            get {
-                object obj = ResourceManager.GetObject("cartsmol_20_1_60x60_1_45x45", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap cartW {
             get {
                 object obj = ResourceManager.GetObject("cartW", resourceCulture);
@@ -96,6 +86,36 @@ namespace ComputerShopForm.Properties {
         internal static System.Drawing.Bitmap cartWsmall2 {
             get {
                 object obj = ResourceManager.GetObject("cartWsmall2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap footerimg {
+            get {
+                object obj = ResourceManager.GetObject("footerimg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap footerleft {
+            get {
+                object obj = ResourceManager.GetObject("footerleft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap footerright {
+            get {
+                object obj = ResourceManager.GetObject("footerright", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

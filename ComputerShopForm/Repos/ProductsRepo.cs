@@ -6,6 +6,7 @@ namespace ComputerShopForm
     public class ProductsRepo : IProductsRepo
     {
         public List<IProduct> prods;
+
         public List<IProduct> CreateProductList()
         {
             var products = new List<IProduct>

@@ -69,7 +69,6 @@ namespace ComputerShopForm.Forms
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ComputerShopForm.Properties.Resources.lck;
             this.pictureBox2.Location = new System.Drawing.Point(767, 141);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 32);
@@ -79,7 +78,6 @@ namespace ComputerShopForm.Forms
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::ComputerShopForm.Properties.Resources.usr1;
             this.pictureBox3.Location = new System.Drawing.Point(767, 75);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 32);
@@ -89,7 +87,6 @@ namespace ComputerShopForm.Forms
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::ComputerShopForm.Properties.Resources.blueball;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(298, 263);

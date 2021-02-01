@@ -2,7 +2,7 @@
 
 namespace ComputerShopForm
 {
-    interface IFileReader
+    internal interface IFileReader
     {
         List<IProduct> ReadProductListFromFile();
     }

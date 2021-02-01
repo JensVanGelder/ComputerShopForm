@@ -70,6 +70,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ProductInfoHandler.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Repos\FileProductsRepo.cs" />
     <Compile Include="UserControllers\UserControlCart.cs">
       <SubType>UserControl</SubType>
@@ -127,14 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UserControllers\UserControlShop.resx">
       <DependentUpon>UserControlShop.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,9 +155,6 @@
     <None Include="Resources\Social Media banner.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cart.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\blueball.png" />
   </ItemGroup>
   <ItemGroup>
@@ -170,9 +167,6 @@
     <None Include="Resources\lck.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cartsmol_20_1_60x60_1_45x45.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\cartW.png" />
   </ItemGroup>
   <ItemGroup>
@@ -182,7 +176,16 @@
     <None Include="Resources\wdotsmaller.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\footerleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footerright.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\cartW1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footerimg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
