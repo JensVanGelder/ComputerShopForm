@@ -42,19 +42,21 @@ namespace ComputerShopForm
             this.lblItemsInCart = new System.Windows.Forms.Label();
             this.picCartButtonCircle = new System.Windows.Forms.PictureBox();
             this.pnlLeftSortOptions = new System.Windows.Forms.Panel();
-            this.picSocialMedia = new System.Windows.Forms.PictureBox();
             this.grpBoxComp = new System.Windows.Forms.GroupBox();
             this.radLaptop = new System.Windows.Forms.RadioButton();
             this.radWorkstation = new System.Windows.Forms.RadioButton();
             this.radGamingPc = new System.Windows.Forms.RadioButton();
+            this.pnlSocialMedia = new System.Windows.Forms.Panel();
+            this.picSocialMedia = new System.Windows.Forms.PictureBox();
             this.btnShoppingCart = new ComputerShopForm.RoundButton();
             this.pnlMidTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBallBox)).BeginInit();
             this.pnlTopRightButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).BeginInit();
             this.pnlLeftSortOptions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).BeginInit();
             this.grpBoxComp.SuspendLayout();
+            this.pnlSocialMedia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).BeginInit();
             this.SuspendLayout();
             // 
             // flowMainShopPanel
@@ -108,7 +110,7 @@ namespace ComputerShopForm
             this.txtSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchBar.Location = new System.Drawing.Point(349, 51);
             this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtSearchBar.MaximumSize = new System.Drawing.Size(570, 21);
+            this.txtSearchBar.MaximumSize = new System.Drawing.Size(970, 21);
             this.txtSearchBar.MinimumSize = new System.Drawing.Size(7, 7);
             this.txtSearchBar.Name = "txtSearchBar";
             this.txtSearchBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -208,10 +210,11 @@ namespace ComputerShopForm
             // 
             this.pnlLeftSortOptions.AutoScroll = true;
             this.pnlLeftSortOptions.BackColor = System.Drawing.Color.White;
-            this.pnlLeftSortOptions.Controls.Add(this.picSocialMedia);
             this.pnlLeftSortOptions.Controls.Add(this.grpBoxComp);
+            this.pnlLeftSortOptions.Controls.Add(this.pnlSocialMedia);
             this.pnlLeftSortOptions.Controls.Add(this.btnShowAll);
             this.pnlLeftSortOptions.Controls.Add(this.btnTemp);
+            this.pnlLeftSortOptions.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeftSortOptions.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlLeftSortOptions.Location = new System.Drawing.Point(0, 100);
             this.pnlLeftSortOptions.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -219,28 +222,14 @@ namespace ComputerShopForm
             this.pnlLeftSortOptions.Size = new System.Drawing.Size(251, 499);
             this.pnlLeftSortOptions.TabIndex = 7;
             // 
-            // picSocialMedia
-            // 
-            this.picSocialMedia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picSocialMedia.BackColor = System.Drawing.Color.White;
-            this.picSocialMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picSocialMedia.Image = global::ComputerShopForm.Properties.Resources.Social_Media_banner;
-            this.picSocialMedia.Location = new System.Drawing.Point(3, 450);
-            this.picSocialMedia.Name = "picSocialMedia";
-            this.picSocialMedia.Size = new System.Drawing.Size(245, 46);
-            this.picSocialMedia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSocialMedia.TabIndex = 10;
-            this.picSocialMedia.TabStop = false;
-            // 
             // grpBoxComp
             // 
             this.grpBoxComp.Controls.Add(this.radLaptop);
             this.grpBoxComp.Controls.Add(this.radWorkstation);
             this.grpBoxComp.Controls.Add(this.radGamingPc);
-            this.grpBoxComp.Location = new System.Drawing.Point(12, 59);
+            this.grpBoxComp.Location = new System.Drawing.Point(10, 62);
             this.grpBoxComp.Name = "grpBoxComp";
-            this.grpBoxComp.Size = new System.Drawing.Size(200, 93);
+            this.grpBoxComp.Size = new System.Drawing.Size(202, 93);
             this.grpBoxComp.TabIndex = 11;
             this.grpBoxComp.TabStop = false;
             this.grpBoxComp.Text = "Computer";
@@ -278,6 +267,27 @@ namespace ComputerShopForm
             this.radGamingPc.Text = "Gaming Pc";
             this.radGamingPc.UseVisualStyleBackColor = true;
             // 
+            // pnlSocialMedia
+            // 
+            this.pnlSocialMedia.Controls.Add(this.picSocialMedia);
+            this.pnlSocialMedia.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlSocialMedia.Location = new System.Drawing.Point(0, 450);
+            this.pnlSocialMedia.Name = "pnlSocialMedia";
+            this.pnlSocialMedia.Size = new System.Drawing.Size(251, 49);
+            this.pnlSocialMedia.TabIndex = 11;
+            // 
+            // picSocialMedia
+            // 
+            this.picSocialMedia.BackColor = System.Drawing.Color.White;
+            this.picSocialMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picSocialMedia.Image = global::ComputerShopForm.Properties.Resources.Social_Media_banner;
+            this.picSocialMedia.Location = new System.Drawing.Point(3, 3);
+            this.picSocialMedia.Name = "picSocialMedia";
+            this.picSocialMedia.Size = new System.Drawing.Size(245, 43);
+            this.picSocialMedia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSocialMedia.TabIndex = 10;
+            this.picSocialMedia.TabStop = false;
+            // 
             // btnShoppingCart
             // 
             this.btnShoppingCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -312,9 +322,10 @@ namespace ComputerShopForm
             this.pnlTopRightButton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCartButtonCircle)).EndInit();
             this.pnlLeftSortOptions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).EndInit();
             this.grpBoxComp.ResumeLayout(false);
             this.grpBoxComp.PerformLayout();
+            this.pnlSocialMedia.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picSocialMedia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,6 +349,7 @@ namespace ComputerShopForm
         private System.Windows.Forms.RadioButton radLaptop;
         private System.Windows.Forms.RadioButton radWorkstation;
         private System.Windows.Forms.RadioButton radGamingPc;
+        private System.Windows.Forms.Panel pnlSocialMedia;
     }
 }
 
