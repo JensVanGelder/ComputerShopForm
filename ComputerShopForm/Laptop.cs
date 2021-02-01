@@ -2,7 +2,7 @@
 {
     public class Laptop : Computer
     {
-        public int ScreenSize { get; set; } //in INCH
+        public int ScreenSize { get; set; } 
         public string ScreenType { get; set; }
         public double WeightInGrams { get; set; }
 

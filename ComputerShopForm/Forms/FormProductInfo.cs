@@ -59,7 +59,6 @@ namespace ComputerShopForm
                         txtBoxWeight.Text = Convert.ToString(laptop.WeightInGrams);
                         break;
                     }
-
                 default:
                     break;
             }

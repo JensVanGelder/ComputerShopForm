@@ -101,10 +101,5 @@ namespace ComputerShopForm
             flowLayoutPanel1.Controls.Clear();
             CreateCombinedShoppingList();
         }
-
-        private void userControlCart1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

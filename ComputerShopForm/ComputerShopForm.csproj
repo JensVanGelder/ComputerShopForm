@@ -53,6 +53,7 @@
     <Compile Include="Forms\FormLanding.Designer.cs">
       <DependentUpon>FormLanding.cs</DependentUpon>
     </Compile>
+    <Compile Include="Keyboard.cs" />
     <Compile Include="Logger\ILogger.cs" />
     <Compile Include="Logger\JsonLogger.cs" />
     <Compile Include="Logger\Logger.cs" />
@@ -62,6 +63,10 @@
     <Compile Include="Forms\FormProductInfo.Designer.cs">
       <DependentUpon>FormProductInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enums\Peripheral.cs" />
+    <Compile Include="Monitor.cs" />
+    <Compile Include="Mouse.cs" />
+    <Compile Include="Peripherals.cs" />
     <Compile Include="PriceCalculator.cs" />
     <Compile Include="Logger\TxtLogger.cs" />
     <Compile Include="Buttons\RoundButton.cs">
