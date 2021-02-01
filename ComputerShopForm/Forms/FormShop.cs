@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace ComputerShopForm
 {
@@ -49,7 +49,7 @@ namespace ComputerShopForm
         {
             if (sender is UserControlShop userControl)
             {
-                var product = _repo.GetProduct(userControl.Id,_repo.prods);
+                var product = _repo.GetProduct(userControl.Id, _repo.prods);
                 _cart.AddProductToCart(product);
                 lblItemsInCart.Visible = true;
                 picCartButtonCircle.Visible = true;
@@ -87,7 +87,7 @@ namespace ComputerShopForm
 
         private void rndbtnShoppingCart_Click(object sender, EventArgs e)
         {
-            FormShoppingCart cart = new FormShoppingCart();
+            FormShoppingCart cart = new FormShoppingCart(this);
             cart.Show();
         }
 
